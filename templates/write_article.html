@@ -1,0 +1,250 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {# 头部元信息 #}
+    <meta name="keywords" content="李易阳，个人博客 | 问世间情为何物 直教人生死相许">
+    <meta name="description" content="李易阳，个人博客，一个提供编程技术相关文章的美男子"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {# 标题图标 #}
+    <link rel="icon" href="{% static 'base/images/blog_title.ico' %}" type="image/x-icon">
+    <title>Lwd's Blog | 写文章</title>
+
+    {# 导入本网页样式 #}
+    <link rel="stylesheet" type="text/css" href="{% static 'write_article/css/write_article.css' %}"/>
+
+    {# 导入bootstrap.css #}
+    <link rel="stylesheet" type="text/css" href="{% static 'base/css/bootstrap.min.css' %}"/>
+
+    {# 导入字体图标 #}
+    <link rel="stylesheet" type="text/css" href="{% static 'base/css/font_awesome/css/font-awesome.min.css' %}"/>
+
+    {# 导入 标签 样式 #}
+    <link rel="stylesheet" href="{% static 'plugins/jquery-tagbox/css/jquery.tagbox.css' %}">
+
+    {# 导入js #}
+    <script src="{% static 'base/js/jquery.min.js' %}" type="text/javascript" charset="utf-8"></script>
+    <script src="{% static 'base/js/bootstrap.min.js' %}" type="text/javascript" charset="utf-8"></script>
+
+    {# editor markdown #}
+    <link rel="stylesheet" href="{% static 'plugins/editor.md-master/css/editormd.css' %}"/>
+    <script src="{% static 'plugins/editor.md-master/editormd.js' %}"></script>
+
+</head>
+
+<body>
+{#  当屏幕过小的时候弹出的警告  #}
+<div class="modal fade" tabindex="-1" role="dialog" id="myModal-alert">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Lwd's Blog | 警告</h4>
+            </div>
+            <div class="modal-body">
+                <p class="lwd-alert-p">对不起，检测到您的浏览器屏幕尺寸过小,不适合您现在进行写作.</p>
+                <p class="lwd-alert-p">Sorry, your browser screen size has been detected to be too small for writing
+                    now.</p>
+            </div>
+            <div class="modal-footer">
+                <p class="lwd-alert-p">{一个挑事的微笑}</p>
+            </div>
+        </div>
+        {#  /.modal-content  #}
+    </div>
+    {#  /.modal-dialog  #}
+</div>
+{#  /.modal  #}
+
+{#  网页一加载进来，就监测屏幕的大小  #}
+<script type="text/javascript">
+    window.onload = function () {
+        var scroll_width = document.body.scrollWidth;
+        console.log(scroll_width);
+        var body = document.getElementsByTagName("body")[0];
+        if (scroll_width < 639) {
+            $('#myModal-alert').modal('show');
+            body.style.pointerEvents = "none";
+        } else {
+            $('#myModal-alert').modal('hide');
+            body.style.pointerEvents = "auto";
+        }
+    }
+</script>
+
+
+{# 大盒子，包括 标题栏 还有文本内容 #}
+<div class="write-article">
+    {# 文章bar #}
+    <div class="article-bar">
+        {# 文章标题 #}
+        <input type="text" id="write-article-title" class="form-control" placeholder="请输入文章标题"
+               aria-describedby="sizing-addon1"
+               maxlength="60" onkeyup="setShowLength()">
+        <span id="article-title-len">00/60</span>
+
+        {# 发送文章 #}
+        <button type="button" id="write-article-publish" class="btn btn-primary btn-lg active" data-toggle="modal"
+                data-target="#lwd-write-publish-modal">
+            发布文章
+        </button>
+        {#  模态框  #}
+        {#  Modal  #}
+        {#  模态框大盒子  #}
+        <div class="modal fade" id="lwd-write-publish-modal" tabindex="-1" role="dialog"
+             aria-labelledby="lwd-ModalLabel">
+            {#  模态框开始  #}
+            <div class="modal-dialog" role="document">
+                {#  模态框内容  #}
+                <div class="modal-content">
+                    {#  模态框头部  #}
+                    <div class="modal-header">
+                        {#  取消 X  #}
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+                        {#  模态框标题  #}
+                        <h4 class="modal-title" id="lwd-ModalLabel">发布文章</h4>
+                    </div>
+                    {#  modal-header end  #}
+
+                    {#  模态框身体部位  #}
+                    <div class="modal-body">
+                        <form class="form-inline">
+                            {#  文章分类  #}
+                            <div id="article-class-div" class="form-group">
+                                <label for="article-class">文章类别</label>
+                                <select id="article-class" class="form-control" name="article-class">
+                                    <option value="-1" class="list-group-item-danger">请选择</option>
+                                    {% for article_category in article_category_list %}
+                                        <option value="{{ article_category.id }}">{{ article_category.category_name }}</option>
+                                    {% empty %}
+                                        <option value="-2">暂无分类</option>
+                                    {% endfor %}
+                                </select>
+                                <span class="bitianxiang">*必填项</span>
+
+                            </div>
+
+                            {# 文章标签 #}
+                            <p class="p-tag">文章标签<span class="bitianxiang">(选填项)</span></p>
+                            <div id="blog-class-div" class="form-group">
+                                <input class="article-tag" name="article-tag" type="text" id="jquery-tagbox-text"/>
+                            </div>
+                        </form>
+                    </div>
+                    {#  body end  #}
+
+                    {#  模态框底部  #}
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                        <button type="button" id="write-article-to-draft" class="btn btn-default">保存为草稿</button>
+                        <button type="button" id="write-article-publish-again" class="btn btn-primary">发布文章</button>
+                    </div>
+                    {#  模态框底部end  #}
+                </div>
+                {#  模态框内容 end  #}
+            </div>
+            {#  模态框end  #}
+        </div>
+        {#  模态框大盒子结束  #}
+
+
+        {# 返回首页 #}
+        <button type="button" id="write-back-home" class="btn btn-primary btn-lg active" onclick="back_home()">返回首页
+        </button>
+    </div>
+
+    {# markdown编辑区域 #}
+    {# 调用editormd的api #}
+    <div id="lwd-write-editormd">
+        <textarea id="lwd-write-content"></textarea>
+    </div>
+
+</div>
+</body>
+
+
+{# editor配置 #}
+<script type="text/javascript">
+    var testEditor;
+    $(function () {
+        testEditor = editormd("lwd-write-editormd", {
+            placeholder: '本编辑器支持Markdown编辑，左边编写，右边预览',
+            width: "98%",
+            fontSize: 18,
+            height: 800,
+            path: '{% static 'plugins/editor.md-master/lib/' %}',
+            codeFold: true,
+            saveHTMLToTextarea: true,
+            searchReplace: true,
+            htmlDecode: "style,script,iframe|on*",
+            emoji: true,
+            taskList: true,
+            tocm: true,       // Using [TOCM]
+            tex: true,  // 开启科学公式TeX语言支持
+            flowChart: true, // 开启流程图支持
+            sequenceDiagram: true, // 开启时序/序列图支持
+
+            imageUpload: true,
+            imageFormats: ["jpg", "jpeg", "gif", "png", "bmp", "webp", 'ico'],
+            imageUploadURL: "{% url 'lwd:upload_img' %}",
+            {#imageUploadURL    : "http://www.lwd520ydd.com/lwd/upload_img/",#}
+            {#crossDomainUpload : true,#}
+            {#uploadCallbackURL : "http://www.lwd520ydd.com/lwd/write_article/",#}
+
+
+            onload: function () {
+                console.log('onload', this);
+                // 引入插件 执行监听方法
+                editormd.loadPlugin("{% static 'plugins/image-handle-paste/image-handle-paste' %}", function () {
+                    testEditor.imagePaste();
+                });
+
+            },
+
+            {# 自定义工具栏 #}
+            toolbarIcons: function () {
+                return editormd.toolbarModes['full']; // full, simple, mini
+            },
+
+
+            {#/**设置主题颜色 把这些注释去掉主题就是黑色的了*/#}
+            {#editorTheme: "pastel-on-dark",#}
+            {#theme: "dark",#}
+            {#previewTheme: "dark"#}
+        });
+    });
+
+
+    // 点击发表文章-again的事件
+    $("#write-article-publish-again").on("click", function () {
+        {#publish_dfrat_session_storage("publish");#}
+        write_article(1);
+    });
+
+    // 保存为草稿箱点击事件
+    $("#write-article-to-draft").on("click", function () {
+        {#console.log("-------sdkfjl--------");#}
+        publish_dfrat_session_storage("dfrat");
+        write_article(0);
+    });
+
+
+</script>
+
+
+{# 导入本页面js #}
+<script src="{% static 'write_article/js/write_article.js' %}" type="text/javascript" charset="utf-8"></script>
+<script src="{% static 'plugins/jquery-tagbox/js/jquery.tagbox.js' %}"></script>
+
+{# 标签 #}
+<script type="text/javascript">
+    $(document).ready(function ($) {
+        $("#jquery-tagbox-text").tagBox();
+    });
+
+</script>
+
+</html>

@@ -1,0 +1,102 @@
+
+/* 分类概要 */
+
+.lwd-class-general {
+	background: #fff;
+	overflow: hidden;
+	clear: both;
+	border: #ddd 1px solid;
+	margin-bottom: 15px;
+}
+
+.lwd-class-general h3 {
+	background: #f8f8f8;
+	font-size: 15px;
+	border-bottom: 1px solid #ddd;
+	height: 38px;
+	line-height: 38px;
+	padding: 0 20px
+}
+
+.lwd-class-general h3 span {
+	font-weight: normal;
+	float: right;
+	font-size: 14px
+}
+
+.lwd-class-general .lwd-class-general-picbox {
+	padding-left: 15px;
+	clear: both;
+	overflow: hidden
+}
+
+.lwd-class-general .lwd-class-general-pic {
+	width: 32%;
+	overflow: hidden;
+	display: block;
+	float: left;
+	margin: 10px 8px 5px 0;
+	height: 150px;
+	position: relative
+}
+
+.lwd-class-general .lwd-class-general-pic i {
+	position: absolute;
+	font-style: normal;
+	bottom: 0;
+	left: 0;
+	background: rgba(0, 0, 0, .7);
+	display: block;
+	width: 100%;
+	color: #FFF;
+	padding: 10px 0;
+	opacity: 0;
+	-moz-transition: all .5s ease;
+	-webkit-transition: all .5s ease;
+	-ms-transition: all .5s ease;
+	-o-transition: all .5s ease;
+	transition: all .5s ease;
+	transition: all 0.5s;
+}
+
+.lwd-class-general .lwd-class-general-pic img {
+	width: 100%;
+	-moz-transition: all .5s ease;
+	-webkit-transition: all .5s ease;
+	-ms-transition: all .5s ease;
+	-o-transition: all .5s ease;
+	transition: all .5s ease;
+	transition: all 0.5s;
+	min-height: 150px
+}
+
+.lwd-class-general .lwd-class-general-pic:hover i {
+	opacity: 1
+}
+
+.lwd-class-general .lwd-class-general-pic:hover img {
+	transform: scale(1.1)
+}
+
+.lwd-class-general-title-list {
+	margin: 20px;
+	clear: both
+}
+
+.lwd-class-general-title-list li {
+	background: url(../../base/images/turn_right.png) no-repeat left center;
+	padding-left: 20px;
+	line-height: 30px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.lwd-class-general-title-list li span {
+	float: right;
+	color: #999
+}
+
+.lwd-class-general-title-list li:hover a {
+	color: #00A7EB;
+}

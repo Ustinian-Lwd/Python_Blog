@@ -1,0 +1,507 @@
+{# 问政详情页 #}
+{# 导入基本模板 #}
+{% extends "base.html" %}
+{% load static %}
+{% load blog_tags %}
+
+
+{# 标题 #}
+{% block title %}
+    <title>Lwd's Blog | {{ article.a_title }}</title>
+{% endblock %}
+
+{# 额外的样式表 #}
+{% block EXTCSS %}
+
+    {#    <link rel="stylesheet" href="{% static 'base/css/bootstrap.min.css' %}">#}
+    {# 首页样式--如侧边栏 #}
+    <link rel="stylesheet" href="{% static 'index/css/index.css' %}">
+    {# 导入本页面的样式 #}
+    <link rel="stylesheet" href="{% static 'blog_detail/css/blog_detail.css' %}">
+    {# editormd样式 #}
+    <link rel="stylesheet" href="{% static 'plugins/editor.md-master/css/editormd.preview.css' %}">
+
+    <style type="text/css">
+        .blog_detail_back_home:hover {
+            color: #0077DD;
+        }
+    </style>
+
+{% endblock %}
+
+
+{% block content %}
+    {#  wrapper开始  #}
+    <main>
+        <h2 class="place">您现在的位置是：<a class="blog_detail_back_home" href="{% url 'lwd:index' %}">网站首页</a>
+            &gt; {{ article.a_title }} </h2>
+
+        {#  博客正文开始  #}
+        <div class="blogbox">
+            {#  正文  #}
+            <div class="blogview">
+                {#  博客标题  #}
+                <h3 class="blog_title">{{ article.a_title }}</h3>
+
+                {#  作者  #}
+                <div class="lwd-blog-author-box">
+                    {#  头像  #}
+                    <a href="#" class="lwd-avatar"><img src="{{ MEDIA_URL }}{{ author.u_img }}"></a>
+                    {#  详细信息  #}
+                    <div class="author-info">
+                        {#  用户名  #}
+                        <a class="name" href="{% url 'lwd:user_home'  author.u_id %}">{{ article.a_author }}</a>
+                        {#  用户等级 图标 #}
+                        <img class="badge-icon" alt="{{ user_level_alt }}" title="{{ user_level_alt }}"
+                             src="{% static user_level_img %}">
+                        {# 这里需要判断，如果是作者本人，这里就没有关注 #}
+                        {#  关注按钮  #}
+                        {% if is_have_follow_btn %}
+                            <a id="follow-other-user" class="btn btn-success follow">
+                                <i class="fa fa-plus"></i>
+                                <span>关注</span>
+                            </a>
+                        {% endif %}
+
+                        {#  详细信息  #}
+                        <div class="meta">
+                            {#  我的L币  #}
+                            <span class="Lb-meta">
+                                <i class="fa fa-gbp"></i>
+                                {{ article.a_user.u_lb }}
+                            </span>
+
+                            {#  文章上传时间  #}
+                            {#  这里只记录第一次发表文章的日期  #}
+                            <span class="publish-time">{{ article.a_create_time }}</span>
+
+                            {#  字数  #}
+                            <span class="wordage">字数 {{ article.a_word_num }}</span>
+                            {# 阅读  #}
+                            <span class="views-count">阅读 {{ article.a_views }}</span>
+
+                            {#  评论  #}
+                            <span class="comments-count">评论 {{ article.a_comment_num }}</span>
+
+                            {#  喜欢  #}
+                            <span class="likes-count">喜欢 {{ article.a_like_num }}</span>
+
+                            {# 判断 #}
+                            {# 如果是当前作者，加入编辑文章  #}
+                            {% if is_have_edit_btn %}
+                                <a href="{% url 'lwd:edit' article.a_id %}" class="edit">编辑文章</a>
+                            {% endif %}
+
+                        </div>
+
+                    </div>
+
+                </div>
+                {#  作者信息结束  #}
+
+                {#  正文内容  #}
+                <div id="lwd-blog-content">
+                            <textarea>
+                                {{ article.a_content_md }}
+                            </textarea>
+                </div>
+                {#  blog-content  #}
+
+
+                {#  喜欢  #}
+                <div class="collect_like" id="lwd-blog-detail-like">
+                    <p class="diggit">
+                        <a href="#" onclick="return false;">喜欢</a>
+                        (<b class="diggnum"></b>)
+                    </p>
+                </div>
+                {#  喜欢结束  #}
+
+                {#  收藏  #}
+                <div class="collect_like" id="lwd-blog-detail-collect">
+                    <p class="diggit">
+                        <a href="#" onclick="return false;">收藏</a>
+                        (<b class="diggnum"></b>)
+                    </p>
+                </div>
+                {#  收藏结束  #}
+
+                {#  上一篇下一篇  #}
+{#                <div class="nextinfo">#}
+{#                    <p>上一篇：<a href="{% url 'lwd:blog_detail' article_pre.a_id %}">{{ article_pre.a_title }}</a></p>#}
+{#                    <p>下一篇：<a href="{% url 'lwd:blog_detail' article_next.a_id %}">{{ article_next.a_title }}</a></p>#}
+{#                </div>#}
+
+                {#  评论  #}
+                <div class="comment-container">
+                    <h2>文章评论</h2>
+                    {% if token %}
+                        {# 发表评论 #}
+                        <form action="{% url 'comments:article_comment' article.a_id %}" method="post">
+                            <div class="comment-publish">
+                                <textarea class="lwd-comment-textarea" name="comment-text"></textarea>
+                                <button type="submit" id="publish-comment">
+                                    发表评论
+                                </button>
+                            </div>
+                        </form>
+                    {% else %}
+                        <div class="comment-publish-login">
+                            <div class="comment-publish-login-div">
+                                <a href="{% url 'lwd:login' %}">登录后进行评论</a>
+                            </div>
+                        </div>
+                    {% endif %}
+                    {# 展示评论 #}
+                    <p style="font-weight: bold">共{{ comment_list.count }}条评论</p>
+                    <hr>
+                    {% if token %}
+                        {% for comment in comment_list %}
+                            <div class="comment-show">
+                                {# 评论用户信息 #}
+                                <div class="comment-user">
+                                    {# 头像 #}
+                                    <div class="comment-user-avatar">
+                                        <a href="{% url 'lwd:user_home' comment.com_user.u_id %}">
+                                            <img src="{{ MEDIA_URL }}{{ comment.com_user.u_img }}"
+                                                 alt="{{ comment.com_user.u_name }}">
+                                        </a>
+                                    </div>
+
+                                    {# 用户文字信息 #}
+                                    <div class="comment-user-info">
+                                        {# 用户名 #}
+                                        <a href="{% url 'lwd:user_home' comment.com_user.u_id %}"
+                                           class="-name">{{ comment.com_user.u_name }}</a>
+                                        {# 评论时间 #}
+                                        <div class="-meta">
+                                            <span>第{{ forloop.counter }}楼 · {{ comment.com_created_time }}</span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                {# 评论内容 #}
+                                <div class="comment-show-content">
+                                    {# 内容 #}
+                                    <p>{{ comment.com_content }}</p>
+                                    {# 可能是点击回复 #}
+                                    {# div #}
+                                </div>
+                            </div>
+                        {% endfor %}
+                    {% else %}
+                        <p>请登录后查看评论</p>
+                    {% endif %}
+                </div>
+
+            </div>
+            {#  blog view end  #}
+        </div>
+        {#  blogbox  end #}
+
+    </main>
+
+    {# 侧边栏 #}
+    <aside class="sidebar">
+
+        {# fenlei-bar begin #}
+        <div class="fenlei">
+            <ul class="flnav">
+                <li class="flselect">
+                    <a href="#" onclick="return false;" title="最新 | 文章" class="pall"></a>
+                </li>
+                <li>
+                    <a href="#" onclick="return false;" title="易阳 | 推荐" class="pgood"></a>
+                </li>
+                <li>
+                    <a href="#" onclick="return false;" title="热评 | 排行" class="pbro"></a>
+                </li>
+                <li>
+                    <a href="#" onclick="return false;" title="收藏 | 排行" class="pfav"></a>
+                </li>
+            </ul>
+            {# flnav ul end #}
+        </div>
+        {# fenlei-bar end #}
+
+        {# 每个分类的文章 #}
+        <div class="newstw">
+            {# 最新 #}
+            <ul class="sidenews">
+                <h2>最新 | 文章</h2>
+                {% get_recent_article as recent_article_list %}
+                {% for recent_article in recent_article_list %}
+                 <li>
+                        <i><img src="{{ MEDIA_URL }}{{ recent_article.a_pre_img }}"></i>
+                        <p>
+                            <a href="{% url 'lwd:blog_detail' recent_article.a_id %}">{{ recent_article.a_title }}</a>
+                        </p>
+                        <span>{{ recent_article.a_create_time }}</span>
+                    </li>
+                {% empty %}
+                    <p style="margin-top: 10px;margin-bottom: 10px;color: red;font-size: 17px">暂无最新文章哟！</p>
+                {% endfor %}
+            </ul>
+            {# 最新文章end #}
+
+            {# 易阳|推荐 #}
+            <ul class="sidenews">
+                <h2>易阳 | 推荐</h2>
+                {% get_recommend_article as recommend_article_list %}
+                {% for recommend_article in recommend_article_list %}
+                 <li>
+                        <i><img src="{{ MEDIA_URL }}{{ recommend_article.a_pre_img }}"></i>
+                        <p>
+                            <a href="{% url 'lwd:blog_detail' recommend_article.a_id %}">{{ recommend_article.a_title }}</a>
+                        </p>
+                        <span>{{ recommend_article.a_create_time }}</span>
+                    </li>
+                {% empty %}
+                    <p style="margin-top: 10px;margin-bottom: 10px;color: red;font-size: 17px">暂无推荐文章哟！</p>
+                {% endfor %}
+            </ul>
+            {# 易阳|推荐 end #}
+
+            {# 热评 排行 #}
+            <ul class="sidenews">
+                <h2>热评 | 排行</h2>
+                {% get_hot_comment_article as hot_comment_article_list %}
+                {% for hot_comment_article in hot_comment_article_list %}
+                 <li>
+                        <i><img src="{{ MEDIA_URL }}{{ hot_comment_article.a_pre_img }}"></i>
+                        <p>
+                            <a href="{% url 'lwd:blog_detail' hot_comment_article.a_id %}">{{ hot_comment_article.a_title }}</a>
+                        </p>
+                        <span>{{ hot_comment_article.a_create_time }}</span>
+                    </li>
+                {% empty %}
+                    <p style="margin-top: 10px;margin-bottom: 10px;color: red;font-size: 17px">暂无热评文章哟！</p>
+                {% endfor %}
+
+            </ul>
+            {# 热评 排行 end #}
+
+            {# 收藏 排行 #}
+            <ul class="sidenews">
+                <h2>收藏 | 排行</h2>
+               {% get_collect_article as collect_article_list %}
+                {% for collect_article in collect_article_list %}
+                 <li>
+                        <i><img src="{{ MEDIA_URL }}{{ collect_article.a_pre_img }}"></i>
+                        <p>
+                            <a href="{% url 'lwd:blog_detail' collect_article.a_id %}">{{ collect_article.a_title }}</a>
+                        </p>
+                        <span>{{ collect_article.a_create_time }}</span>
+                    </li>
+                {% empty %}
+                    <p style="margin-top: 10px;margin-bottom: 10px;color: red;font-size: 17px">暂无热评文章哟！</p>
+                {% endfor %}
+
+            </ul>
+            {# 收藏排行 end #}
+
+        </div>
+        {# newstw end #}
+
+        {# 归档功能 #}
+        <div class="archives">
+            <h2 class="hometitle"><i class="fa fa-th-list"></i> 博客归档</h2>
+            {% archives as date_list %}
+            <ul>
+                {% for date in date_list %}
+                    <li class="archives-li">
+                        <a href="{% url 'lwd:archives' date.year date.month %}">{{ date.year }} 年 {{ date.month }} 月</a>
+                    </li>
+                {% empty %}
+                    <p style="margin-top: 15px;margin-bottom: 15px;color: red;font-size: 17px">暂无归档！</p>
+                {% endfor %}
+            </ul>
+        </div>
+
+
+        {# 关于本站 #}
+        <div class="about">
+            <h2 class="hometitle"><i class="fa fa-th-list"></i> 关于本站</h2>
+            <ul>
+                <div class="avatar">
+                    {# 头像 #}
+                    <img src="{% static 'index/images/about/my_img.jpg' %}" title="李易阳" alt="李易阳">
+                </div>
+                <p class="abname"><a class="home-to-about_me" href="">Lwd | 李易阳</a></p>
+                <p class="abtext">
+                    李易阳，一个90后全能优质程序员，上得了厅堂，下得了厨房。编得了程序，写得了小说，斗得过流氓。
+                </p>
+                {# 订阅 #}
+                <li>
+                    <a class="weibo_ico" href="{% url 'rss' %}" target="_blank"></a>
+                </li>
+                {# qq #}
+                <li class="qq_two_code">
+                    <a class="qq_ico" href="" onclick="return false;"></a>
+                    <img src="{% static 'index/images/about/lwd_qq_two_code.jpg' %}"/>
+                </li>
+                {# github #}
+                <li>
+                    <a class="github_ico" href="https://github.com/YddVae" target="_blank"></a>
+                </li>
+                {# 微信 #}
+                <li class="wx_two_code">
+                    <a class="wx_ico" href="" onclick="return false;"></a>
+                    <img src="{% static 'index/images/about/lwd_wx_two_code.jpg' %}"/>
+                </li>
+            </ul>
+        </div>
+        {# 关于本站 end #}
+
+
+        {# vip广告位01 #}
+        <div id="vip-ad">
+            <h2 class="hometitle" style="color: red;"><i class="fa fa-th-list"></i> VIP广告</h2>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    {% for ad_banner in ad_banners %}
+                        {#  轮播图第一张  #}
+                        <a href="{{ ad_banner.ab_link }}" class="swiper-slide"
+                       style="background-image:url({{ MEDIA_URL }}{{ ad_banner.ab_img_upload }})">
+                        <span class="imginfo"
+                              style="bottom: 10%;color: red;font-size: 1.25rem;z-index: auto;">{{ ad_banner.b_info_content }}</span>
+                    </a>
+                    {% endfor %}
+                </div>
+                {#  Add Pagination  #}
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        {# 广告位 end #}
+
+        {# 友情链接 #}
+        <div class="links">
+            <h2 class="hometitle"><i class="fa fa-th-list"></i> 友情链接</h2>
+            <ul>
+                <li>
+                    <a href="http://www.asc.jx.cn/">皇家理工应科院</a>
+                </li>
+                <li>
+                    <a href="https://cuijiahua.com/">静觅 | 博客</a>
+                </li>
+                <li>
+                    <a href="https://www.jianshu.com/">简书 | 创作</a>
+                </li>
+                <li>
+                    <a href="https://www.mi.com/">小米商城</a>
+                </li>
+            </ul>
+            {# 友情链接 ul end #}
+        </div>
+        {# 友情链接 end #}
+
+        {# 广告位02 #}
+        <div class="ad">
+            <h2 class="hometitle"><i class="fa fa-th-list"></i> 广而告之</h2>
+            <a href="http://www.asc.jx.cn/" target="_blank" class="ad-a">
+                <img src="{% static 'index/images/ad_img/jxlg.png' %}">
+                <span class="imginfo"
+                      style="bottom: 2%;color: white;font-size: 1.25rem;z-index: auto;">皇家理工应科院欢迎您</span>
+            </a>
+        </div>
+        {# 广告位 end #}
+    </aside>
+    {# 侧边栏信息 end #}
+
+{% endblock %}
+
+{# 其他内容，比如cd-top #}
+{% block footer_sub %}
+    <ul id="scroll">
+        {# 向上 #}
+        <li class="lwd-cd-top">
+            <a href="#" style="background-color: #ff5e5c;">
+                <i class="fa fa-arrow-up"></i>
+            </a>
+        </li>
+        {# 向下 #}
+        <li class="lwd-cd-bottom">
+            <a href="#" style="background-color: #ff9531;">
+                <i class="fa fa-arrow-down"></i>
+            </a>
+        </li>
+
+        <li>
+            <input type="button" name="" id="" value="简" style="background-color: burlywood" onclick="zh_tran('s');"/>
+        </li>
+
+        {# 繁体 #}
+        <li>
+            <input type="button" name="" id="" value="繁" style="background-color: #aec534;" onclick="zh_tran('t');"/>
+        </li>
+
+        {# 微信 #}
+        <li class="lwd-scroll-wechat">
+            <a href="#" style="background-color: #3caf33;">
+                <i class="fa fa-wechat"></i>
+            </a>
+            <img src="{% static 'index/images/about/lwd_wx_two_code.jpg' %}"/>
+        </li>
+    </ul>
+{% endblock %}
+
+{#导入额外的js#}
+{% block EXTJS %}
+
+    <script src="{% static 'plugins/editor.md-master/lib/marked.min.js' %}"></script>
+    <script src="{% static 'plugins/editor.md-master/lib/prettify.min.js' %}"></script>
+
+    <script src="{% static 'plugins/editor.md-master/lib/raphael.min.js' %}"></script>
+    <script src="{% static 'plugins/editor.md-master/lib/underscore.min.js' %}"></script>
+    <script src="{% static 'plugins/editor.md-master/lib/sequence-diagram.min.js' %}"></script>
+    <script src="{% static 'plugins/editor.md-master/lib/flowchart.min.js' %}"></script>
+    <script src="{% static 'plugins/editor.md-master/lib/jquery.flowchart.min.js' %}"></script>
+
+    <script src="{% static 'plugins/editor.md-master/editormd.js' %}"></script>
+
+    <script src="{% static 'blog_detail/js/blog_detail.js' %}" type="text/javascript" charset="utf-8"></script>
+
+
+    {# 文章渲染 #}
+    <script type="text/javascript">
+        $(function () {
+            var testEditormdView;
+            testEditormdView = editormd.markdownToHTML("lwd-blog-content", {
+                htmlDecode: "style,script,iframe",  // you can filter tags decode
+                emoji: true,
+                taskList: true,
+                tex: true,  // 默认不解析
+                flowChart: true,  // 默认不解析
+                sequenceDiagram: true,  // 默认不解析
+            });
+        });
+
+        window.onload = function () {
+            // 核对关注
+            check_follow($(".author-info>.name").text());
+            // 核对喜欢
+            check_like(article_id = '{{ article.a_id }}');
+            // 核对收藏
+            check_collect(article_id = '{{ article.a_id }}');
+
+        };
+
+        // 点击关注
+        $("#follow-other-user span").on("click", function () {
+            add_follow($(this).text());
+        });
+
+        // 点击 喜欢 事件
+        $("#lwd-blog-detail-like").on("click", function () {
+            add_like($(this), '{{ article.a_id }}');
+        });
+
+        // 点击 收藏 事件
+        $("#lwd-blog-detail-collect").on("click", function () {
+            add_collect($(this), '{{ article.a_id }}');
+        });
+
+
+    </script>
+
+{% endblock %}

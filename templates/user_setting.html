@@ -1,0 +1,882 @@
+{% load static %}
+{% load blog_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    {# 头部元信息 #}
+    <meta name="keywords" content="李易阳，个人博客 | 问世间情为何物 直教人生死相许">
+    <meta name="description" content="李易阳，个人博客，一个提供编程技术相关文章的美男子"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {# 标题图标 #}
+    <link rel="icon" href="{% static 'base/images/blog_title.ico' %}" type="image/x-icon">
+    <title>Lwd's Blog | 用户设置</title>
+
+    {# 导入字体图标 #}
+    <link rel="stylesheet" type="text/css" href="{% static 'base/css/font_awesome/css/font-awesome.min.css' %}"/>
+
+    {#  导入bootstrap.min.css  #}
+    <link rel="stylesheet" type="text/css" href="{% static 'base/css/bootstrap.min.css' %}"/>
+
+    {# 导入自定义样式 #}
+    {# 每个页面共有样式 #}
+    <link rel="stylesheet" type="text/css" href="{% static 'base/css/base.css' %}"/>
+    {# 首页样式 #}
+    {#		<link href="../css/index.css" rel="stylesheet">#}
+
+    {#  导入本页面自定义样式  #}
+    <link rel="stylesheet" type="text/css" href="{% static 'user_setting/css/user_setting.css' %}"/>
+
+    {# 不同屏幕尺寸下的样式 #}
+    <link rel="stylesheet" type="text/css" href="{% static 'base/css/fit_size.css' %}"/>
+
+    {# 导入剪裁图片的css #}
+    <link rel="stylesheet" href="{% static 'plugins/cropperjs-master/dist/cropper.css' %}">
+
+    <style type="text/css">
+        .classify_general_back_home:hover {
+            color: #0077DD;
+        }
+
+        .modal.fade.in {
+            top: 50px;
+        }
+
+
+        .lwd-img-container {
+            margin: 20px auto;
+            max-width: 640px;
+        }
+
+        .label {
+            cursor: pointer;
+        }
+
+        .progress {
+            display: none;
+            margin-bottom: 1rem;
+        }
+
+        .alert {
+            display: none;
+        }
+
+        .img-container img {
+            max-width: 100%;
+        }
+
+        .cropper-view-box,
+        .cropper-face {
+            border-radius: 50%;
+        }
+
+
+    </style>
+</head>
+
+<body>
+{# 头部标记header #}
+<header id="header">
+    {# 导航栏--内容 #}
+    <div class="header-navigation">
+        <nav>
+            {# 导航栏内容--左边--logo #}
+            <div class="logo">
+                <a href="{% url 'lwd:index' %}">❤Lwd's Blog❤</a>
+            </div>
+
+            {# 自动折叠三条横杠 #}
+            <h2 id="mnavh"><span class="navicon"></span></h2>
+
+            {# 首页，等内容 #}
+            <ul id="starlist">
+                {#  首页  #}
+                <li>
+                    <a href="{% url 'lwd:index' %}"><i class="fa fa-home fa-fw"></i> Home</a>
+                </li>
+
+                {# Python编程 #}
+                <li class="menu">
+                    <a href="#"><i class="fa fa-paypal"></i> Python</a>
+                    <ul class="sub">
+                        {% get_python_category as ptyon_category_list %}
+                        {% for category_name in ptyon_category_list %}
+                                <li>
+                                    <a href="{% url 'lwd:article_category' category_name.id %}">{{ category_name.category_name }}</a>
+                                </li>
+                        {% empty %}
+                            <li><a href="#">暂无分类</a></li>
+                        {% endfor %}
+                    </ul>
+                    {#  python sub end  #}
+                </li>
+
+                {# 技术分享 #}
+                <li class="menu">
+                    <a href="#"><i class="fa fa-simplybuilt"></i> Share</a>
+                    <ul class="sub">
+                        {% get_share_category as share_category_list %}
+                        {% for category_name in share_category_list %}
+                                <li>
+                                    <a href="{% url 'lwd:article_category' category_name.id %}">{{ category_name.category_name }}</a>
+                                </li>
+                        {% empty %}
+                            <li><a href="#">暂无分类</a></li>
+                        {% endfor %}
+                    </ul>
+                </li>
+
+                {# 其他分类 #}
+                <li class="menu">
+                    <a href="#"><i class="fa fa-modx"></i> Other</a>
+                    <ul class="sub">
+                        {% get_other_category as other_category_list %}
+                        {% for category_name in other_category_list %}
+                            <li>
+                                <a href="{% url 'lwd:article_category' category_name.id %}">{{ category_name.category_name }}</a>
+                            </li>
+                        {% empty %}
+                            <li><a href="#">暂无分类</a></li>
+                        {% endfor %}
+
+                    </ul>
+                </li>
+
+                {#  用户信息  #}
+                {# 用户信息 #}
+                <li class="user-info-menu">
+                    <a href="#"><img src="{{ MEDIA_URL }}{{ user_token.u_img }}" alt="" title=""></a>
+                    <ul class="user-info-sub">
+                        <li>
+                            <i class="fa fa-user"></i>
+                            <a href="{% url 'lwd:user_home' user_token.u_id %}"
+                               onclick="publish_dfrat_session_storage('publish')"> 我的主页</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-star"></i>
+                            <a href="{% url 'lwd:collect_like' user_token.u_id %}"
+                               onclick="collect_like_session_storage('collect')"> 收藏的文章</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-heart"></i>
+                            <a href="{% url 'lwd:collect_like' user_token.u_id %}"
+                               onclick="collect_like_session_storage('like')"> 喜欢的文章</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-list-ol"></i>
+                            <a href="#"> 文章分类</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-cog"></i>
+                            <a href="{% url 'lwd:user_setting' user_token.u_id %}"> 设置</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-hand-o-right"></i>
+                            <a href="{% url 'lwd:quit' %}"> 退出</a>
+                        </li>
+                    </ul>
+                </li>
+
+                {#  写博客  #}
+                <li>
+                    <a id="lwd-write-article" href="{% url 'lwd:write' %}"><i class="fa fa-pencil-square-o"></i> 写博客</a>
+                </li>
+            </ul>
+            {#  starlist end  #}
+        </nav>
+    </div>
+</header>
+{# end header #}
+
+
+{#  设置主题内容开始  #}
+<div class="container setting">
+    <div class="row">
+        {#  侧边框  #}
+        <div class="setting-aside">
+            <ul>
+                {#  基础设置  #}
+                <li class="setting-active">
+                    <a href="#">
+                        <div class="setting-ico">
+                            <i class="fa fa-list-ul"></i>
+                        </div>
+                        <span>基础设置</span>
+                    </a>
+                </li>
+                {#  个人资料  #}
+                <li>
+                    <a href="#">
+                        <div class="setting-ico">
+                            <i class="fa fa-vcard"></i>
+                        </div>
+                        <span>个人资料</span>
+                    </a>
+                </li>
+                {#  账号管理  #}
+                <li>
+                    <a href="#">
+                        <div class="setting-ico">
+                            <i class="glyphicon glyphicon-cog"></i>
+                        </div>
+                        <span>账号管理</span>
+                    </a>
+                </li>
+                {#  黑名单  #}
+                <li>
+                    <a href="#">
+                        <div class="setting-ico">
+                            <i class="fa fa-user-times"></i>
+                        </div>
+                        <span>黑名单</span>
+                    </a>
+                </li>
+                {#  赞赏设置  #}
+                <li>
+                    <a href="#">
+                        <div class="setting-ico">
+                            <i class="glyphicon glyphicon-jpy"></i>
+                        </div>
+                        <span>赞赏设置</span>
+                    </a>
+                </li>
+            </ul>
+            {# 基础设置，个人资料 侧边栏 等等 ul end  #}
+        </div>
+        {#  侧边框setting-aside end #}
+
+
+        {#  基础设置  #}
+        <div id="basic-setting" class="col-xs-16 col-xs-offset-8 main">
+            {#  table开始  #}
+            <table>
+                <thead>
+                <tr style="border: none;">
+                    <th class="setting-head responsive-head"></th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody class="base">
+
+                {#  第一行 头像  #}
+                <tr>
+                    <td class="setting-title">修改头像</td>
+                    <td>
+                        <label class="label" data-toggle="tooltip">
+                            <img class="setting-avatar" id="avatar"
+                                 src="{{ MEDIA_URL }}{{ user_token.u_img }}" alt="avatar">
+                            <input type="file" class="sr-only" id="input" name="lwd-image-file" accept="image/*">
+                        </label>
+
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                                 aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                0%
+                            </div>
+                        </div>
+
+                        <div class="alert" role="alert"></div>
+
+                        <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel"
+                             aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalLabel">图片裁剪</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true"> X </span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="img-container">
+                                            <img id="image">
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">取消
+                                        </button>
+                                        <button type="button" class="btn btn-primary" id="crop">确认</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+
+                </tr>
+                {#  头像结束  #}
+
+
+                {#  第二行 昵称  #}
+                <tr>
+                    <td class="setting-title">
+                        昵称
+                    </td>
+
+                    <td>
+                        <input id="user-name-setting" type="text" placeholder="请输入昵称" value="{{ user_token.u_name }}">
+                    </td>
+
+
+                </tr>
+                {#  昵称结束  #}
+
+                {#  第三行 账号为手机号  #}
+                <tr>
+                    <td class="setting-title">账号</td>
+                    <td>
+                        {{ user_token.u_account }}
+                    </td>
+                </tr>
+                {#  账号 手机结束  #}
+
+                {#  第四行 电子邮件  #}
+                <tr>
+                    <td class="setting-title">电子邮件</td>
+                    <td class="setted" id="email-setted">
+                        <div>{{ user_token.u_email }}</div>
+                        <i class="glyphicon glyphicon-ok"></i>
+                        <span>已验证</span>
+                        <a class="cancel-bind">解除绑定</a>
+                    </td>
+                </tr>
+                {#  电子邮件结束  #}
+
+                {#  第五行 语言设置  #}
+                <tr>
+                    <td class="setting-title setting-verticle">语言设置</td>
+                    <td>
+                        {# 在这里需要说明一下，必须是从数据库中取出数据判断是否是存的是简体，如果是简体，那么用js给radio添加checked #}
+                        {% if user_token.u_is_simple %}
+                            {#  中文简体  #}
+                            <div class="col-xs-4">
+                                <input type="radio" name="language" value="1" checked="checked">
+                                <span>中文简体</span>
+                            </div>
+
+                            {#  中文繁体  #}
+                            <div class="col-xs-4">
+                                <input type="radio" name="language" value="0">
+                                <span>中文繁体</span>
+                            </div>
+                        {% else %}
+                            {#  中文简体  #}
+                            <div class="col-xs-4">
+                                <input type="radio" name="language" value="1">
+                                <span>中文简体</span>
+                            </div>
+
+                            {#  中文繁体  #}
+                            <div class="col-xs-4">
+                                <input type="radio" name="language" value="0" checked="checked">
+                                <span>中文繁体</span>
+                            </div>
+
+                        {% endif %}
+                    </td>
+                </tr>
+                {#  语言设置结束  #}
+
+                </tbody>
+            </table>
+            {#  table end  #}
+            {#  保存  #}
+            {#            <input id="setting-basic-save-btn" type="button" class="btn btn-success setting-save" value="保存">#}
+            <button id="setting-basic-save-btn" class="btn btn-success setting-save" data-target=".bs-example-modal-sm"
+                    data-toggle="modal">保存
+            </button>
+            {# 模态框 #}
+            <div id="basic-setting-modal" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog"
+                 aria-labelledby="mySmallModalLabel">
+                <div class="modal-dialog modal-sm" role="document">
+                    {# 模态框内容 #}
+                    <div class="modal-content">
+                        {# 模态框头部 #}
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                    aria-hidden="true"> X </span></button>
+                            <h4 class="modal-title" id="mySmallModalLabel">Tips</h4>
+                        </div>
+                        {# 模态框身体 #}
+                        <div class="modal-body" id="modal-body-error">
+                        </div>
+                    </div>
+                    {# modal content #}
+                </div>
+                {# modal dialog #}
+            </div>
+            {# modal end #}
+        </div>
+
+        {#  个人资料  #}
+        <div id="profile-setting" class="col-xs-16 col-xs-offset-8 main">
+            <table>
+                <thead>
+                <tr style="border: none;">
+                    <th class="setting-head"></th>
+                    <th></th>
+                </tr>
+                </thead>
+
+                {#  个人信息  #}
+                <tbody class="information">
+                {#  性别  #}
+                <tr>
+                    <td class="top-line setting-title setting-verticle">
+                        性别
+                    </td>
+                    <td class="top-line">
+                        {% ifequal user_token.u_sex '0' %}
+                            <input type="radio" name="sex" checked="checked" value="0"> <span>男</span>
+                            <input type="radio" name="sex" value="1"> <span>女</span>
+                            <input type="radio" name="sex" value="2"> <span>保密</span>
+                        {% endifequal %}
+                        {% ifequal user_token.u_sex '1' %}
+                            <input type="radio" name="sex" value="0"> <span>男</span>
+                            <input type="radio" name="sex" checked="checked" value="1"> <span>女</span>
+                            <input type="radio" name="sex" value="2"> <span>保密</span>
+                        {% endifequal %}
+                        {% ifequal user_token.u_sex '2' %}
+                            <input type="radio" name="sex" value="0"> <span>男</span>
+                            <input type="radio" name="sex" value="1"> <span>女</span>
+                            <input type="radio" name="sex" checked="checked" value="2"> <span>保密</span>
+                        {% endifequal %}
+
+
+                    </td>
+                </tr>
+                {#  性别结束  #}
+
+
+                {#  个人简介  #}
+                <tr>
+                    <td class="setting-title pull-left">个人简介</td>
+                    <td>
+                        <form>
+                            <textarea id="personal-intro" placeholder="填写你的个人简介">{{ user_token.u_intro }}</textarea>
+                        </form>
+                    </td>
+                </tr>
+                {#  个人简介结束  #}
+
+                {#  个人网址  #}
+                <tr>
+                    <td class="setting-title pull-left setting-input">
+                        个人网站
+                    </td>
+                    <td>
+                        <form>
+                            <input id="personal-website" type="text" name="website" value="{{ user_token.u_website }}" placeholder="http://你的网址">
+                            <p class="pull-right">填写后会在个人主页显示图标</p>
+                        </form>
+                    </td>
+                </tr>
+                {#  个人网址 end  #}
+
+
+                {#  微信二维码  #}
+                <tr>
+                    <td class="setting-title">微信二维码</td>
+                    <td class="weixin-qrcode">
+                        <input type="file" class="hide">
+                        <a class="btn btn-hollow"><input type="file" class="hide">更换图片</a>
+                        <p class="pull-right">上传后会在个人主页显示图标</p>
+                    </td>
+                </tr>
+                {#  微信二维码结束  #}
+
+                </tbody>
+            </table>
+            <button id="personal-save-btn" class="btn btn-success setting-save" data-toggle="modal"
+                    data-target="#personal-modal">保存
+            </button>
+            {# 模态框 #}
+            <div class="modal fade" id="personal-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                    aria-hidden="true"> X </span></button>
+                            <h4 class="modal-title" id="myModalLabel1">Tips</h4>
+                        </div>
+                        <div class="modal-body" id="modal-body-error-1">
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        {#  个人资料设置 end  #}
+
+        {#  账号管理  #}
+        <div id="account-setting" class="col-xs-16 col-xs-offset-8 main">
+            <table>
+                <thead>
+                <tr style="border: none;">
+                    <th class="setting-head"></th>
+                    <th></th>
+                </tr>
+                </thead>
+
+                {#  修改密码  #}
+                <tr>
+                    <td class="setting-title pull-left setting-input">
+                        修改密码
+                    </td>
+                    <td>
+                        <form>
+                            <input id="pwd1" type="text" name="password" placeholder="请输入新密码">
+                            <input id="pwd2" type="text" name="password" placeholder="确认密码">
+                            <button id="account-pwd-save-btn" type="button" class="btn btn-success setting-save"
+                                    data-toggle="modal" data-target="#myModal2"
+                                    style="margin-top: 10px;margin-bottom: 10px;">
+                                确认修改
+                            </button>
+                            {# 模态框 #}
+                            <div class="modal fade" id="myModal2" tabindex="-1" role="dialog"
+                                 aria-labelledby="myModalLabel2">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true"></span>X
+                                            </button>
+                                            <h4 class="modal-title" id="myModalLabel2">Tips</h4>
+                                        </div>
+                                        <div class="modal-body" id="modal-body-error-2"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </form>
+                    </td>
+                </tr>
+                {#  修改密码end  #}
+            </table>
+
+            {#  删除用户(永久)  #}
+            <div class="delete-account-content">
+                <a class="show-button">
+                    删除账户
+                    <i class="fa fa-angle-down"></i>
+                </a>
+
+                {#  点击 删除账号 之后的详情  #}
+                <div class="content">
+                    <h4>永久删除帐号</h4>
+                    <ul>
+                        <li>
+                            如果你不小心创建出了多余的帐号，或在绑定帐号的时候提示帐号被占用，你可以咨询<a href="index.html" class="lyy">李易阳(博客开发者)</a>后获得相关帮助。
+                        </li>
+
+                        <li>
+                            如果你对**Lwd's Blog**上的某些内容、功能不满意，你可以在首页找到<a href="index.html" class="lyy">李易阳(博客开发者)</a>的联系方式。
+                        </li>
+
+                        <li>删除帐号前，请确保已经没有任何公开或私密文章，且钱包中全部余额已清零。</li>
+
+                        <li>友情Tips：删除帐号是不可逆的操作，删除后将无法恢复。</li>
+                    </ul>
+
+                    <a class="btn btn-hollow">保留我的帐号</a>
+                    <button class="btn btn-delete" data-toggle="modal" data-target="#myModal3">&nbsp;&nbsp删除帐号&nbsp;&nbsp;</button>
+
+                    {# Modal #}
+                    <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel3">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                            aria-hidden="true"> X </span></button>
+                                    <h4 class="modal-title" id="myModalLabel3">友情提示</h4>
+                                </div>
+                                <div class="modal-body" id="modal-body-error-3" style="color: red">
+                                    确定要删除账号？
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                    <button id="delete-my-account" type="button" class="btn btn-primary">确定</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        {#  账号管理 end  #}
+
+        {#  黑名单  #}
+        <div id="black-name" class="col-xs-16 col-xs-offset-8 main">
+            <div class="blacklist">
+                <div class="title">你可以在用户主页将用户加入你的黑名单。在你黑名单中的用户无法在你文章下评论，无法在其它评论中提到你，无法给你发送简信，自动从你的粉丝列表移除且无法再关注你。
+                </div>
+                <ul></ul>
+            </div>
+        </div>
+        {#  黑名单结束  #}
+
+        {#  赞赏设置  #}
+        <div id="reward-setting" class="col-xs-16 col-xs-offset-8 main">
+            <table>
+                <thead>
+                <tr>
+                    <th class="setting-head"></th>
+                    <th></th>
+                </tr>
+                </thead>
+
+                <tbody class="setting-pay">
+                {#  赞赏开启关闭  #}
+                <tr>
+                    <td class="setting-title pull-left setting-editor top-line">
+                        赞赏功能
+                    </td>
+
+                    <td class="top-line">
+                        <div class="col-xs-4">
+                            <input type="radio" name="reward" value="true"><span>开启</span>
+                        </div>
+                        <div class="col-xs-4">
+                            <input type="radio" name="reward" value="false"> <span>关闭</span>
+                        </div>
+                        <p>开启后赞赏按钮将出现在你的文章底部</p>
+                    </td>
+                </tr>
+                {#  赞赏描述  #}
+                <tr>
+                    <td class="setting-title pull-left setting-input">赞赏描述</td>
+                    <td><textarea row="3"></textarea></td>
+                </tr>
+                </tbody>
+            </table>
+            <input type="submit" class="btn btn-success setting-save" value="保存">
+        </div>
+        {#  赞赏设置结束  #}
+
+    </div>
+</div>
+{# 设置结束 end #}
+
+</body>
+
+
+<script src="{% static 'base/js/jquery.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'base/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'base/js/hc-sticky.js' %}"></script>
+<script src="{% static 'base/js/base.js' %}"></script>
+
+
+{#  本页面js  #}
+<script src="{% static 'user_setting/js/user_setting.js' %}" type="text/javascript" charset="utf-8"></script>
+
+{# cropper.js #}
+<script type="text/javascript" src="{% static 'plugins/cropperjs-master/dist/cropper.js' %}"></script>
+
+{# 上传头像配置 #}
+<script>
+    window.addEventListener('DOMContentLoaded', function () {
+        var avatar = document.getElementById('avatar');
+        var image = document.getElementById('image');
+        var input = document.getElementById('input');
+        var $progress = $('.progress');
+        var $progressBar = $('.progress-bar');
+        var $alert = $('.alert');
+        var $modal = $('#modal');
+        var cropper;
+
+        {#$('[data-toggle="tooltip"]').tooltip();#}
+
+        input.addEventListener('change', function (e) {
+            var files = e.target.files;
+
+            var done = function (url) {
+                input.value = '';
+                image.src = url;
+                $alert.hide();
+                $modal.modal('show');
+            };
+            var reader;
+            var file;
+            var url;
+
+            if (files && files.length > 0) {
+                file = files[0];
+                url = window.URL.createObjectURL(file);
+                if (url) {
+                    done(url);
+                } else if (FileReader) {
+                    reader = new FileReader();
+                    reader.onload = function (e) {
+                        done(reader.result);
+                    };
+                    reader.readAsDataURL(file);
+                }
+            }
+        });
+
+        $modal.on('shown.bs.modal', function () {
+            cropper = new Cropper(image, {
+                aspectRatio: 1,
+                viewMode: 3,
+            });
+        }).on('hidden.bs.modal', function () {
+            cropper.destroy();
+            cropper = null;
+        });
+
+        document.getElementById('crop').addEventListener('click', function () {
+            var initialAvatarURL;
+            var canvas;
+
+            $modal.modal('hide');
+
+            if (cropper) {
+                canvas = cropper.getCroppedCanvas({width: 160, height: 160});
+                {# 头像的初始值src #}
+                initialAvatarURL = avatar.src;
+                {#console.log(initialAvatarURL, "dk");#}
+                avatar.src = canvas.toDataURL();
+                $progress.show();
+                $alert.removeClass('alert-success alert-warning');
+
+
+                canvas.toBlob(function (blob) {
+                    var formData = new FormData();
+                    {# 文件名字 #}
+                    var myDate = new Date().getTime();
+
+                    img_name = '{{ user_token.u_id }}' + '_' + myDate + '.jpg';
+                    console.log(img_name);
+                    formData.append('update_avatar', blob, img_name);
+                    $.ajax('/update_avatar/', {
+                        method: 'POST',
+                        data: formData,
+                        processData: false,
+                        contentType: false,
+
+                        xhr: function () {
+                            var xhr = new XMLHttpRequest();
+
+                            xhr.upload.onprogress = function (e) {
+                                var percent = '0';
+                                var percentage = '0%';
+
+                                if (e.lengthComputable) {
+                                    percent = Math.round((e.loaded / e.total) * 100);
+                                    percentage = percent + '%';
+                                    $progressBar.width(percentage).attr('aria-valuenow', percent).text(percentage);
+                                }
+                            };
+
+                            return xhr;
+                        },
+
+                        success: function () {
+                            $alert.show().addClass('alert-success').text('Upload success');
+                            console.log(avatar.src, "ds")
+                        },
+
+                        error: function () {
+                            avatar.src = initialAvatarURL;
+                            $alert.show().addClass('alert-warning').text('Upload error');
+                        },
+
+                        complete: function () {
+                            $progress.hide();
+                        },
+                    });
+                });
+            }
+        });
+    });
+
+
+    window.onload = function () {
+        {# BASIC设置 #}
+        $("#setting-basic-save-btn").on("click", function () {
+            var u_name = $('#user-name-setting').val();
+            var u_id = '{{ user_token.u_id }}';
+            var u_is_simple;
+            var obj1_language = document.getElementsByName("language");
+
+            for (var i = 0; i < obj1_language.length; i++) {
+                if (obj1_language[i].checked) {
+                    console.log(obj1_language[i].value);
+                    u_is_simple = obj1_language[i].value
+                }
+            }
+            update_basic_setting(u_name, u_id, u_is_simple);
+        });
+
+        {# 个人资料 #}
+        $("#personal-save-btn").on("click", function () {
+            var u_id = '{{ user_token.u_id }}';
+            var sex;
+            var intro = $("#personal-intro").val();
+            console.log(intro);
+            var website = $("#personal-website").val();
+
+            var obj1_sex = document.getElementsByName("sex");
+            for (var i = 0; i < obj1_sex.length; i++) {
+                if (obj1_sex[i].checked) {
+                    console.log(obj1_sex[i].value);
+                    sex = obj1_sex[i].value
+                }
+            }
+            update_personal_setting(sex, intro, website, u_id)
+
+        });
+
+        {# 账号管理 #}
+        {# 1.修改密码 #}
+        $("#account-pwd-save-btn").on("click", function () {
+            var u_id = '{{ user_token.u_id }}';
+            {# 获取密码的值 #}
+            var pwd1 = $("#pwd1").val();
+            {# 确认密码 #}
+            var pwd2 = $("#pwd2").val();
+            {#console.log(pwd1)#}
+            if (pwd1 && pwd2) {
+                if (pwd1 == pwd2) {
+                    if (pwd1.length >= 6) {
+                        update_pwd(pwd1, u_id);
+                    } else {
+                        $("#modal-body-error-2").html("密码长度不小于6").css("color", "red");
+                    }
+
+                } else {
+                    $("#modal-body-error-2").html("两次输入密码不一致").css("color", "red");
+                }
+            } else {
+                $("#modal-body-error-2").html("请输入密码").css("color", "red");
+            }
+        });
+        {# 2.删除账号 #}
+        $("#delete-my-account").on("click", function () {
+            $.post('/delete_account/', {}, function (response) {
+                if (response['status']==='1'){
+                    $("#modal-body-error-3").html("删除账户成功，3秒后跳转首页...").css("color", "red");
+            setTimeout(function () {
+                console.log(1);
+                window.location.href = "/";
+            }, 3000);
+                }
+            })
+        })
+
+
+    }
+
+
+
+</script>
+
+
+</html>

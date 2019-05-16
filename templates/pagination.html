@@ -1,0 +1,49 @@
+{% load static %}
+
+
+<div class="pagelist">
+    <ul>
+        {% if article_page %}
+            {% if article_page.has_previous %}
+                <li>
+                    <a href="?page={{ article_page.previous_page_number }}">
+                        <i class="fa fa-arrow-left"></i>
+                    </a>
+                </li>
+            {% else %}
+                <li style="background-color: #f9f2f4">
+                    <a href="" title="没有上一页" onclick="return false;">
+                        <i class="fa fa-arrow-left"></i>
+                    </a>
+                </li>
+            {% endif %}
+
+            {% for page in article_page.paginator.page_range %}
+                {% if article_page.number == page %}
+                    <li class="active">
+                        <a href="?page={{ page }}"> {{ page }} </a>
+                    </li>
+                {% else %}
+                    <li>
+                        <a href="?page={{ page }}"> {{ page }} </a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+
+            {% if article_page.has_next %}
+                <li>
+                    <a href="?page={{ article_page.next_page_number }}" aria-label="Next">
+                        <i class="fa fa-arrow-right"></i>
+                    </a>
+                </li>
+            {% else %}
+                <li style="background-color: #f9f2f4">
+                    <a href="" title="没有下一页" onclick="return false;">
+                        <i class="fa fa-arrow-right"></i>
+                    </a>
+                </li>
+            {% endif %}
+        {% endif %}
+    </ul>
+
+</div>

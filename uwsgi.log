@@ -1,0 +1,1026 @@
+*** Starting uWSGI 2.0.18 (64bit) on [Mon May  6 12:29:23 2019] ***
+compiled with version: 7.3.0 on 06 May 2019 02:45:11
+os: Linux-4.15.0-29-generic #31-Ubuntu SMP Tue Jul 17 15:39:52 UTC 2018
+nodename: VM-0-7-ubuntu
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /var/www/Python_Blog
+writing pidfile to uwsgi.pid
+detected binary path: /home/ubuntu/.virtualenvs/django/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /var/www/Python_Blog
+your processes number limit is 7102
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:8010 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:44109 (port auto-assigned) fd 3
+Python version: 3.6.7 (default, Oct 22 2018, 11:32:17)  [GCC 8.2.0]
+Python main interpreter initialized at 0x5630d1e187e0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 208448 bytes (203 KB) for 4 cores
+*** Operational MODE: threaded ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x5630d1e187e0 pid: 15038 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 15038)
+spawned uWSGI worker 1 (pid: 15040, cores: 4)
+spawned uWSGI http 1 (pid: 15041)
+None token
+[pid: 15040|app: 0|req: 1/1] 111.79.226.82 () {36 vars in 637 bytes} [Mon May  6 12:30:59 2019] GET /lwd/ => generated 19424 bytes in 989 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 15040|app: 0|req: 3/2] 111.79.226.82 () {36 vars in 635 bytes} [Mon May  6 12:31:00 2019] GET /static/base/css/swiper.min.css => generated 104 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 2)
+[pid: 15040|app: 0|req: 4/3] 111.79.226.82 () {36 vars in 623 bytes} [Mon May  6 12:31:00 2019] GET /static/base/css/base.css => generated 98 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 2)
+[pid: 15040|app: 0|req: 5/4] 111.79.226.82 () {36 vars in 631 bytes} [Mon May  6 12:31:00 2019] GET /static/base/css/fit_size.css => generated 102 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 2)
+[pid: 15040|app: 0|req: 6/5] 111.79.226.82 () {36 vars in 625 bytes} [Mon May  6 12:31:00 2019] GET /static/base/css/reset.css => generated 99 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 15040|app: 0|req: 6/6] 111.79.226.82 () {36 vars in 681 bytes} [Mon May  6 12:31:00 2019] GET /static/base/css/font_awesome/css/font-awesome.min.css => generated 127 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 3)
+[pid: 15040|app: 0|req: 7/7] 111.79.226.82 () {36 vars in 627 bytes} [Mon May  6 12:31:00 2019] GET /static/index/css/index.css => generated 100 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 2)
+[pid: 15040|app: 0|req: 8/8] 111.79.226.82 () {36 vars in 616 bytes} [Mon May  6 12:31:00 2019] GET /static/base/js/jquery.min.js => generated 102 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 15040|app: 0|req: 10/9] 111.79.226.82 () {36 vars in 682 bytes} [Mon May  6 12:31:00 2019] GET /static/index/images/banner_img/banner01.png => generated 117 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 3)
+[pid: 15040|app: 0|req: 11/10] 111.79.226.82 () {36 vars in 682 bytes} [Mon May  6 12:31:00 2019] GET /static/index/images/banner_img/banner02.png => generated 117 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 15040|app: 0|req: 12/12] 111.79.226.82 () {36 vars in 682 bytes} [Mon May  6 12:31:00 2019] GET /static/index/images/banner_img/banner04.png => generated 117 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 3)
+[pid: 15040|app: 0|req: 12/12] 111.79.226.82 () {36 vars in 682 bytes} [Mon May  6 12:31:00 2019] GET /static/index/images/banner_img/banner03.png => generated 117 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 2)
+[pid: 15040|app: 0|req: 13/13] 111.79.226.82 () {36 vars in 668 bytes} [Mon May  6 12:31:00 2019] GET /static/index/images/about/my_img.jpg => generated 110 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 15040|app: 0|req: 14/14] 111.79.226.82 () {36 vars in 622 bytes} [Mon May  6 12:31:00 2019] GET /static/base/js/jquery.cookie.js => generated 105 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 15040|app: 0|req: 17/15] 111.79.226.82 () {36 vars in 622 bytes} [Mon May  6 12:31:00 2019] GET /static/base/js/bootstrap.min.js => generated 105 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 15040|app: 0|req: 17/16] 111.79.226.82 () {36 vars in 614 bytes} [Mon May  6 12:31:00 2019] GET /static/base/js/hc-sticky.js => generated 101 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 2)
+[pid: 15040|app: 0|req: 17/17] 111.79.226.82 () {36 vars in 616 bytes} [Mon May  6 12:31:00 2019] GET /static/base/js/swiper.min.js => generated 102 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 3)
+[pid: 15040|app: 0|req: 18/18] 111.79.226.82 () {36 vars in 612 bytes} [Mon May  6 12:31:00 2019] GET /static/base/js/language.js => generated 100 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 15040|app: 0|req: 19/19] 111.79.226.82 () {36 vars in 686 bytes} [Mon May  6 12:31:00 2019] GET /static/index/images/about/lwd_qq_two_code.jpg => generated 119 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 15040|app: 0|req: 20/20] 111.79.226.82 () {36 vars in 608 bytes} [Mon May  6 12:31:00 2019] GET /static/index/js/index.js => generated 98 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 2)
+[pid: 15040|app: 0|req: 23/21] 111.79.226.82 () {36 vars in 616 bytes} [Mon May  6 12:31:00 2019] GET /static/base/js/swiper.min.js => generated 102 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 3)
+[pid: 15040|app: 0|req: 23/22] 111.79.226.82 () {36 vars in 604 bytes} [Mon May  6 12:31:00 2019] GET /static/base/js/base.js => generated 96 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 15040|app: 0|req: 23/23] 111.79.226.82 () {36 vars in 612 bytes} [Mon May  6 12:31:00 2019] GET /static/base/js/lwd_time.js => generated 100 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 15040|app: 0|req: 24/24] 111.79.226.82 () {36 vars in 686 bytes} [Mon May  6 12:31:00 2019] GET /static/index/images/about/lwd_wx_two_code.jpg => generated 119 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 3)
+[pid: 15040|app: 0|req: 25/25] 111.79.226.82 () {36 vars in 666 bytes} [Mon May  6 12:31:00 2019] GET /static/index/images/ad_img/jxlg.png => generated 109 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 15040|app: 0|req: 26/26] 111.79.226.82 () {36 vars in 672 bytes} [Mon May  6 12:31:00 2019] GET /static/base/images/lwd_wx_two_code.jpg => generated 112 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 2)
+[pid: 15040|app: 0|req: 27/27] 111.79.226.82 () {36 vars in 614 bytes} [Mon May  6 12:31:00 2019] GET /static/base/js/hc-sticky.js => generated 101 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 15040|app: 0|req: 28/28] 111.79.226.82 () {36 vars in 702 bytes} [Mon May  6 12:31:01 2019] GET /static/index/images/ad_img/xiaomi_ad/xiaomi9_ad05.jpg => generated 127 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 3)
+[pid: 15040|app: 0|req: 30/29] 111.79.226.82 () {36 vars in 672 bytes} [Mon May  6 12:31:01 2019] GET /static/base/images/lwd_qq_two_code.jpg => generated 112 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 15040|app: 0|req: 30/30] 111.79.226.82 () {36 vars in 702 bytes} [Mon May  6 12:31:01 2019] GET /static/index/images/ad_img/xiaomi_ad/xiaomi9_ad04.jpg => generated 127 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 2)
+[pid: 15040|app: 0|req: 31/31] 111.79.226.82 () {36 vars in 702 bytes} [Mon May  6 12:31:01 2019] GET /static/index/images/ad_img/xiaomi_ad/xiaomi9_ad03.jpg => generated 127 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 15040|app: 0|req: 32/32] 111.79.226.82 () {36 vars in 612 bytes} [Mon May  6 12:31:01 2019] GET /static/base/js/language.js => generated 100 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 3)
+[pid: 15040|app: 0|req: 33/33] 111.79.226.82 () {36 vars in 702 bytes} [Mon May  6 12:31:01 2019] GET /static/index/images/ad_img/xiaomi_ad/xiaomi9_ad02.jpg => generated 127 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 15040|app: 0|req: 34/34] 111.79.226.82 () {36 vars in 702 bytes} [Mon May  6 12:31:01 2019] GET /static/index/images/ad_img/xiaomi_ad/xiaomi9_ad01.jpg => generated 127 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 2)
+[pid: 15040|app: 0|req: 35/35] 111.79.226.82 () {36 vars in 612 bytes} [Mon May  6 12:31:01 2019] GET /static/base/js/lwd_time.js => generated 100 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 15040|app: 0|req: 36/36] 111.79.226.82 () {36 vars in 604 bytes} [Mon May  6 12:31:01 2019] GET /static/base/js/base.js => generated 96 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 3)
+[pid: 15040|app: 0|req: 37/37] 111.79.226.82 () {36 vars in 608 bytes} [Mon May  6 12:31:01 2019] GET /static/index/js/index.js => generated 98 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 15040|app: 0|req: 38/38] 111.79.226.82 () {36 vars in 662 bytes} [Mon May  6 12:31:01 2019] GET /static/base/images/blog_title.ico => generated 107 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 2)
+None token
+[pid: 15040|app: 0|req: 39/39] 111.79.226.82 () {38 vars in 668 bytes} [Mon May  6 12:31:04 2019] GET /lwd/ => generated 19424 bytes in 15 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 15040|app: 0|req: 40/40] 111.79.226.82 () {36 vars in 681 bytes} [Mon May  6 12:31:04 2019] GET /static/base/css/font_awesome/css/font-awesome.min.css => generated 127 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 3)
+[pid: 15040|app: 0|req: 41/41] 111.79.226.82 () {36 vars in 635 bytes} [Mon May  6 12:31:04 2019] GET /static/base/css/swiper.min.css => generated 104 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 15040|app: 0|req: 42/42] 111.79.226.82 () {36 vars in 625 bytes} [Mon May  6 12:31:04 2019] GET /static/base/css/reset.css => generated 99 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 15040|app: 0|req: 43/43] 111.79.226.82 () {36 vars in 623 bytes} [Mon May  6 12:31:04 2019] GET /static/base/css/base.css => generated 98 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 15040|app: 0|req: 44/44] 111.79.226.82 () {36 vars in 631 bytes} [Mon May  6 12:31:04 2019] GET /static/base/css/fit_size.css => generated 102 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 15040|app: 0|req: 45/45] 111.79.226.82 () {36 vars in 627 bytes} [Mon May  6 12:31:04 2019] GET /static/index/css/index.css => generated 100 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 15040|app: 0|req: 46/46] 111.79.226.82 () {36 vars in 616 bytes} [Mon May  6 12:31:04 2019] GET /static/base/js/jquery.min.js => generated 102 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 3)
+[pid: 15040|app: 0|req: 47/47] 111.79.226.82 () {36 vars in 682 bytes} [Mon May  6 12:31:04 2019] GET /static/index/images/banner_img/banner03.png => generated 117 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 2)
+[pid: 15040|app: 0|req: 48/48] 111.79.226.82 () {36 vars in 682 bytes} [Mon May  6 12:31:04 2019] GET /static/index/images/banner_img/banner01.png => generated 117 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 2)
+[pid: 15040|app: 0|req: 50/49] 111.79.226.82 () {36 vars in 682 bytes} [Mon May  6 12:31:04 2019] GET /static/index/images/banner_img/banner04.png => generated 117 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 3)
+[pid: 15040|app: 0|req: 50/50] 111.79.226.82 () {36 vars in 622 bytes} [Mon May  6 12:31:04 2019] GET /static/base/js/bootstrap.min.js => generated 105 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 2)
+[pid: 15040|app: 0|req: 51/51] 111.79.226.82 () {36 vars in 682 bytes} [Mon May  6 12:31:04 2019] GET /static/index/images/banner_img/banner02.png => generated 117 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 15040|app: 0|req: 52/52] 111.79.226.82 () {36 vars in 622 bytes} [Mon May  6 12:31:04 2019] GET /static/base/js/jquery.cookie.js => generated 105 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 15040|app: 0|req: 53/53] 111.79.226.82 () {36 vars in 616 bytes} [Mon May  6 12:31:04 2019] GET /static/base/js/swiper.min.js => generated 102 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 3)
+[pid: 15040|app: 0|req: 55/54] 111.79.226.82 () {36 vars in 612 bytes} [Mon May  6 12:31:04 2019] GET /static/base/js/language.js => generated 100 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 15040|app: 0|req: 55/55] 111.79.226.82 () {36 vars in 614 bytes} [Mon May  6 12:31:04 2019] GET /static/base/js/hc-sticky.js => generated 101 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 2)
+[pid: 15040|app: 0|req: 56/56] 111.79.226.82 () {36 vars in 612 bytes} [Mon May  6 12:31:04 2019] GET /static/base/js/lwd_time.js => generated 100 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 15040|app: 0|req: 57/57] 111.79.226.82 () {36 vars in 604 bytes} [Mon May  6 12:31:04 2019] GET /static/base/js/base.js => generated 96 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 3)
+[pid: 15040|app: 0|req: 60/58] 111.79.226.82 () {36 vars in 608 bytes} [Mon May  6 12:31:05 2019] GET /static/index/js/index.js => generated 98 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 15040|app: 0|req: 61/59] 111.79.226.82 () {36 vars in 686 bytes} [Mon May  6 12:31:05 2019] GET /static/index/images/about/lwd_qq_two_code.jpg => generated 119 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 3)
+[pid: 15040|app: 0|req: 61/60] 111.79.226.82 () {36 vars in 622 bytes} [Mon May  6 12:31:05 2019] GET /static/base/js/bootstrap.min.js => generated 105 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 2)
+[pid: 15040|app: 0|req: 61/61] 111.79.226.82 () {36 vars in 668 bytes} [Mon May  6 12:31:05 2019] GET /static/index/images/about/my_img.jpg => generated 110 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 15040|app: 0|req: 63/62] 111.79.226.82 () {36 vars in 666 bytes} [Mon May  6 12:31:05 2019] GET /static/index/images/ad_img/jxlg.png => generated 109 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 3)
+[pid: 15040|app: 0|req: 63/63] 111.79.226.82 () {36 vars in 686 bytes} [Mon May  6 12:31:05 2019] GET /static/index/images/about/lwd_wx_two_code.jpg => generated 119 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 15040|app: 0|req: 64/64] 111.79.226.82 () {36 vars in 616 bytes} [Mon May  6 12:31:05 2019] GET /static/base/js/swiper.min.js => generated 102 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 2)
+[pid: 15040|app: 0|req: 66/65] 111.79.226.82 () {36 vars in 672 bytes} [Mon May  6 12:31:05 2019] GET /static/base/images/lwd_qq_two_code.jpg => generated 112 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 3)
+[pid: 15040|app: 0|req: 66/66] 111.79.226.82 () {36 vars in 702 bytes} [Mon May  6 12:31:05 2019] GET /static/index/images/ad_img/xiaomi_ad/xiaomi9_ad05.jpg => generated 127 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 15040|app: 0|req: 67/67] 111.79.226.82 () {36 vars in 672 bytes} [Mon May  6 12:31:05 2019] GET /static/base/images/lwd_wx_two_code.jpg => generated 112 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 15040|app: 0|req: 68/68] 111.79.226.82 () {36 vars in 702 bytes} [Mon May  6 12:31:05 2019] GET /static/index/images/ad_img/xiaomi_ad/xiaomi9_ad04.jpg => generated 127 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 2)
+[pid: 15040|app: 0|req: 69/69] 111.79.226.82 () {36 vars in 614 bytes} [Mon May  6 12:31:05 2019] GET /static/base/js/hc-sticky.js => generated 101 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 3)
+[pid: 15040|app: 0|req: 70/70] 111.79.226.82 () {36 vars in 702 bytes} [Mon May  6 12:31:05 2019] GET /static/index/images/ad_img/xiaomi_ad/xiaomi9_ad03.jpg => generated 127 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 15040|app: 0|req: 71/71] 111.79.226.82 () {36 vars in 702 bytes} [Mon May  6 12:31:05 2019] GET /static/index/images/ad_img/xiaomi_ad/xiaomi9_ad02.jpg => generated 127 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 15040|app: 0|req: 72/72] 111.79.226.82 () {36 vars in 702 bytes} [Mon May  6 12:31:05 2019] GET /static/index/images/ad_img/xiaomi_ad/xiaomi9_ad01.jpg => generated 127 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 2)
+[pid: 15040|app: 0|req: 73/73] 111.79.226.82 () {36 vars in 612 bytes} [Mon May  6 12:31:05 2019] GET /static/base/js/language.js => generated 100 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 3)
+[pid: 15040|app: 0|req: 74/74] 111.79.226.82 () {36 vars in 612 bytes} [Mon May  6 12:31:05 2019] GET /static/base/js/lwd_time.js => generated 100 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 15040|app: 0|req: 75/75] 111.79.226.82 () {36 vars in 604 bytes} [Mon May  6 12:31:05 2019] GET /static/base/js/base.js => generated 96 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 15040|app: 0|req: 76/76] 111.79.226.82 () {36 vars in 608 bytes} [Mon May  6 12:31:05 2019] GET /static/index/js/index.js => generated 98 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 2)
+None token
+[pid: 15040|app: 0|req: 77/77] 111.79.226.82 () {36 vars in 637 bytes} [Mon May  6 12:34:00 2019] GET /lwd/ => generated 19424 bytes in 16 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 3)
+[pid: 15040|app: 0|req: 78/78] 111.79.226.82 () {36 vars in 681 bytes} [Mon May  6 12:34:01 2019] GET /static/base/css/font_awesome/css/font-awesome.min.css => generated 127 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 15040|app: 0|req: 79/79] 111.79.226.82 () {36 vars in 635 bytes} [Mon May  6 12:34:01 2019] GET /static/base/css/swiper.min.css => generated 104 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 15040|app: 0|req: 80/80] 111.79.226.82 () {36 vars in 625 bytes} [Mon May  6 12:34:01 2019] GET /static/base/css/reset.css => generated 99 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 15040|app: 0|req: 81/81] 111.79.226.82 () {36 vars in 623 bytes} [Mon May  6 12:34:01 2019] GET /static/base/css/base.css => generated 98 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 15040|app: 0|req: 82/82] 111.79.226.82 () {36 vars in 631 bytes} [Mon May  6 12:34:01 2019] GET /static/base/css/fit_size.css => generated 102 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 15040|app: 0|req: 83/83] 111.79.226.82 () {36 vars in 627 bytes} [Mon May  6 12:34:01 2019] GET /static/index/css/index.css => generated 100 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 2)
+[pid: 15040|app: 0|req: 84/84] 111.79.226.82 () {36 vars in 682 bytes} [Mon May  6 12:34:01 2019] GET /static/index/images/banner_img/banner01.png => generated 117 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 2)
+[pid: 15040|app: 0|req: 86/85] 111.79.226.82 () {36 vars in 682 bytes} [Mon May  6 12:34:01 2019] GET /static/index/images/banner_img/banner03.png => generated 117 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 15040|app: 0|req: 87/87] 111.79.226.82 () {36 vars in 616 bytes} [Mon May  6 12:34:01 2019] GET /static/base/js/jquery.min.js => generated 102 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 2)
+[pid: 15040|app: 0|req: 87/87] 111.79.226.82 () {36 vars in 682 bytes} [Mon May  6 12:34:01 2019] GET /static/index/images/banner_img/banner04.png => generated 117 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 3)
+[pid: 15040|app: 0|req: 88/88] 111.79.226.82 () {36 vars in 668 bytes} [Mon May  6 12:34:01 2019] GET /static/index/images/about/my_img.jpg => generated 110 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 15040|app: 0|req: 89/89] 111.79.226.82 () {36 vars in 622 bytes} [Mon May  6 12:34:01 2019] GET /static/base/js/jquery.cookie.js => generated 105 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 15040|app: 0|req: 90/90] 111.79.226.82 () {36 vars in 682 bytes} [Mon May  6 12:34:01 2019] GET /static/index/images/banner_img/banner02.png => generated 117 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 2)
+[pid: 15040|app: 0|req: 91/91] 111.79.226.82 () {36 vars in 622 bytes} [Mon May  6 12:34:01 2019] GET /static/base/js/bootstrap.min.js => generated 105 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 3)
+[pid: 15040|app: 0|req: 92/92] 111.79.226.82 () {36 vars in 616 bytes} [Mon May  6 12:34:01 2019] GET /static/base/js/swiper.min.js => generated 102 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 15040|app: 0|req: 93/93] 111.79.226.82 () {36 vars in 614 bytes} [Mon May  6 12:34:01 2019] GET /static/base/js/hc-sticky.js => generated 101 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 15040|app: 0|req: 94/94] 111.79.226.82 () {36 vars in 612 bytes} [Mon May  6 12:34:01 2019] GET /static/base/js/language.js => generated 100 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 15040|app: 0|req: 95/95] 111.79.226.82 () {36 vars in 612 bytes} [Mon May  6 12:34:01 2019] GET /static/base/js/lwd_time.js => generated 100 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 3)
+[pid: 15040|app: 0|req: 96/96] 111.79.226.82 () {36 vars in 604 bytes} [Mon May  6 12:34:01 2019] GET /static/base/js/base.js => generated 96 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 15040|app: 0|req: 97/97] 111.79.226.82 () {36 vars in 608 bytes} [Mon May  6 12:34:01 2019] GET /static/index/js/index.js => generated 98 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 2)
+[pid: 15040|app: 0|req: 98/98] 111.79.226.82 () {36 vars in 686 bytes} [Mon May  6 12:34:01 2019] GET /static/index/images/about/lwd_qq_two_code.jpg => generated 119 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 2)
+[pid: 15040|app: 0|req: 99/99] 111.79.226.82 () {36 vars in 686 bytes} [Mon May  6 12:34:01 2019] GET /static/index/images/about/lwd_wx_two_code.jpg => generated 119 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 3)
+[pid: 15040|app: 0|req: 100/100] 111.79.226.82 () {36 vars in 622 bytes} [Mon May  6 12:34:01 2019] GET /static/base/js/jquery.cookie.js => generated 105 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 3)
+[pid: 15040|app: 0|req: 101/101] 111.79.226.82 () {36 vars in 666 bytes} [Mon May  6 12:34:01 2019] GET /static/index/images/ad_img/jxlg.png => generated 109 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 15040|app: 0|req: 102/102] 111.79.226.82 () {36 vars in 672 bytes} [Mon May  6 12:34:01 2019] GET /static/base/images/lwd_qq_two_code.jpg => generated 112 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 15040|app: 0|req: 103/103] 111.79.226.82 () {36 vars in 672 bytes} [Mon May  6 12:34:01 2019] GET /static/base/images/lwd_wx_two_code.jpg => generated 112 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 15040|app: 0|req: 104/104] 111.79.226.82 () {36 vars in 702 bytes} [Mon May  6 12:34:01 2019] GET /static/index/images/ad_img/xiaomi_ad/xiaomi9_ad05.jpg => generated 127 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 15040|app: 0|req: 105/105] 111.79.226.82 () {36 vars in 702 bytes} [Mon May  6 12:34:01 2019] GET /static/index/images/ad_img/xiaomi_ad/xiaomi9_ad04.jpg => generated 127 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 15040|app: 0|req: 106/106] 111.79.226.82 () {36 vars in 622 bytes} [Mon May  6 12:34:01 2019] GET /static/base/js/bootstrap.min.js => generated 105 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 15040|app: 0|req: 107/107] 111.79.226.82 () {36 vars in 702 bytes} [Mon May  6 12:34:01 2019] GET /static/index/images/ad_img/xiaomi_ad/xiaomi9_ad03.jpg => generated 127 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 3)
+[pid: 15040|app: 0|req: 108/108] 111.79.226.82 () {36 vars in 702 bytes} [Mon May  6 12:34:01 2019] GET /static/index/images/ad_img/xiaomi_ad/xiaomi9_ad02.jpg => generated 127 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 2)
+[pid: 15040|app: 0|req: 109/109] 111.79.226.82 () {36 vars in 702 bytes} [Mon May  6 12:34:01 2019] GET /static/index/images/ad_img/xiaomi_ad/xiaomi9_ad01.jpg => generated 127 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 15040|app: 0|req: 110/110] 111.79.226.82 () {36 vars in 616 bytes} [Mon May  6 12:34:01 2019] GET /static/base/js/swiper.min.js => generated 102 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 15040|app: 0|req: 111/111] 111.79.226.82 () {36 vars in 614 bytes} [Mon May  6 12:34:01 2019] GET /static/base/js/hc-sticky.js => generated 101 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 3)
+[pid: 15040|app: 0|req: 112/112] 111.79.226.82 () {36 vars in 612 bytes} [Mon May  6 12:34:01 2019] GET /static/base/js/language.js => generated 100 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 2)
+[pid: 15040|app: 0|req: 113/113] 111.79.226.82 () {36 vars in 612 bytes} [Mon May  6 12:34:01 2019] GET /static/base/js/lwd_time.js => generated 100 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 15040|app: 0|req: 114/114] 111.79.226.82 () {36 vars in 604 bytes} [Mon May  6 12:34:01 2019] GET /static/base/js/base.js => generated 96 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 15040|app: 0|req: 115/115] 111.79.226.82 () {36 vars in 608 bytes} [Mon May  6 12:34:01 2019] GET /static/index/js/index.js => generated 98 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 3)
+None token
+[pid: 15040|app: 0|req: 116/116] 111.79.226.82 () {38 vars in 668 bytes} [Mon May  6 12:34:15 2019] GET /lwd/ => generated 19424 bytes in 16 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 2)
+[pid: 15040|app: 0|req: 117/117] 111.79.226.82 () {36 vars in 681 bytes} [Mon May  6 12:34:15 2019] GET /static/base/css/font_awesome/css/font-awesome.min.css => generated 127 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 15040|app: 0|req: 118/118] 111.79.226.82 () {36 vars in 625 bytes} [Mon May  6 12:34:15 2019] GET /static/base/css/reset.css => generated 99 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 15040|app: 0|req: 119/119] 111.79.226.82 () {36 vars in 623 bytes} [Mon May  6 12:34:15 2019] GET /static/base/css/base.css => generated 98 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 15040|app: 0|req: 120/120] 111.79.226.82 () {36 vars in 635 bytes} [Mon May  6 12:34:15 2019] GET /static/base/css/swiper.min.css => generated 104 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 15040|app: 0|req: 121/121] 111.79.226.82 () {36 vars in 631 bytes} [Mon May  6 12:34:15 2019] GET /static/base/css/fit_size.css => generated 102 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 15040|app: 0|req: 122/122] 111.79.226.82 () {36 vars in 627 bytes} [Mon May  6 12:34:15 2019] GET /static/index/css/index.css => generated 100 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 3)
+[pid: 15040|app: 0|req: 123/123] 111.79.226.82 () {36 vars in 616 bytes} [Mon May  6 12:34:15 2019] GET /static/base/js/jquery.min.js => generated 102 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 3)
+[pid: 15040|app: 0|req: 125/124] 111.79.226.82 () {36 vars in 682 bytes} [Mon May  6 12:34:15 2019] GET /static/index/images/banner_img/banner04.png => generated 117 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 15040|app: 0|req: 127/126] 111.79.226.82 () {36 vars in 682 bytes} [Mon May  6 12:34:15 2019] GET /static/index/images/banner_img/banner01.png => generated 117 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 15040|app: 0|req: 127/126] 111.79.226.82 () {36 vars in 682 bytes} [Mon May  6 12:34:15 2019] GET /static/index/images/banner_img/banner02.png => generated 117 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 2)
+[pid: 15040|app: 0|req: 127/127] 111.79.226.82 () {36 vars in 682 bytes} [Mon May  6 12:34:15 2019] GET /static/index/images/banner_img/banner03.png => generated 117 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 3)
+[pid: 15040|app: 0|req: 128/128] 111.79.226.82 () {36 vars in 622 bytes} [Mon May  6 12:34:15 2019] GET /static/base/js/jquery.cookie.js => generated 105 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 15040|app: 0|req: 129/129] 111.79.226.82 () {36 vars in 622 bytes} [Mon May  6 12:34:15 2019] GET /static/base/js/bootstrap.min.js => generated 105 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 15040|app: 0|req: 130/130] 111.79.226.82 () {36 vars in 616 bytes} [Mon May  6 12:34:15 2019] GET /static/base/js/swiper.min.js => generated 102 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 2)
+[pid: 15040|app: 0|req: 131/131] 111.79.226.82 () {36 vars in 614 bytes} [Mon May  6 12:34:15 2019] GET /static/base/js/hc-sticky.js => generated 101 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 3)
+[pid: 15040|app: 0|req: 132/132] 111.79.226.82 () {36 vars in 612 bytes} [Mon May  6 12:34:15 2019] GET /static/base/js/language.js => generated 100 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 15040|app: 0|req: 133/133] 111.79.226.82 () {36 vars in 612 bytes} [Mon May  6 12:34:15 2019] GET /static/base/js/lwd_time.js => generated 100 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 15040|app: 0|req: 134/134] 111.79.226.82 () {36 vars in 604 bytes} [Mon May  6 12:34:15 2019] GET /static/base/js/base.js => generated 96 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 2)
+[pid: 15040|app: 0|req: 135/135] 111.79.226.82 () {36 vars in 608 bytes} [Mon May  6 12:34:15 2019] GET /static/index/js/index.js => generated 98 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 3)
+[pid: 15040|app: 0|req: 136/136] 111.79.226.82 () {36 vars in 668 bytes} [Mon May  6 12:34:15 2019] GET /static/index/images/about/my_img.jpg => generated 110 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 15040|app: 0|req: 137/137] 111.79.226.82 () {36 vars in 686 bytes} [Mon May  6 12:34:15 2019] GET /static/index/images/about/lwd_qq_two_code.jpg => generated 119 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 15040|app: 0|req: 138/138] 111.79.226.82 () {36 vars in 686 bytes} [Mon May  6 12:34:15 2019] GET /static/index/images/about/lwd_wx_two_code.jpg => generated 119 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 2)
+[pid: 15040|app: 0|req: 139/139] 111.79.226.82 () {36 vars in 672 bytes} [Mon May  6 12:34:15 2019] GET /static/base/images/lwd_wx_two_code.jpg => generated 112 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 2)
+[pid: 15040|app: 0|req: 140/140] 111.79.226.82 () {36 vars in 666 bytes} [Mon May  6 12:34:15 2019] GET /static/index/images/ad_img/jxlg.png => generated 109 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 15040|app: 0|req: 142/141] 111.79.226.82 () {36 vars in 702 bytes} [Mon May  6 12:34:15 2019] GET /static/index/images/ad_img/xiaomi_ad/xiaomi9_ad04.jpg => generated 127 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 3)
+[pid: 15040|app: 0|req: 142/142] 111.79.226.82 () {36 vars in 702 bytes} [Mon May  6 12:34:15 2019] GET /static/index/images/ad_img/xiaomi_ad/xiaomi9_ad05.jpg => generated 127 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 15040|app: 0|req: 143/143] 111.79.226.82 () {36 vars in 702 bytes} [Mon May  6 12:34:16 2019] GET /static/index/images/ad_img/xiaomi_ad/xiaomi9_ad03.jpg => generated 127 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 2)
+[pid: 15040|app: 0|req: 144/144] 111.79.226.82 () {36 vars in 702 bytes} [Mon May  6 12:34:16 2019] GET /static/index/images/ad_img/xiaomi_ad/xiaomi9_ad02.jpg => generated 127 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 15040|app: 0|req: 145/145] 111.79.226.82 () {36 vars in 672 bytes} [Mon May  6 12:34:16 2019] GET /static/base/images/lwd_qq_two_code.jpg => generated 112 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 15040|app: 0|req: 146/146] 111.79.226.82 () {36 vars in 702 bytes} [Mon May  6 12:34:16 2019] GET /static/index/images/ad_img/xiaomi_ad/xiaomi9_ad01.jpg => generated 127 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+None token
+[pid: 15040|app: 0|req: 147/147] 111.79.226.82 () {38 vars in 668 bytes} [Mon May  6 12:34:16 2019] GET /lwd/ => generated 19424 bytes in 15 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 2)
+[pid: 15040|app: 0|req: 148/148] 111.79.226.82 () {36 vars in 681 bytes} [Mon May  6 12:34:16 2019] GET /static/base/css/font_awesome/css/font-awesome.min.css => generated 127 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 3)
+[pid: 15040|app: 0|req: 149/149] 111.79.226.82 () {36 vars in 635 bytes} [Mon May  6 12:34:16 2019] GET /static/base/css/swiper.min.css => generated 104 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 15040|app: 0|req: 150/150] 111.79.226.82 () {36 vars in 625 bytes} [Mon May  6 12:34:16 2019] GET /static/base/css/reset.css => generated 99 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 15040|app: 0|req: 152/151] 111.79.226.82 () {36 vars in 623 bytes} [Mon May  6 12:34:16 2019] GET /static/base/css/base.css => generated 98 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 15040|app: 0|req: 152/152] 111.79.226.82 () {36 vars in 631 bytes} [Mon May  6 12:34:16 2019] GET /static/base/css/fit_size.css => generated 102 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 2)
+[pid: 15040|app: 0|req: 153/153] 111.79.226.82 () {36 vars in 627 bytes} [Mon May  6 12:34:16 2019] GET /static/index/css/index.css => generated 100 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 3)
+[pid: 15040|app: 0|req: 154/154] 111.79.226.82 () {36 vars in 682 bytes} [Mon May  6 12:34:16 2019] GET /static/index/images/banner_img/banner01.png => generated 117 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 15040|app: 0|req: 155/155] 111.79.226.82 () {36 vars in 682 bytes} [Mon May  6 12:34:16 2019] GET /static/index/images/banner_img/banner03.png => generated 117 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 15040|app: 0|req: 157/156] 111.79.226.82 () {36 vars in 682 bytes} [Mon May  6 12:34:16 2019] GET /static/index/images/banner_img/banner02.png => generated 117 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 3)
+[pid: 15040|app: 0|req: 157/157] 111.79.226.82 () {36 vars in 682 bytes} [Mon May  6 12:34:16 2019] GET /static/index/images/banner_img/banner04.png => generated 117 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 15040|app: 0|req: 158/158] 111.79.226.82 () {36 vars in 668 bytes} [Mon May  6 12:34:16 2019] GET /static/index/images/about/my_img.jpg => generated 110 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 15040|app: 0|req: 159/159] 111.79.226.82 () {36 vars in 686 bytes} [Mon May  6 12:34:16 2019] GET /static/index/images/about/lwd_qq_two_code.jpg => generated 119 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 2)
+[pid: 15040|app: 0|req: 160/160] 111.79.226.82 () {36 vars in 686 bytes} [Mon May  6 12:34:16 2019] GET /static/index/images/about/lwd_wx_two_code.jpg => generated 119 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 3)
+[pid: 15040|app: 0|req: 161/161] 111.79.226.82 () {36 vars in 702 bytes} [Mon May  6 12:34:16 2019] GET /static/index/images/ad_img/xiaomi_ad/xiaomi9_ad04.jpg => generated 127 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 15040|app: 0|req: 162/162] 111.79.226.82 () {36 vars in 702 bytes} [Mon May  6 12:34:16 2019] GET /static/index/images/ad_img/xiaomi_ad/xiaomi9_ad02.jpg => generated 127 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 15040|app: 0|req: 163/163] 111.79.226.82 () {36 vars in 702 bytes} [Mon May  6 12:34:16 2019] GET /static/index/images/ad_img/xiaomi_ad/xiaomi9_ad01.jpg => generated 127 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 2)
+[pid: 15040|app: 0|req: 164/164] 111.79.226.82 () {36 vars in 702 bytes} [Mon May  6 12:34:16 2019] GET /static/index/images/ad_img/xiaomi_ad/xiaomi9_ad03.jpg => generated 127 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 3)
+[pid: 15040|app: 0|req: 166/166] 111.79.226.82 () {36 vars in 672 bytes} [Mon May  6 12:34:16 2019] GET /static/base/images/lwd_wx_two_code.jpg => generated 112 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 15040|app: 0|req: 166/166] 111.79.226.82 () {36 vars in 666 bytes} [Mon May  6 12:34:16 2019] GET /static/index/images/ad_img/jxlg.png => generated 109 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 15040|app: 0|req: 167/167] 111.79.226.82 () {36 vars in 672 bytes} [Mon May  6 12:34:16 2019] GET /static/base/images/lwd_qq_two_code.jpg => generated 112 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 2)
+[pid: 15040|app: 0|req: 168/168] 111.79.226.82 () {36 vars in 616 bytes} [Mon May  6 12:34:16 2019] GET /static/base/js/jquery.min.js => generated 102 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 3)
+[pid: 15040|app: 0|req: 169/169] 111.79.226.82 () {36 vars in 702 bytes} [Mon May  6 12:34:16 2019] GET /static/index/images/ad_img/xiaomi_ad/xiaomi9_ad05.jpg => generated 127 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 3)
+[pid: 15040|app: 0|req: 170/170] 111.79.226.82 () {36 vars in 622 bytes} [Mon May  6 12:34:16 2019] GET /static/base/js/jquery.cookie.js => generated 105 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 15040|app: 0|req: 171/171] 111.79.226.82 () {36 vars in 622 bytes} [Mon May  6 12:34:16 2019] GET /static/base/js/bootstrap.min.js => generated 105 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 15040|app: 0|req: 172/172] 111.79.226.82 () {36 vars in 616 bytes} [Mon May  6 12:34:16 2019] GET /static/base/js/swiper.min.js => generated 102 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 15040|app: 0|req: 173/173] 111.79.226.82 () {36 vars in 686 bytes} [Mon May  6 12:34:16 2019] GET /static/index/images/about/lwd_wx_two_code.jpg => generated 119 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 15040|app: 0|req: 174/174] 111.79.226.82 () {36 vars in 622 bytes} [Mon May  6 12:34:16 2019] GET /static/base/js/bootstrap.min.js => generated 105 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 15040|app: 0|req: 175/175] 111.79.226.82 () {36 vars in 614 bytes} [Mon May  6 12:34:16 2019] GET /static/base/js/hc-sticky.js => generated 101 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 2)
+[pid: 15040|app: 0|req: 176/176] 111.79.226.82 () {36 vars in 612 bytes} [Mon May  6 12:34:16 2019] GET /static/base/js/language.js => generated 100 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 2)
+[pid: 15040|app: 0|req: 177/177] 111.79.226.82 () {36 vars in 612 bytes} [Mon May  6 12:34:16 2019] GET /static/base/js/lwd_time.js => generated 100 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 2)
+[pid: 15040|app: 0|req: 178/178] 111.79.226.82 () {36 vars in 604 bytes} [Mon May  6 12:34:16 2019] GET /static/base/js/base.js => generated 96 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 3)
+[pid: 15040|app: 0|req: 179/179] 111.79.226.82 () {36 vars in 616 bytes} [Mon May  6 12:34:16 2019] GET /static/base/js/swiper.min.js => generated 102 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 3)
+[pid: 15040|app: 0|req: 180/180] 111.79.226.82 () {36 vars in 614 bytes} [Mon May  6 12:34:16 2019] GET /static/base/js/hc-sticky.js => generated 101 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 15040|app: 0|req: 181/181] 111.79.226.82 () {36 vars in 604 bytes} [Mon May  6 12:34:17 2019] GET /static/base/js/base.js => generated 96 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 2)
+[pid: 15040|app: 0|req: 182/182] 111.79.226.82 () {36 vars in 608 bytes} [Mon May  6 12:34:18 2019] GET /static/index/js/index.js => generated 98 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+Mon May  6 12:46:50 2019 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Mon May  6 12:46:50 2019 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+*** Starting uWSGI 2.0.18 (64bit) on [Mon May  6 12:47:46 2019] ***
+compiled with version: 7.3.0 on 06 May 2019 02:45:11
+os: Linux-4.15.0-29-generic #31-Ubuntu SMP Tue Jul 17 15:39:52 UTC 2018
+nodename: VM-0-7-ubuntu
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /var/www/Python_Blog
+writing pidfile to uwsgi.pid
+detected binary path: /home/ubuntu/.virtualenvs/django/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /var/www/Python_Blog
+your processes number limit is 7102
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8000 fd 3
+Python version: 3.6.7 (default, Oct 22 2018, 11:32:17)  [GCC 8.2.0]
+Python main interpreter initialized at 0x5623dc780700
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 208448 bytes (203 KB) for 4 cores
+*** Operational MODE: threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x5623dc780700 pid: 17027 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 17027)
+spawned uWSGI worker 1 (pid: 17029, cores: 4)
+Mon May  6 12:49:48 2019 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Mon May  6 12:49:48 2019 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+*** Starting uWSGI 2.0.18 (64bit) on [Mon May  6 13:13:55 2019] ***
+compiled with version: 7.3.0 on 06 May 2019 02:45:11
+os: Linux-4.15.0-29-generic #31-Ubuntu SMP Tue Jul 17 15:39:52 UTC 2018
+nodename: VM-0-7-ubuntu
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /var/www/Python_Blog
+writing pidfile to uwsgi.pid
+detected binary path: /home/ubuntu/.virtualenvs/django/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /var/www/Python_Blog
+your processes number limit is 7102
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 0.0.0.0:8000 fd 3
+Python version: 3.6.7 (default, Oct 22 2018, 11:32:17)  [GCC 8.2.0]
+Python main interpreter initialized at 0x555b99afd700
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 208448 bytes (203 KB) for 4 cores
+*** Operational MODE: threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x555b99afd700 pid: 19240 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 19240)
+spawned uWSGI worker 1 (pid: 19243, cores: 4)
+None token
+[pid: 19243|app: 0|req: 1/1] 111.79.226.82 () {40 vars in 685 bytes} [Mon May  6 13:14:54 2019] GET /lwd/ => generated 19424 bytes in 1035 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+None token
+[pid: 19243|app: 0|req: 2/2] 111.79.226.82 () {44 vars in 742 bytes} [Mon May  6 13:17:17 2019] GET /lwd/ => generated 19424 bytes in 16 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 3)
+None token
+[pid: 19243|app: 0|req: 3/3] 111.79.226.82 () {44 vars in 742 bytes} [Mon May  6 13:17:18 2019] GET /lwd/ => generated 19424 bytes in 17 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 2)
+None token
+[pid: 19243|app: 0|req: 4/4] 111.79.226.82 () {44 vars in 742 bytes} [Mon May  6 13:17:19 2019] GET /lwd/ => generated 19424 bytes in 17 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 1)
+[pid: 19243|app: 0|req: 5/5] 128.14.209.226 () {34 vars in 540 bytes} [Mon May  6 13:17:55 2019] GET /console/login/LoginForm.jsp => generated 101 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 19243|app: 0|req: 6/6] 77.159.71.204 () {32 vars in 462 bytes} [Mon May  6 13:22:56 2019] GET / => generated 74 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 3)
+[pid: 19243|app: 0|req: 7/7] 111.79.226.82 () {44 vars in 772 bytes} [Mon May  6 13:24:42 2019] GET /lwd/register/ => generated 3957 bytes in 4 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 3)
+[pid: 19243|app: 0|req: 8/8] 111.79.226.82 () {50 vars in 893 bytes} [Mon May  6 13:26:29 2019] POST /lwd/checkaccount/ => generated 51 bytes in 7 msecs (HTTP/1.1 200) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 19243|app: 0|req: 9/9] 111.79.226.82 () {44 vars in 780 bytes} [Mon May  6 13:26:34 2019] GET /lwd/checkname/?user_name=%E6%9D%8E%E6%98%93%E9%98%B3 => generated 51 bytes in 4 msecs (HTTP/1.1 200) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 19243|app: 0|req: 10/10] 111.79.226.82 () {50 vars in 895 bytes} [Mon May  6 13:26:40 2019] POST /lwd/register_post/ => generated 63 bytes in 24 msecs (HTTP/1.1 200) 5 headers in 245 bytes (1 switches on core 2)
+2f94851f-128c-5f0a-92ab-8ade7fea4ed4 token
+[pid: 19243|app: 0|req: 11/11] 111.79.226.82 () {44 vars in 807 bytes} [Mon May  6 13:26:41 2019] GET /lwd/ => generated 19863 bytes in 19 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 3)
+[pid: 19243|app: 0|req: 12/12] 111.79.226.82 () {44 vars in 888 bytes} [Mon May  6 13:27:41 2019] GET /lwd/setting/u_id/3417470d65405634af3597cfd51e965e => generated 31604 bytes in 12 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 1)
+3417470d65405634af3597cfd51e965e_1557120478038.jpg 头像啊呀
+[pid: 19243|app: 0|req: 13/13] 111.79.226.82 () {50 vars in 1021 bytes} [Mon May  6 13:27:58 2019] POST /lwd/update_avatar/ => generated 7 bytes in 12 msecs (HTTP/1.1 200) 4 headers in 121 bytes (2 switches on core 0)
+2f94851f-128c-5f0a-92ab-8ade7fea4ed4 token
+[pid: 19243|app: 0|req: 14/14] 111.79.226.82 () {44 vars in 843 bytes} [Mon May  6 13:28:01 2019] GET /lwd/ => generated 19930 bytes in 17 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 2)
+[pid: 19243|app: 0|req: 15/15] 111.79.226.82 () {44 vars in 870 bytes} [Mon May  6 13:33:20 2019] GET /lwd/article_tag/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91 => generated 18097 bytes in 18 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 3)
+[pid: 19243|app: 0|req: 16/16] 111.79.226.82 () {44 vars in 918 bytes} [Mon May  6 13:33:23 2019] GET /lwd/article_tag/%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB => generated 18097 bytes in 15 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 1)
+[pid: 19243|app: 0|req: 17/17] 111.79.226.82 () {46 vars in 949 bytes} [Mon May  6 13:40:00 2019] GET /lwd/article_tag/%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB => generated 18097 bytes in 16 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+2f94851f-128c-5f0a-92ab-8ade7fea4ed4 token
+[pid: 19243|app: 0|req: 18/18] 111.79.226.82 () {44 vars in 846 bytes} [Mon May  6 13:40:52 2019] GET /lwd/ => generated 19930 bytes in 17 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 2)
+[pid: 19243|app: 0|req: 19/19] 111.79.226.82 () {44 vars in 810 bytes} [Mon May  6 13:40:54 2019] GET /lwd/write/ => generated 9868 bytes in 5 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 3)
+[pid: 19243|app: 0|req: 20/20] 111.79.226.82 () {52 vars in 1122 bytes} [Mon May  6 13:41:25 2019] POST /lwd/upload_img/?guid=1557121279692 => generated 173 bytes in 1 msecs (HTTP/1.1 200) 3 headers in 101 bytes (1 switches on core 1)
+Building prefix dict from the default dictionary ...
+Dumping model to file cache /tmp/jieba.cache
+Loading model cost 0.989 seconds.
+Prefix dict has been built succesfully.
+[pid: 19243|app: 0|req: 21/21] 111.79.226.82 () {50 vars in 932 bytes} [Mon May  6 13:41:36 2019] POST /lwd/write_post/ => generated 173 bytes in 1045 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 1)
+[pid: 19243|app: 0|req: 22/22] 111.79.226.82 () {44 vars in 878 bytes} [Mon May  6 13:41:40 2019] GET /lwd/a_id/e03dabcdfd0750c78a09c93bea685334 => generated 0 bytes in 0 msecs (HTTP/1.1 301) 3 headers in 148 bytes (1 switches on core 2)
+[pid: 19243|app: 0|req: 23/23] 111.79.226.82 () {44 vars in 880 bytes} [Mon May  6 13:41:40 2019] GET /lwd/a_id/e03dabcdfd0750c78a09c93bea685334/ => generated 24797 bytes in 274 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 2)
+[pid: 19243|app: 0|req: 26/24] 111.79.226.82 () {50 vars in 964 bytes} [Mon May  6 13:41:41 2019] POST /lwd/checkfollow/ => generated 38 bytes in 13 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+[pid: 19243|app: 0|req: 26/26] 111.79.226.82 () {50 vars in 956 bytes} [Mon May  6 13:41:41 2019] POST /lwd/is_like/ => generated 56 bytes in 16 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 1)
+[pid: 19243|app: 0|req: 26/26] 111.79.226.82 () {50 vars in 962 bytes} [Mon May  6 13:41:41 2019] POST /lwd/is_collect/ => generated 59 bytes in 14 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 3)
+2f94851f-128c-5f0a-92ab-8ade7fea4ed4 token
+[pid: 19243|app: 0|req: 27/27] 111.79.226.82 () {44 vars in 836 bytes} [Mon May  6 13:41:50 2019] GET /lwd/ => generated 24069 bytes in 20 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 2)
+[pid: 19243|app: 0|req: 28/28] 111.79.226.82 () {44 vars in 874 bytes} [Mon May  6 13:49:43 2019] GET /lwd/a_id/e03dabcdfd0750c78a09c93bea685334/ => generated 24797 bytes in 34 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 19243|app: 0|req: 30/29] 111.79.226.82 () {50 vars in 964 bytes} [Mon May  6 13:49:43 2019] POST /lwd/checkfollow/ => generated 38 bytes in 10 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 1)
+[pid: 19243|app: 0|req: 30/30] 111.79.226.82 () {50 vars in 956 bytes} [Mon May  6 13:49:43 2019] POST /lwd/is_like/ => generated 56 bytes in 8 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 3)
+[pid: 19243|app: 0|req: 31/31] 111.79.226.82 () {50 vars in 962 bytes} [Mon May  6 13:49:43 2019] POST /lwd/is_collect/ => generated 59 bytes in 6 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 2)
+[pid: 19243|app: 0|req: 32/32] 200.126.76.104 () {32 vars in 462 bytes} [Mon May  6 13:51:34 2019] GET / => generated 74 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 19243|app: 0|req: 33/33] 2.181.2.250 () {32 vars in 460 bytes} [Mon May  6 13:58:19 2019] GET / => generated 74 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.18 (64bit) on [Mon May  6 16:01:02 2019] ***
+compiled with version: 7.3.0 on 06 May 2019 02:45:11
+os: Linux-4.15.0-29-generic #31-Ubuntu SMP Tue Jul 17 15:39:52 UTC 2018
+nodename: VM-0-7-ubuntu
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /var/www/Python_Blog
+writing pidfile to uwsgi.pid
+detected binary path: /home/ubuntu/.virtualenvs/django/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /var/www/Python_Blog
+your processes number limit is 7102
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (0.0.0.0:8000).
+bind(): Address already in use [core/socket.c line 769]
+*** Starting uWSGI 2.0.18 (64bit) on [Mon May  6 19:59:01 2019] ***
+compiled with version: 7.3.0 on 06 May 2019 02:45:11
+os: Linux-4.15.0-29-generic #31-Ubuntu SMP Tue Jul 17 15:39:52 UTC 2018
+nodename: VM-0-7-ubuntu
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /var/www/Python_Blog
+writing pidfile to uwsgi.pid
+detected binary path: /home/ubuntu/.virtualenvs/django/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /var/www/Python_Blog
+your processes number limit is 7102
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 0.0.0.0:8000 fd 3
+Python version: 3.6.7 (default, Oct 22 2018, 11:32:17)  [GCC 8.2.0]
+Python main interpreter initialized at 0x556245384700
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 208448 bytes (203 KB) for 4 cores
+*** Operational MODE: threaded ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x556245384700 pid: 22903 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 22903)
+spawned uWSGI worker 1 (pid: 22905, cores: 4)
+[pid: 22905|app: 0|req: 1/1] 218.64.220.101 () {42 vars in 824 bytes} [Mon May  6 19:59:26 2019] GET /admin/ => generated 0 bytes in 996 msecs (HTTP/1.1 302) 7 headers in 265 bytes (1 switches on core 0)
+[pid: 22905|app: 0|req: 2/2] 218.64.220.101 () {42 vars in 861 bytes} [Mon May  6 19:59:27 2019] GET /admin/login/?next=/admin/ => generated 1652 bytes in 29 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 3)
+[pid: 22905|app: 0|req: 3/3] 218.64.220.101 () {52 vars in 1112 bytes} [Mon May  6 19:59:43 2019] POST /admin/login/?next=/admin/ => generated 0 bytes in 67 msecs (HTTP/1.1 302) 9 headers in 531 bytes (1 switches on core 2)
+[pid: 22905|app: 0|req: 4/4] 218.64.220.101 () {46 vars in 920 bytes} [Mon May  6 19:59:43 2019] GET /admin/ => generated 4206 bytes in 20 msecs (HTTP/1.1 200) 6 headers in 227 bytes (1 switches on core 1)
+[pid: 22905|app: 0|req: 5/5] 218.64.220.101 () {44 vars in 902 bytes} [Mon May  6 19:59:45 2019] GET /admin/Lwd/articleinfo/ => generated 4910 bytes in 28 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 22905|app: 0|req: 6/6] 218.64.220.101 () {42 vars in 783 bytes} [Mon May  6 19:59:45 2019] GET /admin/jsi18n/ => generated 7682 bytes in 6 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 3)
+[pid: 22905|app: 0|req: 7/7] 218.64.220.101 () {44 vars in 998 bytes} [Mon May  6 19:59:49 2019] GET /admin/Lwd/articleinfo/f34d8955a88053aca53392066ad24e2f/change/ => generated 27947 bytes in 47 msecs (HTTP/1.1 200) 7 headers in 382 bytes (1 switches on core 2)
+[pid: 22905|app: 0|req: 8/8] 218.64.220.101 () {42 vars in 823 bytes} [Mon May  6 19:59:49 2019] GET /admin/jsi18n/ => generated 7682 bytes in 5 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 1)
+[pid: 22905|app: 0|req: 9/9] 218.64.220.101 () {44 vars in 926 bytes} [Mon May  6 19:59:54 2019] GET /admin/ => generated 4206 bytes in 12 msecs (HTTP/1.1 200) 6 headers in 227 bytes (1 switches on core 0)
+[pid: 22905|app: 0|req: 10/10] 218.64.220.101 () {46 vars in 957 bytes} [Mon May  6 20:01:18 2019] GET /admin/ => generated 4206 bytes in 12 msecs (HTTP/1.1 200) 6 headers in 227 bytes (1 switches on core 3)
+[pid: 22905|app: 0|req: 11/11] 218.64.220.101 () {44 vars in 902 bytes} [Mon May  6 20:01:20 2019] GET /admin/Lwd/articleinfo/ => generated 4910 bytes in 16 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 2)
+[pid: 22905|app: 0|req: 12/12] 218.64.220.101 () {42 vars in 783 bytes} [Mon May  6 20:01:20 2019] GET /admin/jsi18n/ => generated 7682 bytes in 5 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 1)
+[pid: 22905|app: 0|req: 13/13] 218.64.220.101 () {46 vars in 933 bytes} [Mon May  6 20:01:22 2019] GET /admin/Lwd/articleinfo/ => generated 4910 bytes in 17 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 22905|app: 0|req: 14/14] 218.64.220.101 () {42 vars in 783 bytes} [Mon May  6 20:01:22 2019] GET /admin/jsi18n/ => generated 7682 bytes in 5 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 3)
+[pid: 22905|app: 0|req: 15/15] 218.64.220.101 () {44 vars in 886 bytes} [Mon May  6 20:01:23 2019] GET /admin/ => generated 4206 bytes in 12 msecs (HTTP/1.1 200) 6 headers in 227 bytes (1 switches on core 2)
+[pid: 22905|app: 0|req: 16/16] 218.64.220.101 () {46 vars in 917 bytes} [Mon May  6 20:01:53 2019] GET /admin/ => generated 4206 bytes in 13 msecs (HTTP/1.1 200) 6 headers in 227 bytes (1 switches on core 1)
+[pid: 22905|app: 0|req: 17/17] 218.64.220.101 () {44 vars in 902 bytes} [Mon May  6 20:01:55 2019] GET /admin/Lwd/articleinfo/ => generated 4910 bytes in 17 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 22905|app: 0|req: 18/18] 218.64.220.101 () {42 vars in 783 bytes} [Mon May  6 20:01:55 2019] GET /admin/jsi18n/ => generated 7682 bytes in 5 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 3)
+[pid: 22905|app: 0|req: 19/19] 218.64.220.101 () {44 vars in 998 bytes} [Mon May  6 20:01:58 2019] GET /admin/Lwd/articleinfo/f34d8955a88053aca53392066ad24e2f/change/ => generated 27947 bytes in 30 msecs (HTTP/1.1 200) 7 headers in 382 bytes (1 switches on core 2)
+[pid: 22905|app: 0|req: 20/20] 218.64.220.101 () {42 vars in 823 bytes} [Mon May  6 20:01:59 2019] GET /admin/jsi18n/ => generated 7682 bytes in 5 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 1)
+[pid: 22905|app: 0|req: 21/21] 218.64.220.101 () {44 vars in 926 bytes} [Mon May  6 20:02:01 2019] GET /admin/ => generated 4206 bytes in 12 msecs (HTTP/1.1 200) 6 headers in 227 bytes (1 switches on core 0)
+719d52d8-314d-53d8-b84a-f61afcfb427e token
+[pid: 22905|app: 0|req: 22/22] 218.64.220.101 () {42 vars in 833 bytes} [Mon May  6 20:02:08 2019] GET /lwd/ => generated 33746 bytes in 39 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 3)
+Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+Loading model cost 0.797 seconds.
+Prefix dict has been built succesfully.
+[pid: 22905|app: 0|req: 23/23] 218.64.220.101 () {44 vars in 953 bytes} [Mon May  6 20:02:56 2019] GET /lwd/a_id/f34d8955a88053aca53392066ad24e2f/ => generated 44947 bytes in 869 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 2)
+[pid: 22905|app: 0|req: 24/24] 114.115.201.105 () {40 vars in 608 bytes} [Mon May  6 20:04:41 2019] GET /phpmyadmin => generated 84 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 22905|app: 0|req: 25/25] 114.115.201.105 () {40 vars in 608 bytes} [Mon May  6 20:04:41 2019] GET /phpmyadmin => generated 84 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 22905|app: 0|req: 28/26] 218.64.220.101 () {50 vars in 1044 bytes} [Mon May  6 20:05:38 2019] POST /lwd/checkfollow/ => generated 38 bytes in 14 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+[pid: 22905|app: 0|req: 28/27] 218.64.220.101 () {50 vars in 1036 bytes} [Mon May  6 20:05:38 2019] POST /lwd/is_like/ => generated 56 bytes in 15 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 2)
+[pid: 22905|app: 0|req: 28/28] 218.64.220.101 () {50 vars in 1042 bytes} [Mon May  6 20:05:38 2019] POST /lwd/is_collect/ => generated 59 bytes in 10 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 1)
+[pid: 22905|app: 0|req: 29/29] 218.64.220.101 () {46 vars in 984 bytes} [Mon May  6 20:05:45 2019] GET /lwd/a_id/f34d8955a88053aca53392066ad24e2f/ => generated 44947 bytes in 57 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 3)
+[pid: 22905|app: 0|req: 32/30] 218.64.220.101 () {50 vars in 1044 bytes} [Mon May  6 20:05:45 2019] POST /lwd/checkfollow/ => generated 38 bytes in 7 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 1)
+[pid: 22905|app: 0|req: 32/31] 218.64.220.101 () {50 vars in 1042 bytes} [Mon May  6 20:05:45 2019] POST /lwd/is_collect/ => generated 59 bytes in 14 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 2)
+[pid: 22905|app: 0|req: 32/32] 218.64.220.101 () {50 vars in 1036 bytes} [Mon May  6 20:05:45 2019] POST /lwd/is_like/ => generated 56 bytes in 16 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+[pid: 22905|app: 0|req: 33/33] 218.64.220.101 () {46 vars in 984 bytes} [Mon May  6 20:05:47 2019] GET /lwd/a_id/f34d8955a88053aca53392066ad24e2f/ => generated 44947 bytes in 61 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 1)
+[pid: 22905|app: 0|req: 36/34] 218.64.220.101 () {50 vars in 1044 bytes} [Mon May  6 20:05:47 2019] POST /lwd/checkfollow/ => generated 38 bytes in 8 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+[pid: 22905|app: 0|req: 36/35] 218.64.220.101 () {50 vars in 1042 bytes} [Mon May  6 20:05:47 2019] POST /lwd/is_collect/ => generated 59 bytes in 14 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 2)
+[pid: 22905|app: 0|req: 36/36] 218.64.220.101 () {50 vars in 1036 bytes} [Mon May  6 20:05:47 2019] POST /lwd/is_like/ => generated 56 bytes in 16 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 3)
+[pid: 22905|app: 0|req: 37/37] 101.91.62.11 () {38 vars in 621 bytes} [Mon May  6 20:06:11 2019] GET / => generated 74 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 22905|app: 0|req: 38/38] 218.64.220.101 () {46 vars in 984 bytes} [Mon May  6 20:06:18 2019] GET /lwd/a_id/f34d8955a88053aca53392066ad24e2f/ => generated 44947 bytes in 282 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 22905|app: 0|req: 41/39] 218.64.220.101 () {50 vars in 1044 bytes} [Mon May  6 20:06:19 2019] POST /lwd/checkfollow/ => generated 38 bytes in 15 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 2)
+[pid: 22905|app: 0|req: 41/40] 218.64.220.101 () {50 vars in 1036 bytes} [Mon May  6 20:06:19 2019] POST /lwd/is_like/ => generated 56 bytes in 15 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 3)
+[pid: 22905|app: 0|req: 41/41] 218.64.220.101 () {50 vars in 1042 bytes} [Mon May  6 20:06:19 2019] POST /lwd/is_collect/ => generated 59 bytes in 8 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 1)
+719d52d8-314d-53d8-b84a-f61afcfb427e token
+[pid: 22905|app: 0|req: 42/42] 218.64.220.101 () {44 vars in 915 bytes} [Mon May  6 20:06:20 2019] GET /lwd/ => generated 33746 bytes in 24 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 22905|app: 0|req: 43/43] 218.64.220.101 () {44 vars in 953 bytes} [Mon May  6 20:06:27 2019] GET /lwd/a_id/0cf2e71173805591849e3449a83b9fa7/ => generated 39019 bytes in 50 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 2)
+[pid: 22905|app: 0|req: 46/44] 218.64.220.101 () {50 vars in 1044 bytes} [Mon May  6 20:06:28 2019] POST /lwd/checkfollow/ => generated 38 bytes in 9 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 1)
+[pid: 22905|app: 0|req: 46/45] 218.64.220.101 () {50 vars in 1042 bytes} [Mon May  6 20:06:28 2019] POST /lwd/is_collect/ => generated 70 bytes in 9 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+[pid: 22905|app: 0|req: 46/46] 218.64.220.101 () {50 vars in 1036 bytes} [Mon May  6 20:06:28 2019] POST /lwd/is_like/ => generated 67 bytes in 16 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 3)
+[pid: 22905|app: 0|req: 47/47] 218.64.220.101 () {46 vars in 984 bytes} [Mon May  6 20:06:43 2019] GET /lwd/a_id/0cf2e71173805591849e3449a83b9fa7/ => generated 39019 bytes in 59 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 2)
+[pid: 22905|app: 0|req: 50/48] 218.64.220.101 () {50 vars in 1044 bytes} [Mon May  6 20:06:44 2019] POST /lwd/checkfollow/ => generated 38 bytes in 8 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+[pid: 22905|app: 0|req: 50/49] 218.64.220.101 () {50 vars in 1036 bytes} [Mon May  6 20:06:44 2019] POST /lwd/is_like/ => generated 67 bytes in 17 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 1)
+[pid: 22905|app: 0|req: 50/50] 218.64.220.101 () {50 vars in 1042 bytes} [Mon May  6 20:06:44 2019] POST /lwd/is_collect/ => generated 70 bytes in 10 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 3)
+[pid: 22905|app: 0|req: 51/51] 218.64.220.101 () {40 vars in 685 bytes} [Mon May  6 20:08:22 2019] GET /lwd => generated 0 bytes in 0 msecs (HTTP/1.1 301) 3 headers in 110 bytes (1 switches on core 2)
+None token
+[pid: 22905|app: 0|req: 52/52] 218.64.220.101 () {40 vars in 687 bytes} [Mon May  6 20:08:22 2019] GET /lwd/ => generated 33258 bytes in 23 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 2)
+[pid: 22905|app: 0|req: 53/53] 218.64.220.101 () {44 vars in 769 bytes} [Mon May  6 20:08:47 2019] GET /lwd/login/ => generated 3957 bytes in 2 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 22905|app: 0|req: 54/54] 218.64.220.101 () {50 vars in 890 bytes} [Mon May  6 20:08:57 2019] POST /lwd/login_post/ => generated 38 bytes in 13 msecs (HTTP/1.1 200) 5 headers in 245 bytes (1 switches on core 3)
+7e88543b-e670-55db-95c8-cf525319e4ae token
+[pid: 22905|app: 0|req: 55/55] 218.64.220.101 () {44 vars in 807 bytes} [Mon May  6 20:08:57 2019] GET /lwd/ => generated 33746 bytes in 24 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[<Comment: 演员的自我修养，不树人设，好好演戏，专研>]
+[pid: 22905|app: 0|req: 56/56] 218.64.220.101 () {44 vars in 875 bytes} [Mon May  6 20:09:06 2019] GET /lwd/u_id/3417470d65405634af3597cfd51e965e => generated 28930 bytes in 27 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 2)
+[pid: 22905|app: 0|req: 57/57] 218.64.220.101 () {50 vars in 967 bytes} [Mon May  6 20:09:07 2019] POST /lwd/checkfollow/ => generated 38 bytes in 4 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 1)
+[pid: 22905|app: 0|req: 58/58] 218.64.220.101 () {44 vars in 914 bytes} [Mon May  6 20:09:09 2019] GET /lwd/a_id/0cf2e71173805591849e3449a83b9fa7/ => generated 39019 bytes in 51 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 3)
+[pid: 22905|app: 0|req: 59/59] 218.64.220.101 () {50 vars in 968 bytes} [Mon May  6 20:09:24 2019] POST /lwd/checkfollow/ => generated 38 bytes in 4 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+[pid: 22905|app: 0|req: 61/60] 218.64.220.101 () {50 vars in 966 bytes} [Mon May  6 20:09:24 2019] POST /lwd/is_collect/ => generated 70 bytes in 12 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 2)
+[pid: 22905|app: 0|req: 61/61] 218.64.220.101 () {50 vars in 960 bytes} [Mon May  6 20:09:24 2019] POST /lwd/is_like/ => generated 67 bytes in 8 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 1)
+[<Comment: 演员的自我修养，不树人设，好好演戏，专研>]
+[pid: 22905|app: 0|req: 62/62] 218.64.220.101 () {44 vars in 913 bytes} [Mon May  6 20:09:40 2019] GET /lwd/u_id/3417470d65405634af3597cfd51e965e => generated 28930 bytes in 23 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 3)
+[pid: 22905|app: 0|req: 63/63] 218.64.220.101 () {50 vars in 967 bytes} [Mon May  6 20:09:40 2019] POST /lwd/checkfollow/ => generated 38 bytes in 4 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+[pid: 22905|app: 0|req: 64/64] 218.64.220.101 () {44 vars in 914 bytes} [Mon May  6 20:10:19 2019] GET /lwd/a_id/ecece34b5e5c570f82f074f9845140b0/ => generated 55327 bytes in 64 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 2)
+[pid: 22905|app: 0|req: 67/65] 218.64.220.101 () {50 vars in 968 bytes} [Mon May  6 20:10:20 2019] POST /lwd/checkfollow/ => generated 38 bytes in 16 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 1)
+[pid: 22905|app: 0|req: 67/67] 218.64.220.101 () {50 vars in 960 bytes} [Mon May  6 20:10:20 2019] POST /lwd/is_like/ => generated 56 bytes in 12 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+[pid: 22905|app: 0|req: 67/67] 218.64.220.101 () {50 vars in 966 bytes} [Mon May  6 20:10:20 2019] POST /lwd/is_collect/ => generated 59 bytes in 15 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 3)
+7e88543b-e670-55db-95c8-cf525319e4ae token
+[pid: 22905|app: 0|req: 68/68] 218.64.220.101 () {44 vars in 839 bytes} [Mon May  6 20:12:31 2019] GET /lwd/ => generated 33746 bytes in 26 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 2)
+[pid: 22905|app: 0|req: 69/69] 218.64.220.101 () {44 vars in 877 bytes} [Mon May  6 20:12:36 2019] GET /lwd/a_id/f34d8955a88053aca53392066ad24e2f/ => generated 44948 bytes in 302 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 1)
+[pid: 22905|app: 0|req: 70/70] 218.64.220.101 () {50 vars in 968 bytes} [Mon May  6 20:12:38 2019] POST /lwd/checkfollow/ => generated 38 bytes in 5 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+[pid: 22905|app: 0|req: 72/71] 218.64.220.101 () {50 vars in 966 bytes} [Mon May  6 20:12:38 2019] POST /lwd/is_collect/ => generated 59 bytes in 10 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 2)
+[pid: 22905|app: 0|req: 72/72] 218.64.220.101 () {50 vars in 960 bytes} [Mon May  6 20:12:38 2019] POST /lwd/is_like/ => generated 56 bytes in 12 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 3)
+[pid: 22905|app: 0|req: 73/73] 218.64.220.101 () {44 vars in 915 bytes} [Mon May  6 20:12:38 2019] GET /lwd/edit/f34d8955a88053aca53392066ad24e2f/ => generated 26035 bytes in 6 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 1)
+[pid: 22905|app: 0|req: 74/74] 218.64.220.101 () {52 vars in 1158 bytes} [Mon May  6 20:13:21 2019] POST /lwd/upload_img/?guid=1557144791311 => generated 27 bytes in 18 msecs (HTTP/1.1 500) 4 headers in 126 bytes (2 switches on core 0)
+[pid: 22905|app: 0|req: 75/75] 218.64.220.101 () {52 vars in 1160 bytes} [Mon May  6 20:13:56 2019] POST /lwd/upload_img/?guid=1557144791311 => generated 27 bytes in 14 msecs (HTTP/1.1 500) 4 headers in 126 bytes (3 switches on core 2)
+[pid: 22905|app: 0|req: 76/76] 218.64.220.101 () {52 vars in 1160 bytes} [Mon May  6 20:14:16 2019] POST /lwd/upload_img/?guid=1557144791311 => generated 27 bytes in 16 msecs (HTTP/1.1 500) 4 headers in 126 bytes (3 switches on core 3)
+[pid: 22905|app: 0|req: 77/77] 218.64.220.101 () {52 vars in 1160 bytes} [Mon May  6 20:14:29 2019] POST /lwd/upload_img/?guid=1557144791311 => generated 27 bytes in 17 msecs (HTTP/1.1 500) 4 headers in 126 bytes (11 switches on core 1)
+[pid: 22905|app: 0|req: 78/78] 218.64.220.101 () {46 vars in 946 bytes} [Mon May  6 20:17:18 2019] GET /lwd/edit/f34d8955a88053aca53392066ad24e2f/ => generated 26035 bytes in 4 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 22905|app: 0|req: 79/79] 218.64.220.101 () {52 vars in 1162 bytes} [Mon May  6 20:17:32 2019] POST /lwd/upload_img/?guid=1557145043404 => generated 27 bytes in 19 msecs (HTTP/1.1 500) 4 headers in 126 bytes (14 switches on core 2)
+[pid: 22905|app: 0|req: 80/80] 218.64.220.101 () {40 vars in 685 bytes} [Mon May  6 20:19:01 2019] GET /lwd => generated 0 bytes in 0 msecs (HTTP/1.1 301) 3 headers in 110 bytes (1 switches on core 3)
+None token
+[pid: 22905|app: 0|req: 81/81] 218.64.220.101 () {40 vars in 687 bytes} [Mon May  6 20:19:01 2019] GET /lwd/ => generated 33258 bytes in 23 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 3)
+[pid: 22905|app: 0|req: 82/82] 45.76.144.219 () {36 vars in 430 bytes} [Mon May  6 20:19:10 2019] GET / => generated 74 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 22905|app: 0|req: 83/83] 218.64.220.101 () {42 vars in 743 bytes} [Mon May  6 20:19:19 2019] GET /lwd/login/ => generated 3957 bytes in 1 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 22905|app: 0|req: 84/84] 218.64.220.101 () {48 vars in 864 bytes} [Mon May  6 20:19:34 2019] POST /lwd/login_post/ => generated 38 bytes in 16 msecs (HTTP/1.1 200) 5 headers in 245 bytes (1 switches on core 0)
+8080d676-0c08-52db-a93e-51bc4e55a19f token
+[pid: 22905|app: 0|req: 85/85] 218.64.220.101 () {44 vars in 794 bytes} [Mon May  6 20:19:34 2019] GET /lwd/ => generated 33746 bytes in 24 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 3)
+[pid: 22905|app: 0|req: 86/86] 218.64.220.101 () {44 vars in 864 bytes} [Mon May  6 20:19:42 2019] GET /lwd/a_id/f34d8955a88053aca53392066ad24e2f/ => generated 44948 bytes in 56 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 2)
+[pid: 22905|app: 0|req: 87/87] 218.64.220.101 () {44 vars in 929 bytes} [Mon May  6 20:20:01 2019] GET /lwd/setting/u_id/3417470d65405634af3597cfd51e965e => generated 31738 bytes in 11 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 1)
+[pid: 22905|app: 0|req: 88/88] 218.64.220.101 () {46 vars in 960 bytes} [Mon May  6 20:22:33 2019] GET /lwd/setting/u_id/3417470d65405634af3597cfd51e965e => generated 31738 bytes in 6 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 22905|app: 0|req: 89/89] 218.64.220.101 () {46 vars in 960 bytes} [Mon May  6 20:22:35 2019] GET /lwd/setting/u_id/3417470d65405634af3597cfd51e965e => generated 31738 bytes in 6 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 3)
+[pid: 22905|app: 0|req: 90/90] 218.64.220.101 () {46 vars in 960 bytes} [Mon May  6 20:22:35 2019] GET /lwd/setting/u_id/3417470d65405634af3597cfd51e965e => generated 31738 bytes in 7 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 2)
+3417470d65405634af3597cfd51e965e_1557145421074.jpg 头像啊呀
+[pid: 22905|app: 0|req: 91/91] 218.64.220.101 () {50 vars in 1025 bytes} [Mon May  6 20:23:41 2019] POST /lwd/update_avatar/ => generated 27 bytes in 16 msecs (HTTP/1.1 500) 4 headers in 126 bytes (2 switches on core 1)
+[pid: 22905|app: 0|req: 92/92] 218.64.220.101 () {46 vars in 960 bytes} [Mon May  6 20:25:41 2019] GET /lwd/setting/u_id/3417470d65405634af3597cfd51e965e => generated 31738 bytes in 6 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+3417470d65405634af3597cfd51e965e_1557145566646.jpg 头像啊呀
+[pid: 22905|app: 0|req: 93/93] 218.64.220.101 () {50 vars in 1025 bytes} [Mon May  6 20:26:07 2019] POST /lwd/update_avatar/ => generated 27 bytes in 17 msecs (HTTP/1.1 500) 4 headers in 126 bytes (2 switches on core 3)
+Mon May  6 20:26:43 2019 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Mon May  6 20:26:43 2019 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+*** Starting uWSGI 2.0.18 (64bit) on [Mon May  6 20:26:50 2019] ***
+compiled with version: 7.3.0 on 06 May 2019 02:45:11
+os: Linux-4.15.0-29-generic #31-Ubuntu SMP Tue Jul 17 15:39:52 UTC 2018
+nodename: VM-0-7-ubuntu
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /var/www/Python_Blog
+writing pidfile to uwsgi.pid
+detected binary path: /home/ubuntu/.virtualenvs/django/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /var/www/Python_Blog
+your processes number limit is 7102
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 0.0.0.0:8000 fd 3
+Python version: 3.6.7 (default, Oct 22 2018, 11:32:17)  [GCC 8.2.0]
+Python main interpreter initialized at 0x55c2501d9700
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 208448 bytes (203 KB) for 4 cores
+*** Operational MODE: threaded ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x55c2501d9700 pid: 25217 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 25217)
+spawned uWSGI worker 1 (pid: 25219, cores: 4)
+8080d676-0c08-52db-a93e-51bc4e55a19f token
+[pid: 25219|app: 0|req: 1/1] 218.64.220.101 () {42 vars in 757 bytes} [Mon May  6 20:27:09 2019] GET /lwd/ => generated 33746 bytes in 1022 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 25219|app: 0|req: 2/2] 218.64.220.101 () {44 vars in 891 bytes} [Mon May  6 20:27:15 2019] GET /lwd/setting/u_id/3417470d65405634af3597cfd51e965e => generated 31702 bytes in 12 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 3)
+[pid: 25219|app: 0|req: 3/3] 218.64.220.101 () {46 vars in 922 bytes} [Mon May  6 20:27:19 2019] GET /lwd/setting/u_id/3417470d65405634af3597cfd51e965e => generated 31702 bytes in 8 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 2)
+8080d676-0c08-52db-a93e-51bc4e55a19f token
+[pid: 25219|app: 0|req: 4/4] 218.64.220.101 () {44 vars in 846 bytes} [Mon May  6 20:27:24 2019] GET /lwd/ => generated 33746 bytes in 25 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 1)
+Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+Loading model cost 0.811 seconds.
+Prefix dict has been built succesfully.
+[pid: 25219|app: 0|req: 5/5] 218.64.220.101 () {44 vars in 877 bytes} [Mon May  6 20:27:26 2019] GET /lwd/a_id/f34d8955a88053aca53392066ad24e2f/ => generated 44930 bytes in 885 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 25219|app: 0|req: 6/6] 218.64.220.101 () {44 vars in 915 bytes} [Mon May  6 20:27:30 2019] GET /lwd/edit/f34d8955a88053aca53392066ad24e2f/ => generated 26035 bytes in 6 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 3)
+[pid: 25219|app: 0|req: 7/7] 218.64.220.101 () {52 vars in 1160 bytes} [Mon May  6 20:27:47 2019] POST /lwd/upload_img/?guid=1557145658323 => generated 27 bytes in 25 msecs (HTTP/1.1 500) 4 headers in 126 bytes (6 switches on core 2)
+[pid: 25219|app: 0|req: 8/8] 218.64.220.101 () {50 vars in 970 bytes} [Mon May  6 20:29:32 2019] POST /lwd/edit_post/ => generated 135 bytes in 61 msecs (HTTP/1.1 200) 4 headers in 115 bytes (2 switches on core 1)
+[pid: 25219|app: 0|req: 9/9] 218.64.220.101 () {44 vars in 915 bytes} [Mon May  6 20:29:35 2019] GET /lwd/a_id/f34d8955a88053aca53392066ad24e2f/ => generated 43214 bytes in 62 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 25219|app: 0|req: 11/10] 218.64.220.101 () {50 vars in 968 bytes} [Mon May  6 20:29:36 2019] POST /lwd/checkfollow/ => generated 38 bytes in 11 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 3)
+[pid: 25219|app: 0|req: 11/11] 218.64.220.101 () {50 vars in 960 bytes} [Mon May  6 20:29:36 2019] POST /lwd/is_like/ => generated 56 bytes in 9 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 2)
+[pid: 25219|app: 0|req: 12/12] 218.64.220.101 () {50 vars in 966 bytes} [Mon May  6 20:29:36 2019] POST /lwd/is_collect/ => generated 59 bytes in 8 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 1)
+8080d676-0c08-52db-a93e-51bc4e55a19f token
+[pid: 25219|app: 0|req: 13/13] 218.64.220.101 () {44 vars in 839 bytes} [Mon May  6 20:30:24 2019] GET /lwd/ => generated 33518 bytes in 24 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 25219|app: 0|req: 14/14] 218.64.220.101 () {44 vars in 811 bytes} [Mon May  6 20:30:28 2019] GET /lwd/quit/ => generated 0 bytes in 10 msecs (HTTP/1.1 302) 5 headers in 212 bytes (1 switches on core 3)
+None token
+[pid: 25219|app: 0|req: 15/15] 218.64.220.101 () {44 vars in 757 bytes} [Mon May  6 20:30:28 2019] GET /lwd/ => generated 33030 bytes in 26 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 2)
+[pid: 25219|app: 0|req: 16/16] 218.64.220.101 () {44 vars in 769 bytes} [Mon May  6 20:30:29 2019] GET /lwd/login/ => generated 3957 bytes in 2 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 25219|app: 0|req: 17/17] 218.64.220.101 () {50 vars in 890 bytes} [Mon May  6 20:30:37 2019] POST /lwd/login_post/ => generated 38 bytes in 23 msecs (HTTP/1.1 200) 5 headers in 245 bytes (1 switches on core 0)
+f5e30c39-4dc6-5f62-a3aa-39961b6d5b2c token
+[pid: 25219|app: 0|req: 18/18] 218.64.220.101 () {44 vars in 807 bytes} [Mon May  6 20:30:37 2019] GET /lwd/ => generated 33524 bytes in 26 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 3)
+[pid: 25219|app: 0|req: 19/19] 218.64.220.101 () {44 vars in 891 bytes} [Mon May  6 20:30:42 2019] GET /lwd/setting/u_id/1770767305ed50a0aa862dd99d51f0cf => generated 31720 bytes in 6 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 2)
+1770767305ed50a0aa862dd99d51f0cf_1557145856060.jpg 头像啊呀
+[pid: 25219|app: 0|req: 20/20] 218.64.220.101 () {50 vars in 1025 bytes} [Mon May  6 20:30:56 2019] POST /lwd/update_avatar/ => generated 7 bytes in 12 msecs (HTTP/1.1 200) 4 headers in 121 bytes (2 switches on core 1)
+f5e30c39-4dc6-5f62-a3aa-39961b6d5b2c token
+[pid: 25219|app: 0|req: 21/21] 218.64.220.101 () {44 vars in 846 bytes} [Mon May  6 20:30:59 2019] GET /lwd/ => generated 33524 bytes in 25 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 25219|app: 0|req: 22/22] 218.64.220.101 () {44 vars in 877 bytes} [Mon May  6 20:31:01 2019] GET /lwd/a_id/f34d8955a88053aca53392066ad24e2f/ => generated 43330 bytes in 328 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 3)
+[pid: 25219|app: 0|req: 24/23] 218.64.220.101 () {50 vars in 968 bytes} [Mon May  6 20:31:01 2019] POST /lwd/checkfollow/ => generated 44 bytes in 6 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 1)
+[pid: 25219|app: 0|req: 24/24] 218.64.220.101 () {50 vars in 960 bytes} [Mon May  6 20:31:01 2019] POST /lwd/is_like/ => generated 67 bytes in 12 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 2)
+[pid: 25219|app: 0|req: 25/25] 218.64.220.101 () {50 vars in 966 bytes} [Mon May  6 20:31:01 2019] POST /lwd/is_collect/ => generated 70 bytes in 7 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+[pid: 25219|app: 0|req: 26/26] 218.64.220.101 () {46 vars in 908 bytes} [Mon May  6 20:31:06 2019] GET /lwd/a_id/f34d8955a88053aca53392066ad24e2f/ => generated 43330 bytes in 59 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 3)
+[pid: 25219|app: 0|req: 27/27] 218.64.220.101 () {50 vars in 968 bytes} [Mon May  6 20:31:07 2019] POST /lwd/checkfollow/ => generated 44 bytes in 4 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 1)
+[pid: 25219|app: 0|req: 29/29] 218.64.220.101 () {50 vars in 966 bytes} [Mon May  6 20:31:07 2019] POST /lwd/is_collect/ => generated 70 bytes in 13 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 2)
+[pid: 25219|app: 0|req: 29/29] 218.64.220.101 () {50 vars in 960 bytes} [Mon May  6 20:31:07 2019] POST /lwd/is_like/ => generated 67 bytes in 13 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+[pid: 25219|app: 0|req: 30/30] 218.64.220.101 () {46 vars in 908 bytes} [Mon May  6 20:32:35 2019] GET /lwd/a_id/f34d8955a88053aca53392066ad24e2f/ => generated 43330 bytes in 59 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 3)
+[pid: 25219|app: 0|req: 31/31] 218.64.220.101 () {50 vars in 968 bytes} [Mon May  6 20:32:35 2019] POST /lwd/checkfollow/ => generated 44 bytes in 4 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 1)
+[pid: 25219|app: 0|req: 32/32] 218.64.220.101 () {50 vars in 960 bytes} [Mon May  6 20:32:35 2019] POST /lwd/is_like/ => generated 67 bytes in 7 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 2)
+[pid: 25219|app: 0|req: 33/33] 218.64.220.101 () {50 vars in 966 bytes} [Mon May  6 20:32:35 2019] POST /lwd/is_collect/ => generated 70 bytes in 6 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+[pid: 25219|app: 0|req: 34/34] 218.64.220.101 () {46 vars in 908 bytes} [Mon May  6 20:32:54 2019] GET /lwd/a_id/f34d8955a88053aca53392066ad24e2f/ => generated 43330 bytes in 59 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 3)
+[pid: 25219|app: 0|req: 36/35] 218.64.220.101 () {50 vars in 968 bytes} [Mon May  6 20:32:54 2019] POST /lwd/checkfollow/ => generated 44 bytes in 8 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 1)
+[pid: 25219|app: 0|req: 37/36] 218.64.220.101 () {50 vars in 960 bytes} [Mon May  6 20:32:54 2019] POST /lwd/is_like/ => generated 67 bytes in 12 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 2)
+[pid: 25219|app: 0|req: 37/37] 218.64.220.101 () {50 vars in 966 bytes} [Mon May  6 20:32:54 2019] POST /lwd/is_collect/ => generated 70 bytes in 7 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+f5e30c39-4dc6-5f62-a3aa-39961b6d5b2c token
+[pid: 25219|app: 0|req: 38/38] 218.64.220.101 () {46 vars in 877 bytes} [Mon May  6 20:33:06 2019] GET /lwd/ => generated 33524 bytes in 24 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 3)
+[pid: 25219|app: 0|req: 39/39] 218.64.220.101 () {44 vars in 877 bytes} [Mon May  6 20:33:07 2019] GET /lwd/a_id/f34d8955a88053aca53392066ad24e2f/ => generated 43330 bytes in 60 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 1)
+[pid: 25219|app: 0|req: 42/40] 218.64.220.101 () {50 vars in 968 bytes} [Mon May  6 20:33:07 2019] POST /lwd/checkfollow/ => generated 44 bytes in 14 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 2)
+[pid: 25219|app: 0|req: 42/41] 218.64.220.101 () {50 vars in 960 bytes} [Mon May  6 20:33:07 2019] POST /lwd/is_like/ => generated 67 bytes in 13 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+[pid: 25219|app: 0|req: 42/42] 218.64.220.101 () {50 vars in 966 bytes} [Mon May  6 20:33:07 2019] POST /lwd/is_collect/ => generated 70 bytes in 8 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 3)
+[pid: 25219|app: 0|req: 43/43] 218.64.220.101 () {44 vars in 929 bytes} [Mon May  6 20:33:39 2019] GET /lwd/setting/u_id/1770767305ed50a0aa862dd99d51f0cf => generated 31720 bytes in 6 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 1)
+1770767305ed50a0aa862dd99d51f0cf_1557146032451.jpg 头像啊呀
+[pid: 25219|app: 0|req: 44/44] 218.64.220.101 () {50 vars in 1025 bytes} [Mon May  6 20:33:53 2019] POST /lwd/update_avatar/ => generated 7 bytes in 15 msecs (HTTP/1.1 200) 4 headers in 121 bytes (2 switches on core 2)
+f5e30c39-4dc6-5f62-a3aa-39961b6d5b2c token
+[pid: 25219|app: 0|req: 45/45] 218.64.220.101 () {44 vars in 846 bytes} [Mon May  6 20:33:55 2019] GET /lwd/ => generated 33524 bytes in 26 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 25219|app: 0|req: 46/46] 218.64.220.101 () {44 vars in 877 bytes} [Mon May  6 20:34:00 2019] GET /lwd/a_id/f34d8955a88053aca53392066ad24e2f/ => generated 43330 bytes in 308 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 3)
+[pid: 25219|app: 0|req: 49/47] 218.64.220.101 () {50 vars in 968 bytes} [Mon May  6 20:34:00 2019] POST /lwd/checkfollow/ => generated 44 bytes in 14 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 1)
+[pid: 25219|app: 0|req: 49/48] 218.64.220.101 () {50 vars in 960 bytes} [Mon May  6 20:34:00 2019] POST /lwd/is_like/ => generated 67 bytes in 15 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 2)
+[pid: 25219|app: 0|req: 49/49] 218.64.220.101 () {50 vars in 966 bytes} [Mon May  6 20:34:00 2019] POST /lwd/is_collect/ => generated 70 bytes in 6 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+None token
+[pid: 25219|app: 0|req: 50/50] 218.64.220.101 () {40 vars in 687 bytes} [Mon May  6 20:34:54 2019] GET /lwd/ => generated 33030 bytes in 24 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 3)
+[pid: 25219|app: 0|req: 51/51] 218.64.220.101 () {42 vars in 743 bytes} [Mon May  6 20:35:01 2019] GET /lwd/login/ => generated 3957 bytes in 2 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 25219|app: 0|req: 52/52] 218.64.220.101 () {48 vars in 864 bytes} [Mon May  6 20:35:12 2019] POST /lwd/login_post/ => generated 38 bytes in 14 msecs (HTTP/1.1 200) 5 headers in 245 bytes (1 switches on core 1)
+02158437-6535-56ec-aae7-dc4b58c62ef7 token
+[pid: 25219|app: 0|req: 53/53] 218.64.220.101 () {44 vars in 794 bytes} [Mon May  6 20:35:12 2019] GET /lwd/ => generated 33524 bytes in 24 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 25219|app: 0|req: 54/54] 218.64.220.101 () {44 vars in 864 bytes} [Mon May  6 20:35:16 2019] GET /lwd/a_id/f34d8955a88053aca53392066ad24e2f/ => generated 43330 bytes in 69 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 3)
+[pid: 25219|app: 0|req: 55/55] 218.64.220.101 () {50 vars in 968 bytes} [Mon May  6 20:36:24 2019] POST /lwd/checkfollow/ => generated 44 bytes in 4 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 2)
+[pid: 25219|app: 0|req: 57/57] 218.64.220.101 () {50 vars in 960 bytes} [Mon May  6 20:36:24 2019] POST /lwd/is_like/ => generated 67 bytes in 7 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+[pid: 25219|app: 0|req: 57/57] 218.64.220.101 () {50 vars in 966 bytes} [Mon May  6 20:36:24 2019] POST /lwd/is_collect/ => generated 70 bytes in 12 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 1)
+[pid: 25219|app: 0|req: 58/58] 201.76.127.150 () {32 vars in 462 bytes} [Mon May  6 20:38:13 2019] GET / => generated 74 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 3)
+[pid: 25219|app: 0|req: 59/59] 218.64.220.101 () {52 vars in 1094 bytes} [Mon May  6 20:40:18 2019] POST /comment/a_id/f34d8955a88053aca53392066ad24e2f/ => generated 0 bytes in 48 msecs (HTTP/1.1 302) 5 headers in 179 bytes (1 switches on core 2)
+[pid: 25219|app: 0|req: 60/60] 218.64.220.101 () {46 vars in 946 bytes} [Mon May  6 20:40:19 2019] GET /lwd/a_id/f34d8955a88053aca53392066ad24e2f/ => generated 45011 bytes in 60 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 25219|app: 0|req: 61/61] 218.64.220.101 () {50 vars in 968 bytes} [Mon May  6 20:40:19 2019] POST /lwd/checkfollow/ => generated 44 bytes in 4 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 1)
+[pid: 25219|app: 0|req: 62/62] 218.64.220.101 () {50 vars in 960 bytes} [Mon May  6 20:40:19 2019] POST /lwd/is_like/ => generated 67 bytes in 7 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 3)
+[pid: 25219|app: 0|req: 63/63] 218.64.220.101 () {50 vars in 966 bytes} [Mon May  6 20:40:19 2019] POST /lwd/is_collect/ => generated 70 bytes in 7 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 2)
+[pid: 25219|app: 0|req: 64/64] 218.64.220.101 () {46 vars in 946 bytes} [Mon May  6 20:45:10 2019] GET /lwd/a_id/f34d8955a88053aca53392066ad24e2f/ => generated 45011 bytes in 62 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 25219|app: 0|req: 67/65] 218.64.220.101 () {50 vars in 968 bytes} [Mon May  6 20:45:10 2019] POST /lwd/checkfollow/ => generated 44 bytes in 13 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 1)
+[pid: 25219|app: 0|req: 67/66] 218.64.220.101 () {50 vars in 960 bytes} [Mon May  6 20:45:10 2019] POST /lwd/is_like/ => generated 67 bytes in 14 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 3)
+[pid: 25219|app: 0|req: 67/67] 218.64.220.101 () {50 vars in 966 bytes} [Mon May  6 20:45:10 2019] POST /lwd/is_collect/ => generated 70 bytes in 6 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 2)
+[]
+[pid: 25219|app: 0|req: 68/68] 218.64.220.101 () {44 vars in 913 bytes} [Mon May  6 20:45:24 2019] GET /lwd/u_id/1770767305ed50a0aa862dd99d51f0cf => generated 19250 bytes in 25 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 25219|app: 0|req: 69/69] 218.64.220.101 () {50 vars in 967 bytes} [Mon May  6 20:45:25 2019] POST /lwd/checkfollow/ => generated 38 bytes in 4 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 1)
+[pid: 25219|app: 0|req: 70/70] 218.64.220.101 () {44 vars in 848 bytes} [Mon May  6 20:45:35 2019] GET /lwd/quit/ => generated 0 bytes in 11 msecs (HTTP/1.1 302) 5 headers in 212 bytes (1 switches on core 3)
+None token
+[pid: 25219|app: 0|req: 71/71] 218.64.220.101 () {44 vars in 794 bytes} [Mon May  6 20:45:36 2019] GET /lwd/ => generated 33030 bytes in 22 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 2)
+[pid: 25219|app: 0|req: 72/72] 218.64.220.101 () {44 vars in 769 bytes} [Mon May  6 20:45:37 2019] GET /lwd/login/ => generated 3957 bytes in 2 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 25219|app: 0|req: 73/73] 218.64.220.101 () {50 vars in 890 bytes} [Mon May  6 20:45:45 2019] POST /lwd/login_post/ => generated 38 bytes in 15 msecs (HTTP/1.1 200) 5 headers in 245 bytes (1 switches on core 1)
+0f824011-f2f0-5155-9b9d-43691a439a15 token
+[pid: 25219|app: 0|req: 74/74] 218.64.220.101 () {44 vars in 807 bytes} [Mon May  6 20:45:45 2019] GET /lwd/ => generated 33518 bytes in 23 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 3)
+[pid: 25219|app: 0|req: 75/75] 218.64.220.101 () {44 vars in 877 bytes} [Mon May  6 20:45:47 2019] GET /lwd/a_id/f34d8955a88053aca53392066ad24e2f/ => generated 44895 bytes in 297 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 2)
+[pid: 25219|app: 0|req: 78/76] 218.64.220.101 () {50 vars in 968 bytes} [Mon May  6 20:45:47 2019] POST /lwd/checkfollow/ => generated 38 bytes in 7 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 3)
+[pid: 25219|app: 0|req: 78/77] 218.64.220.101 () {50 vars in 966 bytes} [Mon May  6 20:45:47 2019] POST /lwd/is_collect/ => generated 59 bytes in 14 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 1)
+[pid: 25219|app: 0|req: 78/78] 218.64.220.101 () {50 vars in 960 bytes} [Mon May  6 20:45:47 2019] POST /lwd/is_like/ => generated 56 bytes in 16 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+[<Comment: 演员的自我修养，不树人设，好好演戏，专研>, <Comment: 我是演员>]
+[pid: 25219|app: 0|req: 79/79] 218.64.220.101 () {44 vars in 913 bytes} [Mon May  6 20:45:55 2019] GET /lwd/u_id/3417470d65405634af3597cfd51e965e => generated 30668 bytes in 26 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 2)
+[pid: 25219|app: 0|req: 80/80] 218.64.220.101 () {50 vars in 967 bytes} [Mon May  6 20:45:55 2019] POST /lwd/checkfollow/ => generated 38 bytes in 4 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 3)
+Mon May  6 20:49:44 2019 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Mon May  6 20:49:44 2019 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+*** Starting uWSGI 2.0.18 (64bit) on [Mon May  6 20:49:49 2019] ***
+compiled with version: 7.3.0 on 06 May 2019 02:45:11
+os: Linux-4.15.0-29-generic #31-Ubuntu SMP Tue Jul 17 15:39:52 UTC 2018
+nodename: VM-0-7-ubuntu
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /var/www/Python_Blog
+writing pidfile to uwsgi.pid
+detected binary path: /home/ubuntu/.virtualenvs/django/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /var/www/Python_Blog
+your processes number limit is 7102
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 0.0.0.0:8000 fd 3
+Python version: 3.6.7 (default, Oct 22 2018, 11:32:17)  [GCC 8.2.0]
+Python main interpreter initialized at 0x55dd76c44700
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 208448 bytes (203 KB) for 4 cores
+*** Operational MODE: threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55dd76c44700 pid: 27164 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 27164)
+spawned uWSGI worker 1 (pid: 27166, cores: 4)
+[pid: 27166|app: 0|req: 1/1] 218.64.220.101 () {40 vars in 679 bytes} [Mon May  6 20:50:25 2019] GET / => generated 74 bytes in 957 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 27166|app: 0|req: 2/2] 218.64.220.101 () {40 vars in 691 bytes} [Mon May  6 20:50:31 2019] GET /admin/ => generated 0 bytes in 23 msecs (HTTP/1.1 302) 7 headers in 265 bytes (1 switches on core 3)
+[pid: 27166|app: 0|req: 3/3] 218.64.220.101 () {40 vars in 728 bytes} [Mon May  6 20:50:32 2019] GET /admin/login/?next=/admin/ => generated 1652 bytes in 18 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 2)
+None token
+[pid: 27166|app: 0|req: 4/4] 218.64.220.101 () {42 vars in 776 bytes} [Mon May  6 20:50:39 2019] GET /lwd/ => generated 33030 bytes in 47 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 1)
+[pid: 27166|app: 0|req: 5/5] 218.64.220.101 () {44 vars in 832 bytes} [Mon May  6 20:50:41 2019] GET /lwd/login/ => generated 3957 bytes in 3 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 27166|app: 0|req: 6/6] 218.64.220.101 () {50 vars in 953 bytes} [Mon May  6 20:50:50 2019] POST /lwd/login_post/ => generated 38 bytes in 22 msecs (HTTP/1.1 200) 5 headers in 245 bytes (1 switches on core 3)
+ebb2363c-34fe-5534-a0f2-9ec15767a40d token
+[pid: 27166|app: 0|req: 7/7] 218.64.220.101 () {44 vars in 870 bytes} [Mon May  6 20:50:50 2019] GET /lwd/ => generated 33518 bytes in 27 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 2)
+[pid: 27166|app: 0|req: 8/8] 218.64.220.101 () {44 vars in 967 bytes} [Mon May  6 20:51:00 2019] GET /lwd/setting/u_id/3417470d65405634af3597cfd51e965e => generated 31702 bytes in 11 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 1)
+3417470d65405634af3597cfd51e965e_1557147078213.jpg 头像啊呀
+[pid: 27166|app: 0|req: 9/9] 218.64.220.101 () {50 vars in 1101 bytes} [Mon May  6 20:51:19 2019] POST /lwd/update_avatar/ => generated 7 bytes in 15 msecs (HTTP/1.1 200) 4 headers in 121 bytes (2 switches on core 0)
+ebb2363c-34fe-5534-a0f2-9ec15767a40d token
+[pid: 27166|app: 0|req: 10/10] 218.64.220.101 () {44 vars in 922 bytes} [Mon May  6 20:51:21 2019] GET /lwd/ => generated 33518 bytes in 25 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 3)
+Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+Loading model cost 0.816 seconds.
+Prefix dict has been built succesfully.
+[pid: 27166|app: 0|req: 11/11] 218.64.220.101 () {44 vars in 953 bytes} [Mon May  6 20:51:29 2019] GET /lwd/a_id/f34d8955a88053aca53392066ad24e2f/ => generated 44835 bytes in 896 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 2)
+[pid: 27166|app: 0|req: 14/12] 218.64.220.101 () {50 vars in 1044 bytes} [Mon May  6 20:52:09 2019] POST /lwd/checkfollow/ => generated 38 bytes in 5 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 3)
+[pid: 27166|app: 0|req: 14/13] 218.64.220.101 () {50 vars in 1036 bytes} [Mon May  6 20:52:09 2019] POST /lwd/is_like/ => generated 56 bytes in 12 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+[pid: 27166|app: 0|req: 14/14] 218.64.220.101 () {50 vars in 1042 bytes} [Mon May  6 20:52:09 2019] POST /lwd/is_collect/ => generated 59 bytes in 17 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 1)
+[pid: 27166|app: 0|req: 15/15] 218.64.220.101 () {44 vars in 925 bytes} [Mon May  6 20:52:15 2019] GET /lwd/quit/ => generated 0 bytes in 9 msecs (HTTP/1.1 302) 5 headers in 212 bytes (1 switches on core 2)
+None token
+[pid: 27166|app: 0|req: 16/16] 218.64.220.101 () {44 vars in 871 bytes} [Mon May  6 20:52:15 2019] GET /lwd/ => generated 33030 bytes in 23 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 3)
+[pid: 27166|app: 0|req: 17/17] 218.64.220.101 () {44 vars in 845 bytes} [Mon May  6 20:52:16 2019] GET /lwd/login/ => generated 3957 bytes in 1 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 27166|app: 0|req: 18/18] 218.64.220.101 () {50 vars in 966 bytes} [Mon May  6 20:52:26 2019] POST /lwd/login_post/ => generated 38 bytes in 17 msecs (HTTP/1.1 200) 5 headers in 245 bytes (1 switches on core 1)
+faa73fb6-1ce3-560a-ac8c-892f19dfb855 token
+[pid: 27166|app: 0|req: 19/19] 218.64.220.101 () {44 vars in 883 bytes} [Mon May  6 20:52:26 2019] GET /lwd/ => generated 33524 bytes in 24 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 2)
+[pid: 27166|app: 0|req: 20/20] 218.64.220.101 () {44 vars in 967 bytes} [Mon May  6 20:52:29 2019] GET /lwd/setting/u_id/1770767305ed50a0aa862dd99d51f0cf => generated 31720 bytes in 7 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 3)
+1770767305ed50a0aa862dd99d51f0cf_1557147161450.jpg 头像啊呀
+[pid: 27166|app: 0|req: 21/21] 218.64.220.101 () {50 vars in 1101 bytes} [Mon May  6 20:52:42 2019] POST /lwd/update_avatar/ => generated 7 bytes in 11 msecs (HTTP/1.1 200) 4 headers in 121 bytes (2 switches on core 0)
+faa73fb6-1ce3-560a-ac8c-892f19dfb855 token
+[pid: 27166|app: 0|req: 22/22] 218.64.220.101 () {44 vars in 922 bytes} [Mon May  6 20:52:48 2019] GET /lwd/ => generated 33524 bytes in 24 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 1)
+[pid: 27166|app: 0|req: 23/23] 218.64.220.101 () {44 vars in 953 bytes} [Mon May  6 20:52:53 2019] GET /lwd/a_id/f34d8955a88053aca53392066ad24e2f/ => generated 44951 bytes in 60 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 2)
+[pid: 27166|app: 0|req: 24/24] 218.64.220.101 () {50 vars in 1044 bytes} [Mon May  6 20:52:54 2019] POST /lwd/checkfollow/ => generated 44 bytes in 4 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 3)
+[pid: 27166|app: 0|req: 25/25] 218.64.220.101 () {50 vars in 1036 bytes} [Mon May  6 20:52:54 2019] POST /lwd/is_like/ => generated 67 bytes in 6 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+[pid: 27166|app: 0|req: 26/26] 218.64.220.101 () {50 vars in 1042 bytes} [Mon May  6 20:52:54 2019] POST /lwd/is_collect/ => generated 70 bytes in 5 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 1)
+faa73fb6-1ce3-560a-ac8c-892f19dfb855 token
+[pid: 27166|app: 0|req: 27/27] 218.64.220.101 () {44 vars in 915 bytes} [Mon May  6 20:53:16 2019] GET /lwd/ => generated 33524 bytes in 30 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 2)
+[pid: 27166|app: 0|req: 28/28] 218.64.220.101 () {44 vars in 887 bytes} [Mon May  6 20:53:19 2019] GET /lwd/quit/ => generated 0 bytes in 8 msecs (HTTP/1.1 302) 5 headers in 212 bytes (1 switches on core 3)
+None token
+[pid: 27166|app: 0|req: 29/29] 218.64.220.101 () {44 vars in 833 bytes} [Mon May  6 20:53:19 2019] GET /lwd/ => generated 33030 bytes in 22 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 27166|app: 0|req: 30/30] 218.64.220.101 () {44 vars in 845 bytes} [Mon May  6 20:53:20 2019] GET /lwd/login/ => generated 3957 bytes in 2 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 27166|app: 0|req: 31/31] 218.64.220.101 () {50 vars in 966 bytes} [Mon May  6 20:53:29 2019] POST /lwd/login_post/ => generated 38 bytes in 19 msecs (HTTP/1.1 200) 5 headers in 245 bytes (1 switches on core 2)
+b60fd506-2308-5ae4-8b10-0c4637875b0a token
+[pid: 27166|app: 0|req: 32/32] 218.64.220.101 () {44 vars in 883 bytes} [Mon May  6 20:53:29 2019] GET /lwd/ => generated 33518 bytes in 23 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 3)
+[pid: 27166|app: 0|req: 33/33] 218.64.220.101 () {44 vars in 953 bytes} [Mon May  6 20:53:30 2019] GET /lwd/a_id/f34d8955a88053aca53392066ad24e2f/ => generated 44835 bytes in 62 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 27166|app: 0|req: 36/34] 218.64.220.101 () {50 vars in 1044 bytes} [Mon May  6 20:53:31 2019] POST /lwd/checkfollow/ => generated 38 bytes in 7 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 2)
+[pid: 27166|app: 0|req: 36/35] 218.64.220.101 () {50 vars in 1036 bytes} [Mon May  6 20:53:31 2019] POST /lwd/is_like/ => generated 56 bytes in 16 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 1)
+[pid: 27166|app: 0|req: 36/36] 218.64.220.101 () {50 vars in 1042 bytes} [Mon May  6 20:53:31 2019] POST /lwd/is_collect/ => generated 59 bytes in 11 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 3)
+[pid: 27166|app: 0|req: 37/37] 218.64.220.101 () {44 vars in 991 bytes} [Mon May  6 20:53:32 2019] GET /lwd/edit/f34d8955a88053aca53392066ad24e2f/ => generated 24503 bytes in 7 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 27166|app: 0|req: 38/38] 218.64.220.101 () {52 vars in 1236 bytes} [Mon May  6 20:53:46 2019] POST /lwd/upload_img/?guid=1557147219175 => generated 27 bytes in 21 msecs (HTTP/1.1 500) 4 headers in 126 bytes (9 switches on core 2)
+[pid: 27166|app: 0|req: 39/39] 218.64.220.101 () {52 vars in 1236 bytes} [Mon May  6 20:54:07 2019] POST /lwd/upload_img/?guid=1557147219175 => generated 27 bytes in 16 msecs (HTTP/1.1 500) 4 headers in 126 bytes (6 switches on core 1)
+[pid: 27166|app: 0|req: 40/40] 218.64.220.101 () {46 vars in 1022 bytes} [Mon May  6 20:57:23 2019] GET /lwd/edit/f34d8955a88053aca53392066ad24e2f/ => generated 24503 bytes in 4 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 3)
+[pid: 27166|app: 0|req: 41/41] 218.64.220.101 () {52 vars in 1236 bytes} [Mon May  6 20:57:34 2019] POST /lwd/upload_img/?guid=1557147447267 => generated 27 bytes in 17 msecs (HTTP/1.1 500) 4 headers in 126 bytes (12 switches on core 0)
+[pid: 27166|app: 0|req: 42/42] 218.64.220.101 () {52 vars in 1236 bytes} [Mon May  6 20:59:04 2019] POST /lwd/upload_img/?guid=1557147447267 => generated 27 bytes in 18 msecs (HTTP/1.1 500) 4 headers in 126 bytes (12 switches on core 2)
+Mon May  6 20:59:51 2019 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Mon May  6 20:59:51 2019 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+*** Starting uWSGI 2.0.18 (64bit) on [Mon May  6 20:59:57 2019] ***
+compiled with version: 7.3.0 on 06 May 2019 02:45:11
+os: Linux-4.15.0-29-generic #31-Ubuntu SMP Tue Jul 17 15:39:52 UTC 2018
+nodename: VM-0-7-ubuntu
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /var/www/Python_Blog
+writing pidfile to uwsgi.pid
+detected binary path: /home/ubuntu/.virtualenvs/django/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /var/www/Python_Blog
+your processes number limit is 7102
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 0.0.0.0:8000 fd 3
+Python version: 3.6.7 (default, Oct 22 2018, 11:32:17)  [GCC 8.2.0]
+Python main interpreter initialized at 0x560e13ade700
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 208448 bytes (203 KB) for 4 cores
+*** Operational MODE: threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x560e13ade700 pid: 27998 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 27998)
+spawned uWSGI worker 1 (pid: 28000, cores: 4)
+*** Starting uWSGI 2.0.18 (64bit) on [Mon May  6 21:03:07 2019] ***
+compiled with version: 7.3.0 on 06 May 2019 02:45:11
+os: Linux-4.15.0-29-generic #31-Ubuntu SMP Tue Jul 17 15:39:52 UTC 2018
+nodename: VM-0-7-ubuntu
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /var/www/Python_Blog
+writing pidfile to uwsgi.pid
+detected binary path: /home/ubuntu/.virtualenvs/django/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /var/www/Python_Blog
+your processes number limit is 7102
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (0.0.0.0:8000).
+bind(): Address already in use [core/socket.c line 769]
+[pid: 28000|app: 0|req: 1/1] 218.64.220.101 () {40 vars in 685 bytes} [Mon May  6 21:04:21 2019] GET /lwd => generated 0 bytes in 918 msecs (HTTP/1.1 301) 3 headers in 110 bytes (1 switches on core 0)
+None token
+[pid: 28000|app: 0|req: 2/2] 218.64.220.101 () {40 vars in 687 bytes} [Mon May  6 21:04:22 2019] GET /lwd/ => generated 33030 bytes in 83 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 3)
+[pid: 28000|app: 0|req: 3/3] 218.64.220.101 () {42 vars in 743 bytes} [Mon May  6 21:04:34 2019] GET /lwd/login/ => generated 3957 bytes in 2 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 2)
+[pid: 28000|app: 0|req: 4/4] 218.64.220.101 () {48 vars in 864 bytes} [Mon May  6 21:04:48 2019] POST /lwd/login_post/ => generated 38 bytes in 20 msecs (HTTP/1.1 200) 5 headers in 245 bytes (1 switches on core 1)
+16ac6cfe-6b50-5743-81b8-7f805fc429b4 token
+[pid: 28000|app: 0|req: 5/5] 218.64.220.101 () {44 vars in 794 bytes} [Mon May  6 21:04:48 2019] GET /lwd/ => generated 33518 bytes in 25 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 28000|app: 0|req: 6/6] 197.211.3.178 () {32 vars in 462 bytes} [Mon May  6 21:04:50 2019] GET / => generated 74 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 3)
+Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+Loading model cost 0.807 seconds.
+Prefix dict has been built succesfully.
+[pid: 28000|app: 0|req: 7/7] 218.64.220.101 () {44 vars in 877 bytes} [Mon May  6 21:05:07 2019] GET /lwd/a_id/0cf2e71173805591849e3449a83b9fa7/ => generated 38817 bytes in 876 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 2)
+[pid: 28000|app: 0|req: 10/8] 218.64.220.101 () {50 vars in 968 bytes} [Mon May  6 21:05:38 2019] POST /lwd/checkfollow/ => generated 38 bytes in 12 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+[pid: 28000|app: 0|req: 10/9] 218.64.220.101 () {50 vars in 960 bytes} [Mon May  6 21:05:38 2019] POST /lwd/is_like/ => generated 67 bytes in 12 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 3)
+[pid: 28000|app: 0|req: 10/10] 218.64.220.101 () {50 vars in 966 bytes} [Mon May  6 21:05:38 2019] POST /lwd/is_collect/ => generated 70 bytes in 18 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 1)
+[pid: 28000|app: 0|req: 11/11] 218.64.220.101 () {52 vars in 1096 bytes} [Mon May  6 21:06:10 2019] POST /comment/a_id/0cf2e71173805591849e3449a83b9fa7/ => generated 0 bytes in 310 msecs (HTTP/1.1 302) 5 headers in 179 bytes (1 switches on core 2)
+[pid: 28000|app: 0|req: 12/12] 218.64.220.101 () {46 vars in 946 bytes} [Mon May  6 21:06:10 2019] GET /lwd/a_id/0cf2e71173805591849e3449a83b9fa7/ => generated 40477 bytes in 54 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 28000|app: 0|req: 13/13] 218.64.220.101 () {50 vars in 968 bytes} [Mon May  6 21:06:11 2019] POST /lwd/checkfollow/ => generated 38 bytes in 4 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 3)
+[pid: 28000|app: 0|req: 15/15] 218.64.220.101 () {50 vars in 966 bytes} [Mon May  6 21:06:11 2019] POST /lwd/is_collect/ => generated 70 bytes in 12 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 2)
+[pid: 28000|app: 0|req: 15/15] 218.64.220.101 () {50 vars in 960 bytes} [Mon May  6 21:06:11 2019] POST /lwd/is_like/ => generated 67 bytes in 14 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 1)
+[pid: 28000|app: 0|req: 16/16] 218.64.220.101 () {44 vars in 915 bytes} [Mon May  6 21:06:19 2019] GET /lwd/edit/0cf2e71173805591849e3449a83b9fa7/ => generated 21962 bytes in 5 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 28000|app: 0|req: 17/17] 218.64.220.101 () {52 vars in 1160 bytes} [Mon May  6 21:06:39 2019] POST /lwd/upload_img/?guid=1557147989308 => generated 27 bytes in 20 msecs (HTTP/1.1 500) 4 headers in 126 bytes (8 switches on core 3)
+[pid: 28000|app: 0|req: 18/18] 218.64.220.101 () {52 vars in 1160 bytes} [Mon May  6 21:08:32 2019] POST /lwd/upload_img/?guid=1557147989308 => generated 27 bytes in 17 msecs (HTTP/1.1 500) 4 headers in 126 bytes (12 switches on core 2)
+[pid: 28000|app: 0|req: 19/19] 218.64.220.101 () {52 vars in 1158 bytes} [Mon May  6 21:08:57 2019] POST /lwd/upload_img/?guid=1557147989308 => generated 27 bytes in 16 msecs (HTTP/1.1 500) 4 headers in 126 bytes (2 switches on core 1)
+[pid: 28000|app: 0|req: 20/20] 218.64.220.101 () {42 vars in 816 bytes} [Mon May  6 21:09:18 2019] GET /lwd/upload_img/?guid=1557147989308 => generated 27 bytes in 14 msecs (HTTP/1.1 500) 4 headers in 126 bytes (1 switches on core 0)
+[pid: 28000|app: 0|req: 21/21] 218.64.220.101 () {42 vars in 751 bytes} [Mon May  6 21:09:19 2019] GET /favicon.ico => generated 85 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 3)
+[pid: 28000|app: 0|req: 22/22] 218.64.220.101 () {42 vars in 779 bytes} [Mon May  6 21:09:24 2019] GET /lwd/upload_img/ => generated 27 bytes in 14 msecs (HTTP/1.1 500) 4 headers in 126 bytes (1 switches on core 3)
+[pid: 28000|app: 0|req: 23/23] 218.64.220.101 () {52 vars in 1158 bytes} [Mon May  6 21:09:50 2019] POST /lwd/upload_img/?guid=1557147989308 => generated 27 bytes in 16 msecs (HTTP/1.1 500) 4 headers in 126 bytes (2 switches on core 1)
+[pid: 28000|app: 0|req: 24/24] 218.64.220.101 () {46 vars in 946 bytes} [Mon May  6 21:14:22 2019] GET /lwd/edit/0cf2e71173805591849e3449a83b9fa7/ => generated 21962 bytes in 4 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 28000|app: 0|req: 25/25] 218.64.220.101 () {52 vars in 1158 bytes} [Mon May  6 21:14:34 2019] POST /lwd/upload_img/?guid=1557148470461 => generated 27 bytes in 15 msecs (HTTP/1.1 500) 4 headers in 126 bytes (2 switches on core 2)
+[pid: 28000|app: 0|req: 26/26] 218.64.220.101 () {46 vars in 946 bytes} [Mon May  6 21:16:37 2019] GET /lwd/edit/0cf2e71173805591849e3449a83b9fa7/ => generated 21962 bytes in 4 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 3)
+[pid: 28000|app: 0|req: 27/27] 218.64.220.101 () {52 vars in 1158 bytes} [Mon May  6 21:16:45 2019] POST /lwd/upload_img/?guid=1557148601934 => generated 27 bytes in 16 msecs (HTTP/1.1 500) 4 headers in 126 bytes (2 switches on core 1)
+[pid: 28000|app: 0|req: 28/28] 218.64.220.101 () {52 vars in 1156 bytes} [Mon May  6 21:16:59 2019] POST /lwd/upload_img/?guid=1557148601934 => generated 27 bytes in 16 msecs (HTTP/1.1 500) 4 headers in 126 bytes (1 switches on core 0)
+[pid: 28000|app: 0|req: 29/29] 218.64.220.101 () {46 vars in 946 bytes} [Mon May  6 21:17:13 2019] GET /lwd/edit/0cf2e71173805591849e3449a83b9fa7/ => generated 21962 bytes in 4 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 2)
+[pid: 28000|app: 0|req: 30/30] 218.64.220.101 () {52 vars in 1160 bytes} [Mon May  6 21:17:21 2019] POST /lwd/upload_img/?guid=1557148637413 => generated 27 bytes in 15 msecs (HTTP/1.1 500) 4 headers in 126 bytes (3 switches on core 3)
+16ac6cfe-6b50-5743-81b8-7f805fc429b4 token
+[pid: 28000|app: 0|req: 31/31] 218.64.220.101 () {44 vars in 839 bytes} [Mon May  6 21:18:12 2019] GET /lwd/ => generated 33518 bytes in 25 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 1)
+[pid: 28000|app: 0|req: 32/32] 218.64.220.101 () {44 vars in 813 bytes} [Mon May  6 21:18:13 2019] GET /lwd/write/ => generated 9868 bytes in 3 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 28000|app: 0|req: 33/33] 218.64.220.101 () {52 vars in 1124 bytes} [Mon May  6 21:18:27 2019] POST /lwd/upload_img/?guid=1557148703468 => generated 27 bytes in 17 msecs (HTTP/1.1 500) 4 headers in 126 bytes (1 switches on core 2)
+[pid: 28000|app: 0|req: 34/34] 58.251.121.186 () {38 vars in 630 bytes} [Mon May  6 21:20:09 2019] GET /lwd => generated 0 bytes in 0 msecs (HTTP/1.1 301) 3 headers in 110 bytes (1 switches on core 3)
+None token
+[pid: 28000|app: 0|req: 35/35] 58.251.121.186 () {40 vars in 675 bytes} [Mon May  6 21:20:09 2019] GET /lwd/ => generated 33030 bytes in 23 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 3)
+16ac6cfe-6b50-5743-81b8-7f805fc429b4 token
+[pid: 28000|app: 0|req: 36/36] 218.64.220.101 () {42 vars in 757 bytes} [Mon May  6 22:04:33 2019] GET /lwd/ => generated 33518 bytes in 24 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 28000|app: 0|req: 37/37] 218.64.220.101 () {44 vars in 877 bytes} [Mon May  6 22:04:39 2019] GET /lwd/a_id/0cf2e71173805591849e3449a83b9fa7/ => generated 40478 bytes in 52 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 2)
+[pid: 28000|app: 0|req: 38/38] 218.64.220.101 () {50 vars in 968 bytes} [Mon May  6 22:04:39 2019] POST /lwd/checkfollow/ => generated 38 bytes in 4 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 1)
+[pid: 28000|app: 0|req: 40/39] 218.64.220.101 () {50 vars in 960 bytes} [Mon May  6 22:04:39 2019] POST /lwd/is_like/ => generated 67 bytes in 11 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 3)
+[pid: 28000|app: 0|req: 40/40] 218.64.220.101 () {50 vars in 966 bytes} [Mon May  6 22:04:39 2019] POST /lwd/is_collect/ => generated 70 bytes in 9 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+[<Comment: 英雄儿女，希望大家多多支持>, <Comment: 演员的自我修养，不树人设，好好演戏，专研>, <Comment: 我是演员>]
+[pid: 28000|app: 0|req: 41/41] 218.64.220.101 () {44 vars in 913 bytes} [Mon May  6 22:04:43 2019] GET /lwd/u_id/3417470d65405634af3597cfd51e965e => generated 32369 bytes in 30 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 2)
+[pid: 28000|app: 0|req: 42/42] 218.64.220.101 () {50 vars in 967 bytes} [Mon May  6 22:04:43 2019] POST /lwd/checkfollow/ => generated 38 bytes in 4 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 1)
+[pid: 28000|app: 0|req: 43/43] 218.64.220.101 () {44 vars in 914 bytes} [Mon May  6 22:04:45 2019] GET /lwd/a_id/ecece34b5e5c570f82f074f9845140b0/ => generated 55125 bytes in 65 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 3)
+[pid: 28000|app: 0|req: 46/44] 218.64.220.101 () {50 vars in 968 bytes} [Mon May  6 22:04:45 2019] POST /lwd/checkfollow/ => generated 38 bytes in 10 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 2)
+[pid: 28000|app: 0|req: 46/45] 218.64.220.101 () {50 vars in 960 bytes} [Mon May  6 22:04:45 2019] POST /lwd/is_like/ => generated 56 bytes in 13 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 1)
+[pid: 28000|app: 0|req: 46/46] 218.64.220.101 () {50 vars in 966 bytes} [Mon May  6 22:04:45 2019] POST /lwd/is_collect/ => generated 59 bytes in 17 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+[pid: 28000|app: 0|req: 47/47] 218.64.220.101 () {44 vars in 851 bytes} [Mon May  6 22:04:52 2019] GET /lwd/write/ => generated 9868 bytes in 1 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 3)
+[pid: 28000|app: 0|req: 48/48] 218.64.220.101 () {52 vars in 1126 bytes} [Mon May  6 22:05:10 2019] POST /lwd/upload_img/?guid=1557151501002 => generated 27 bytes in 17 msecs (HTTP/1.1 500) 4 headers in 126 bytes (3 switches on core 2)
+[pid: 28000|app: 0|req: 49/49] 218.64.220.101 () {52 vars in 1128 bytes} [Mon May  6 22:05:45 2019] POST /lwd/upload_img/?guid=1557151501002 => generated 27 bytes in 20 msecs (HTTP/1.1 500) 4 headers in 126 bytes (12 switches on core 1)
+[pid: 28000|app: 0|req: 50/50] 218.64.220.101 () {52 vars in 1126 bytes} [Mon May  6 22:07:59 2019] POST /lwd/upload_img/?guid=1557151501002 => generated 27 bytes in 19 msecs (HTTP/1.1 500) 4 headers in 126 bytes (1 switches on core 0)
+[pid: 28000|app: 0|req: 51/51] 218.64.220.101 () {52 vars in 1128 bytes} [Mon May  6 22:08:09 2019] POST /lwd/upload_img/?guid=1557151501002 => generated 27 bytes in 16 msecs (HTTP/1.1 500) 4 headers in 126 bytes (4 switches on core 3)
+[pid: 28000|app: 0|req: 52/52] 218.64.220.101 () {52 vars in 1122 bytes} [Mon May  6 22:08:33 2019] POST /lwd/upload_img/?guid=1557151501002 => generated 27 bytes in 17 msecs (HTTP/1.1 500) 4 headers in 126 bytes (1 switches on core 2)
+None token
+[pid: 28000|app: 0|req: 53/53] 117.136.39.86 () {40 vars in 881 bytes} [Mon May  6 22:10:02 2019] GET /lwd/ => generated 33030 bytes in 24 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 1)
+[pid: 28000|app: 0|req: 54/54] 117.136.39.86 () {44 vars in 1027 bytes} [Mon May  6 22:10:30 2019] GET /lwd/a_id/0cf2e71173805591849e3449a83b9fa7/ => generated 38219 bytes in 57 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+None token
+[pid: 28000|app: 0|req: 55/55] 117.136.39.86 () {42 vars in 907 bytes} [Mon May  6 22:10:48 2019] GET /lwd/ => generated 33030 bytes in 23 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 3)
+[pid: 28000|app: 0|req: 56/56] 117.136.39.86 () {44 vars in 1027 bytes} [Mon May  6 22:10:55 2019] GET /lwd/a_id/0cf2e71173805591849e3449a83b9fa7/ => generated 38219 bytes in 312 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 2)
+[pid: 28000|app: 0|req: 59/57] 117.136.39.86 () {50 vars in 1084 bytes} [Mon May  6 22:10:57 2019] POST /lwd/checkfollow/ => generated 27 bytes in 20 msecs (HTTP/1.1 500) 4 headers in 126 bytes (1 switches on core 1)
+[pid: 28000|app: 0|req: 59/58] 117.136.39.86 () {50 vars in 1082 bytes} [Mon May  6 22:10:57 2019] POST /lwd/is_collect/ => generated 27 bytes in 29 msecs (HTTP/1.1 500) 4 headers in 126 bytes (1 switches on core 3)
+[pid: 28000|app: 0|req: 59/59] 117.136.39.86 () {50 vars in 1076 bytes} [Mon May  6 22:10:57 2019] POST /lwd/is_like/ => generated 27 bytes in 39 msecs (HTTP/1.1 500) 4 headers in 126 bytes (1 switches on core 0)
+[pid: 28000|app: 0|req: 60/60] 117.136.39.86 () {44 vars in 1045 bytes} [Mon May  6 22:10:59 2019] GET /lwd/article_tag/HTML%E5%9F%BA%E7%A1%80 => generated 22380 bytes in 25 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 2)
+None token
+[pid: 28000|app: 0|req: 61/61] 117.136.39.86 () {44 vars in 985 bytes} [Mon May  6 22:11:02 2019] GET /lwd/ => generated 33030 bytes in 23 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 1)
+[pid: 28000|app: 0|req: 62/62] 117.136.39.86 () {44 vars in 1027 bytes} [Mon May  6 22:11:15 2019] GET /lwd/a_id/0cf2e71173805591849e3449a83b9fa7/ => generated 38219 bytes in 48 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 3)
+[pid: 28000|app: 0|req: 65/63] 117.136.39.86 () {50 vars in 1084 bytes} [Mon May  6 22:11:16 2019] POST /lwd/checkfollow/ => generated 27 bytes in 21 msecs (HTTP/1.1 500) 4 headers in 126 bytes (1 switches on core 0)
+[pid: 28000|app: 0|req: 65/64] 117.136.39.86 () {50 vars in 1076 bytes} [Mon May  6 22:11:16 2019] POST /lwd/is_like/ => generated 27 bytes in 29 msecs (HTTP/1.1 500) 4 headers in 126 bytes (1 switches on core 2)
+[pid: 28000|app: 0|req: 65/65] 117.136.39.86 () {50 vars in 1082 bytes} [Mon May  6 22:11:16 2019] POST /lwd/is_collect/ => generated 27 bytes in 35 msecs (HTTP/1.1 500) 4 headers in 126 bytes (1 switches on core 1)
+[pid: 28000|app: 0|req: 66/66] 183.192.164.71 () {36 vars in 623 bytes} [Mon May  6 22:11:29 2019] GET /lwd/a_id/0cf2e71173805591849e3449a83b9fa7 => generated 0 bytes in 0 msecs (HTTP/1.1 301) 3 headers in 148 bytes (1 switches on core 3)
+[pid: 28000|app: 0|req: 67/67] 120.204.17.73 () {36 vars in 604 bytes} [Mon May  6 22:11:59 2019] GET /lwd/article_tag/HTML%E5%9F%BA%E7%A1%80 => generated 22380 bytes in 18 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 3)
+16ac6cfe-6b50-5743-81b8-7f805fc429b4 token
+[pid: 28000|app: 0|req: 68/68] 218.64.220.101 () {44 vars in 807 bytes} [Mon May  6 22:12:42 2019] GET /lwd/ => generated 33518 bytes in 24 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 2)
+[pid: 28000|app: 0|req: 69/69] 218.64.220.101 () {44 vars in 813 bytes} [Mon May  6 22:16:32 2019] GET /lwd/write/ => generated 9868 bytes in 1 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 28000|app: 0|req: 70/70] 218.64.220.101 () {52 vars in 1130 bytes} [Mon May  6 22:17:04 2019] POST /lwd/upload_img/?guid=1557152197785 => generated 27 bytes in 20 msecs (HTTP/1.1 500) 4 headers in 126 bytes (13 switches on core 0)
+None token
+[pid: 28000|app: 0|req: 71/71] 117.136.124.85 () {40 vars in 888 bytes} [Mon May  6 22:20:22 2019] GET /lwd/ => generated 33030 bytes in 24 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 3)
+[pid: 28000|app: 0|req: 72/72] 117.136.124.85 () {44 vars in 1030 bytes} [Mon May  6 22:20:51 2019] GET /lwd/article_tag/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91 => generated 22384 bytes in 23 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 2)
+None token
+[pid: 28000|app: 0|req: 73/73] 117.136.124.85 () {44 vars in 1006 bytes} [Mon May  6 22:20:54 2019] GET /lwd/ => generated 33030 bytes in 25 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 1)
+[pid: 28000|app: 0|req: 74/74] 117.136.124.85 () {44 vars in 1034 bytes} [Mon May  6 22:21:03 2019] GET /lwd/a_id/0cf2e71173805591849e3449a83b9fa7/ => generated 38219 bytes in 50 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 28000|app: 0|req: 75/75] 117.136.124.85 () {50 vars in 1091 bytes} [Mon May  6 22:21:11 2019] POST /lwd/checkfollow/ => generated 27 bytes in 11 msecs (HTTP/1.1 500) 4 headers in 126 bytes (1 switches on core 3)
+[pid: 28000|app: 0|req: 76/76] 117.136.124.85 () {50 vars in 1083 bytes} [Mon May  6 22:21:11 2019] POST /lwd/is_like/ => generated 27 bytes in 15 msecs (HTTP/1.1 500) 4 headers in 126 bytes (1 switches on core 2)
+[pid: 28000|app: 0|req: 77/77] 117.136.124.85 () {50 vars in 1089 bytes} [Mon May  6 22:21:11 2019] POST /lwd/is_collect/ => generated 27 bytes in 14 msecs (HTTP/1.1 500) 4 headers in 126 bytes (1 switches on core 1)
+[pid: 28000|app: 0|req: 78/78] 117.136.124.85 () {44 vars in 1008 bytes} [Mon May  6 22:21:21 2019] GET /lwd/login/ => generated 3957 bytes in 1 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 28000|app: 0|req: 79/79] 14.17.21.58 () {38 vars in 639 bytes} [Mon May  6 22:21:22 2019] GET /lwd/login => generated 0 bytes in 0 msecs (HTTP/1.1 301) 3 headers in 116 bytes (1 switches on core 3)
+[pid: 28000|app: 0|req: 80/80] 14.17.21.58 () {40 vars in 690 bytes} [Mon May  6 22:21:22 2019] GET /lwd/login/ => generated 3957 bytes in 1 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 3)
+[pid: 28000|app: 0|req: 81/81] 117.136.124.85 () {50 vars in 1061 bytes} [Mon May  6 22:21:43 2019] POST /lwd/checkaccount/ => generated 51 bytes in 3 msecs (HTTP/1.1 200) 3 headers in 100 bytes (1 switches on core 3)
+[pid: 28000|app: 0|req: 82/82] 183.192.164.214 () {36 vars in 585 bytes} [Mon May  6 22:21:49 2019] GET /lwd/article_tag/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91 => generated 22384 bytes in 19 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 28000|app: 0|req: 83/83] 117.136.124.85 () {44 vars in 1019 bytes} [Mon May  6 22:21:55 2019] GET /lwd/checkname/?user_name=%E9%98%BF%E9%BE%99%E6%9C%89%E7%82%B9%E9%A9%AC%E5%8F%89%E8%99%AB => generated 51 bytes in 3 msecs (HTTP/1.1 200) 3 headers in 100 bytes (1 switches on core 2)
+[pid: 28000|app: 0|req: 84/84] 117.136.124.85 () {50 vars in 1065 bytes} [Mon May  6 22:22:09 2019] POST /lwd/register_post/ => generated 63 bytes in 16 msecs (HTTP/1.1 200) 5 headers in 245 bytes (1 switches on core 1)
+b6beb651-b796-53b6-8fc5-3b2f279b2cdc token
+[pid: 28000|app: 0|req: 85/85] 117.136.124.85 () {44 vars in 1008 bytes} [Mon May  6 22:22:09 2019] GET /lwd/ => generated 33468 bytes in 25 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 3)
+[pid: 28000|app: 0|req: 86/86] 117.136.124.85 () {44 vars in 1078 bytes} [Mon May  6 22:22:19 2019] GET /lwd/a_id/ecece34b5e5c570f82f074f9845140b0/ => generated 55185 bytes in 57 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 28000|app: 0|req: 87/87] 58.251.121.185 () {38 vars in 706 bytes} [Mon May  6 22:22:19 2019] GET /lwd/a_id/ecece34b5e5c570f82f074f9845140b0 => generated 0 bytes in 0 msecs (HTTP/1.1 301) 3 headers in 148 bytes (1 switches on core 2)
+[pid: 28000|app: 0|req: 88/88] 58.251.121.185 () {40 vars in 789 bytes} [Mon May  6 22:22:19 2019] GET /lwd/a_id/ecece34b5e5c570f82f074f9845140b0/ => generated 54526 bytes in 56 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 2)
+[pid: 28000|app: 0|req: 89/89] 61.151.178.163 () {36 vars in 522 bytes} [Mon May  6 22:22:21 2019] GET /lwd/login => generated 0 bytes in 0 msecs (HTTP/1.1 301) 3 headers in 116 bytes (1 switches on core 3)
+[pid: 28000|app: 0|req: 92/90] 117.136.124.85 () {50 vars in 1133 bytes} [Mon May  6 22:22:21 2019] POST /lwd/is_collect/ => generated 59 bytes in 13 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 1)
+[pid: 28000|app: 0|req: 92/91] 117.136.124.85 () {50 vars in 1135 bytes} [Mon May  6 22:22:21 2019] POST /lwd/checkfollow/ => generated 38 bytes in 13 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 2)
+[pid: 28000|app: 0|req: 92/92] 117.136.124.85 () {50 vars in 1127 bytes} [Mon May  6 22:22:21 2019] POST /lwd/is_like/ => generated 56 bytes in 16 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 3)
+[pid: 28000|app: 0|req: 93/93] 117.136.124.85 () {52 vars in 1295 bytes} [Mon May  6 22:22:49 2019] POST /comment/a_id/ecece34b5e5c570f82f074f9845140b0/ => generated 0 bytes in 272 msecs (HTTP/1.1 302) 5 headers in 179 bytes (1 switches on core 0)
+[pid: 28000|app: 0|req: 94/94] 117.136.124.85 () {46 vars in 1147 bytes} [Mon May  6 22:22:49 2019] GET /lwd/a_id/ecece34b5e5c570f82f074f9845140b0/ => generated 56792 bytes in 57 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 1)
+[pid: 28000|app: 0|req: 97/95] 117.136.124.85 () {50 vars in 1135 bytes} [Mon May  6 22:22:50 2019] POST /lwd/checkfollow/ => generated 38 bytes in 13 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+[pid: 28000|app: 0|req: 97/96] 117.136.124.85 () {50 vars in 1133 bytes} [Mon May  6 22:22:50 2019] POST /lwd/is_collect/ => generated 59 bytes in 17 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 3)
+[pid: 28000|app: 0|req: 97/97] 117.136.124.85 () {50 vars in 1127 bytes} [Mon May  6 22:22:50 2019] POST /lwd/is_like/ => generated 56 bytes in 20 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 2)
+b6beb651-b796-53b6-8fc5-3b2f279b2cdc token
+[pid: 28000|app: 0|req: 98/98] 117.136.124.85 () {44 vars in 1040 bytes} [Mon May  6 22:23:05 2019] GET /lwd/ => generated 33468 bytes in 24 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 1)
+[pid: 28000|app: 0|req: 99/99] 101.89.239.216 () {36 vars in 623 bytes} [Mon May  6 22:23:19 2019] GET /lwd/a_id/ecece34b5e5c570f82f074f9845140b0 => generated 0 bytes in 0 msecs (HTTP/1.1 301) 3 headers in 148 bytes (1 switches on core 0)
+None token
+[pid: 28000|app: 0|req: 100/100] 117.136.124.85 () {42 vars in 788 bytes} [Mon May  6 22:23:20 2019] GET /lwd/ => generated 33030 bytes in 23 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 28000|app: 0|req: 101/101] 120.92.72.116 () {38 vars in 539 bytes} [Mon May  6 22:23:22 2019] GET / => generated 74 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 2)
+[pid: 28000|app: 0|req: 102/102] 120.92.72.149 () {40 vars in 603 bytes} [Mon May  6 22:23:22 2019] GET / => generated 74 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 2)
+[pid: 28000|app: 0|req: 103/103] 61.129.6.151 () {36 vars in 502 bytes} [Mon May  6 22:24:21 2019] GET / => generated 74 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 3)
+[pid: 28000|app: 0|req: 104/104] 117.136.124.85 () {44 vars in 913 bytes} [Mon May  6 22:24:22 2019] GET /lwd/a_id/ecece34b5e5c570f82f074f9845140b0/ => generated 54526 bytes in 55 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 3)
+[pid: 28000|app: 0|req: 107/105] 117.136.124.85 () {50 vars in 1004 bytes} [Mon May  6 22:24:28 2019] POST /lwd/checkfollow/ => generated 27 bytes in 19 msecs (HTTP/1.1 500) 4 headers in 126 bytes (1 switches on core 2)
+[pid: 28000|app: 0|req: 107/106] 117.136.124.85 () {50 vars in 996 bytes} [Mon May  6 22:24:28 2019] POST /lwd/is_like/ => generated 27 bytes in 32 msecs (HTTP/1.1 500) 4 headers in 126 bytes (1 switches on core 1)
+[pid: 28000|app: 0|req: 107/107] 117.136.124.85 () {50 vars in 1002 bytes} [Mon May  6 22:24:28 2019] POST /lwd/is_collect/ => generated 27 bytes in 32 msecs (HTTP/1.1 500) 4 headers in 126 bytes (1 switches on core 0)
+[pid: 28000|app: 0|req: 108/108] 117.136.124.85 () {50 vars in 1006 bytes} [Mon May  6 22:24:32 2019] POST /lwd/like_handler/ => generated 56 bytes in 0 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 3)
+[pid: 28000|app: 0|req: 109/109] 117.136.124.85 () {44 vars in 887 bytes} [Mon May  6 22:24:32 2019] GET /lwd/login/ => generated 3957 bytes in 1 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 3)
+[pid: 28000|app: 0|req: 110/110] 117.136.124.85 () {40 vars in 738 bytes} [Mon May  6 22:25:11 2019] GET /lwd/a_id/ecece34b5e5c570f82f074f9845140b0 => generated 0 bytes in 0 msecs (HTTP/1.1 301) 3 headers in 148 bytes (1 switches on core 1)
+[pid: 28000|app: 0|req: 111/111] 117.136.124.85 () {40 vars in 740 bytes} [Mon May  6 22:25:11 2019] GET /lwd/a_id/ecece34b5e5c570f82f074f9845140b0/ => generated 54526 bytes in 56 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 1)
+[pid: 28000|app: 0|req: 112/112] 117.136.124.85 () {42 vars in 758 bytes} [Mon May  6 22:25:23 2019] GET /lwd/login/ => generated 3957 bytes in 1 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 2)
+[pid: 28000|app: 0|req: 113/113] 117.136.124.85 () {34 vars in 479 bytes} [Mon May  6 22:25:24 2019] GET /favicon.ico => generated 85 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 3)
+[pid: 28000|app: 0|req: 114/114] 117.136.124.85 () {46 vars in 825 bytes} [Mon May  6 22:25:48 2019] POST /lwd/login_post/ => generated 51 bytes in 3 msecs (HTTP/1.1 200) 3 headers in 100 bytes (1 switches on core 3)
+[pid: 28000|app: 0|req: 115/115] 117.136.124.85 () {46 vars in 825 bytes} [Mon May  6 22:25:56 2019] POST /lwd/login_post/ => generated 51 bytes in 3 msecs (HTTP/1.1 200) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 28000|app: 0|req: 116/116] 117.136.124.85 () {42 vars in 766 bytes} [Mon May  6 22:26:01 2019] GET /lwd/a_id/ecece34b5e5c570f82f074f9845140b0/ => generated 54526 bytes in 57 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 2)
+b6beb651-b796-53b6-8fc5-3b2f279b2cdc token
+[pid: 28000|app: 0|req: 117/117] 117.136.124.85 () {42 vars in 958 bytes} [Mon May  6 22:26:14 2019] GET /lwd/ => generated 33468 bytes in 44 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+None token
+[pid: 28000|app: 0|req: 118/118] 123.151.77.90 () {42 vars in 750 bytes} [Mon May  6 22:26:22 2019] GET /lwd/ => generated 33030 bytes in 27 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 3)
+[pid: 28000|app: 0|req: 119/119] 125.39.46.59 () {42 vars in 717 bytes} [Mon May  6 22:28:07 2019] GET / => generated 74 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 28000|app: 0|req: 120/120] 111.30.142.233 () {42 vars in 719 bytes} [Mon May  6 22:28:07 2019] GET / => generated 74 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+None token
+[pid: 28000|app: 0|req: 121/121] 117.136.124.85 () {40 vars in 923 bytes} [Mon May  6 22:28:32 2019] GET /lwd/ => generated 33030 bytes in 22 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 1)
+[pid: 28000|app: 0|req: 122/122] 111.79.225.25 () {40 vars in 722 bytes} [Mon May  6 22:28:52 2019] GET /lwd => generated 0 bytes in 0 msecs (HTTP/1.1 301) 3 headers in 110 bytes (1 switches on core 3)
+None token
+[pid: 28000|app: 0|req: 123/123] 111.79.225.25 () {40 vars in 724 bytes} [Mon May  6 22:28:52 2019] GET /lwd/ => generated 33030 bytes in 24 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 3)
+[pid: 28000|app: 0|req: 124/124] 111.79.225.25 () {42 vars in 844 bytes} [Mon May  6 22:29:20 2019] GET /lwd/a_id/ecece34b5e5c570f82f074f9845140b0/ => generated 54527 bytes in 315 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 28000|app: 0|req: 125/125] 111.79.225.25 () {44 vars in 806 bytes} [Mon May  6 22:29:24 2019] GET /lwd/login/ => generated 3957 bytes in 1 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+None token
+[pid: 28000|app: 0|req: 126/126] 111.79.225.25 () {42 vars in 750 bytes} [Mon May  6 22:29:28 2019] GET /lwd/ => generated 33030 bytes in 24 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 2)
+[pid: 28000|app: 0|req: 127/127] 111.79.225.25 () {44 vars in 866 bytes} [Mon May  6 22:29:52 2019] GET /lwd/article_tag/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91 => generated 22384 bytes in 19 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 3)
+[pid: 28000|app: 0|req: 128/128] 111.79.225.25 () {44 vars in 854 bytes} [Mon May  6 22:30:12 2019] GET /lwd/login/ => generated 3957 bytes in 1 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 28000|app: 0|req: 129/129] 111.79.225.25 () {44 vars in 918 bytes} [Mon May  6 22:30:19 2019] GET /lwd/a_id/0cf2e71173805591849e3449a83b9fa7/ => generated 38219 bytes in 57 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 1)
+[pid: 28000|app: 0|req: 132/130] 111.79.225.25 () {50 vars in 961 bytes} [Mon May  6 22:30:28 2019] POST /lwd/checkfollow/ => generated 27 bytes in 19 msecs (HTTP/1.1 500) 4 headers in 126 bytes (1 switches on core 2)
+[pid: 28000|app: 0|req: 132/131] 111.79.225.25 () {50 vars in 959 bytes} [Mon May  6 22:30:28 2019] POST /lwd/is_collect/ => generated 27 bytes in 27 msecs (HTTP/1.1 500) 4 headers in 126 bytes (1 switches on core 0)
+[pid: 28000|app: 0|req: 132/132] 111.79.225.25 () {50 vars in 953 bytes} [Mon May  6 22:30:28 2019] POST /lwd/is_like/ => generated 27 bytes in 34 msecs (HTTP/1.1 500) 4 headers in 126 bytes (1 switches on core 3)
+None token
+[pid: 28000|app: 0|req: 133/133] 111.79.225.25 () {44 vars in 832 bytes} [Mon May  6 22:30:43 2019] GET /lwd/ => generated 33030 bytes in 23 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 1)
+[pid: 28000|app: 0|req: 134/134] 111.79.225.25 () {36 vars in 603 bytes} [Mon May  6 22:32:30 2019] GET /favicon.ico => generated 85 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 2)
+16ac6cfe-6b50-5743-81b8-7f805fc429b4 token
+[pid: 28000|app: 0|req: 135/135] 117.136.124.85 () {44 vars in 788 bytes} [Mon May  6 22:34:37 2019] GET /lwd/ => generated 33518 bytes in 25 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 2)
+16ac6cfe-6b50-5743-81b8-7f805fc429b4 token
+[pid: 28000|app: 0|req: 136/136] 117.136.124.85 () {44 vars in 788 bytes} [Mon May  6 22:34:44 2019] GET /lwd/ => generated 33518 bytes in 25 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 3)
+[pid: 28000|app: 0|req: 137/137] 117.136.124.85 () {44 vars in 813 bytes} [Mon May  6 22:35:24 2019] GET /lwd/write/ => generated 9868 bytes in 1 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 28000|app: 0|req: 138/138] 117.136.124.85 () {52 vars in 1128 bytes} [Mon May  6 22:35:33 2019] POST /lwd/upload_img/?guid=1557153328619 => generated 27 bytes in 17 msecs (HTTP/1.1 500) 4 headers in 126 bytes (12 switches on core 1)
+16ac6cfe-6b50-5743-81b8-7f805fc429b4 token
+[pid: 28000|app: 0|req: 139/139] 117.136.124.85 () {44 vars in 807 bytes} [Mon May  6 22:36:56 2019] GET /lwd/ => generated 33518 bytes in 31 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 2)
+16ac6cfe-6b50-5743-81b8-7f805fc429b4 token
+[pid: 28000|app: 0|req: 140/140] 117.136.124.85 () {46 vars in 838 bytes} [Mon May  6 22:37:02 2019] GET /lwd/ => generated 33518 bytes in 25 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 3)
+16ac6cfe-6b50-5743-81b8-7f805fc429b4 token
+[pid: 28000|app: 0|req: 141/141] 117.136.124.85 () {46 vars in 838 bytes} [Mon May  6 22:37:05 2019] GET /lwd/ => generated 33518 bytes in 25 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[<Comment: 英雄儿女，希望大家多多支持>, <Comment: 写得不错>, <Comment: 演员的自我修养，不树人设，好好演戏，专研>, <Comment: 我是演员>]
+[pid: 28000|app: 0|req: 142/142] 117.136.124.85 () {44 vars in 875 bytes} [Mon May  6 22:37:39 2019] GET /lwd/u_id/3417470d65405634af3597cfd51e965e => generated 34077 bytes in 27 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 1)
+[pid: 28000|app: 0|req: 143/143] 117.136.124.85 () {50 vars in 967 bytes} [Mon May  6 22:37:40 2019] POST /lwd/checkfollow/ => generated 38 bytes in 5 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 2)
+[pid: 28000|app: 0|req: 144/144] 117.136.124.85 () {44 vars in 996 bytes} [Mon May  6 22:37:41 2019] GET /lwd/delete_logic/3417470d65405634af3597cfd51e965e/0cf2e71173805591849e3449a83b9fa7/ => generated 0 bytes in 34 msecs (HTTP/1.1 302) 5 headers in 178 bytes (1 switches on core 3)
+[<Comment: 写得不错>, <Comment: 演员的自我修养，不树人设，好好演戏，专研>, <Comment: 我是演员>]
+[pid: 28000|app: 0|req: 145/145] 117.136.124.85 () {44 vars in 912 bytes} [Mon May  6 22:37:41 2019] GET /lwd/u_id/3417470d65405634af3597cfd51e965e => generated 32182 bytes in 26 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 28000|app: 0|req: 146/146] 117.136.124.85 () {50 vars in 967 bytes} [Mon May  6 22:37:42 2019] POST /lwd/checkfollow/ => generated 38 bytes in 4 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 1)
+[pid: 28000|app: 0|req: 147/147] 117.136.124.85 () {44 vars in 992 bytes} [Mon May  6 22:37:42 2019] GET /lwd/delete_com/3417470d65405634af3597cfd51e965e/0cf2e71173805591849e3449a83b9fa7/ => generated 0 bytes in 26 msecs (HTTP/1.1 302) 5 headers in 178 bytes (1 switches on core 2)
+[<Comment: 写得不错>, <Comment: 演员的自我修养，不树人设，好好演戏，专研>, <Comment: 我是演员>]
+[pid: 28000|app: 0|req: 148/148] 117.136.124.85 () {44 vars in 912 bytes} [Mon May  6 22:37:43 2019] GET /lwd/u_id/3417470d65405634af3597cfd51e965e => generated 29681 bytes in 28 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 3)
+[pid: 28000|app: 0|req: 149/149] 117.136.124.85 () {50 vars in 967 bytes} [Mon May  6 22:37:43 2019] POST /lwd/checkfollow/ => generated 38 bytes in 4 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+[pid: 28000|app: 0|req: 150/150] 117.136.124.85 () {44 vars in 996 bytes} [Mon May  6 22:37:45 2019] GET /lwd/delete_logic/3417470d65405634af3597cfd51e965e/ecece34b5e5c570f82f074f9845140b0/ => generated 0 bytes in 39 msecs (HTTP/1.1 302) 5 headers in 178 bytes (1 switches on core 1)
+[<Comment: 演员的自我修养，不树人设，好好演戏，专研>, <Comment: 我是演员>]
+[pid: 28000|app: 0|req: 151/151] 117.136.124.85 () {44 vars in 912 bytes} [Mon May  6 22:37:45 2019] GET /lwd/u_id/3417470d65405634af3597cfd51e965e => generated 27838 bytes in 26 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 2)
+[pid: 28000|app: 0|req: 152/152] 117.136.124.85 () {50 vars in 967 bytes} [Mon May  6 22:37:45 2019] POST /lwd/checkfollow/ => generated 38 bytes in 4 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 3)
+[pid: 28000|app: 0|req: 153/153] 117.136.124.85 () {44 vars in 992 bytes} [Mon May  6 22:37:47 2019] GET /lwd/delete_com/3417470d65405634af3597cfd51e965e/ecece34b5e5c570f82f074f9845140b0/ => generated 0 bytes in 26 msecs (HTTP/1.1 302) 5 headers in 178 bytes (1 switches on core 0)
+[<Comment: 演员的自我修养，不树人设，好好演戏，专研>, <Comment: 我是演员>]
+[pid: 28000|app: 0|req: 154/154] 117.136.124.85 () {44 vars in 912 bytes} [Mon May  6 22:37:47 2019] GET /lwd/u_id/3417470d65405634af3597cfd51e965e => generated 25258 bytes in 21 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 1)
+[pid: 28000|app: 0|req: 155/155] 117.136.124.85 () {50 vars in 967 bytes} [Mon May  6 22:37:47 2019] POST /lwd/checkfollow/ => generated 38 bytes in 6 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 2)
+[pid: 28000|app: 0|req: 156/156] 117.136.124.85 () {44 vars in 996 bytes} [Mon May  6 22:37:48 2019] GET /lwd/delete_logic/3417470d65405634af3597cfd51e965e/f34d8955a88053aca53392066ad24e2f/ => generated 0 bytes in 37 msecs (HTTP/1.1 302) 5 headers in 178 bytes (1 switches on core 3)
+[]
+[pid: 28000|app: 0|req: 157/157] 117.136.124.85 () {44 vars in 912 bytes} [Mon May  6 22:37:49 2019] GET /lwd/u_id/3417470d65405634af3597cfd51e965e => generated 21804 bytes in 16 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 28000|app: 0|req: 158/158] 117.136.124.85 () {50 vars in 967 bytes} [Mon May  6 22:37:49 2019] POST /lwd/checkfollow/ => generated 38 bytes in 4 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 1)
+[pid: 28000|app: 0|req: 159/159] 117.136.124.85 () {44 vars in 992 bytes} [Mon May  6 22:37:50 2019] GET /lwd/delete_com/3417470d65405634af3597cfd51e965e/f34d8955a88053aca53392066ad24e2f/ => generated 0 bytes in 269 msecs (HTTP/1.1 302) 5 headers in 178 bytes (1 switches on core 2)
+[]
+[pid: 28000|app: 0|req: 160/160] 117.136.124.85 () {44 vars in 912 bytes} [Mon May  6 22:37:50 2019] GET /lwd/u_id/3417470d65405634af3597cfd51e965e => generated 19208 bytes in 15 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 3)
+[pid: 28000|app: 0|req: 161/161] 117.136.124.85 () {50 vars in 967 bytes} [Mon May  6 22:37:50 2019] POST /lwd/checkfollow/ => generated 38 bytes in 4 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+16ac6cfe-6b50-5743-81b8-7f805fc429b4 token
+[pid: 28000|app: 0|req: 162/162] 117.136.124.85 () {44 vars in 838 bytes} [Mon May  6 22:37:53 2019] GET /lwd/ => generated 20053 bytes in 16 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 1)
+16ac6cfe-6b50-5743-81b8-7f805fc429b4 token
+[pid: 28000|app: 0|req: 163/163] 117.136.124.85 () {46 vars in 869 bytes} [Mon May  6 22:37:58 2019] GET /lwd/ => generated 20053 bytes in 19 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 2)
+None token
+[pid: 28000|app: 0|req: 164/164] 101.227.139.173 () {40 vars in 661 bytes} [Mon May  6 22:39:55 2019] GET /lwd/ => generated 19565 bytes in 18 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 3)
+[pid: 28000|app: 0|req: 165/165] 117.136.124.85 () {40 vars in 685 bytes} [Mon May  6 22:39:56 2019] GET /lwd => generated 0 bytes in 0 msecs (HTTP/1.1 301) 3 headers in 110 bytes (1 switches on core 0)
+None token
+[pid: 28000|app: 0|req: 166/166] 117.136.124.85 () {40 vars in 687 bytes} [Mon May  6 22:39:57 2019] GET /lwd/ => generated 19565 bytes in 16 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 28000|app: 0|req: 167/167] 117.136.124.85 () {44 vars in 769 bytes} [Mon May  6 22:40:48 2019] GET /lwd/login/ => generated 3957 bytes in 1 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 2)
+[pid: 28000|app: 0|req: 168/168] 117.136.124.85 () {50 vars in 890 bytes} [Mon May  6 22:41:00 2019] POST /lwd/login_post/ => generated 38 bytes in 13 msecs (HTTP/1.1 200) 5 headers in 245 bytes (1 switches on core 3)
+d5c485a7-701c-5dc5-a2c9-838c9611a5f3 token
+[pid: 28000|app: 0|req: 169/169] 117.136.124.85 () {44 vars in 807 bytes} [Mon May  6 22:41:00 2019] GET /lwd/ => generated 20003 bytes in 16 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 1)
+[]
+[pid: 28000|app: 0|req: 170/170] 117.136.124.85 () {44 vars in 875 bytes} [Mon May  6 22:41:04 2019] GET /lwd/u_id/7ea12589eb7c50fbad6f8bc31dbc7da4 => generated 19168 bytes in 16 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 28000|app: 0|req: 171/171] 117.136.124.85 () {50 vars in 967 bytes} [Mon May  6 22:41:04 2019] POST /lwd/checkfollow/ => generated 38 bytes in 4 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 2)
+[pid: 28000|app: 0|req: 172/172] 117.136.124.85 () {44 vars in 928 bytes} [Mon May  6 22:41:14 2019] GET /lwd/setting/u_id/7ea12589eb7c50fbad6f8bc31dbc7da4 => generated 31614 bytes in 9 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 3)
+[pid: 28000|app: 0|req: 173/173] 111.79.225.25 () {36 vars in 603 bytes} [Mon May  6 22:41:48 2019] GET /favicon.ico => generated 85 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 28000|app: 0|req: 174/174] 117.136.124.85 () {50 vars in 987 bytes} [Mon May  6 22:41:53 2019] POST /lwd/personal_setting/ => generated 50 bytes in 9 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 1)
+[pid: 28000|app: 0|req: 175/175] 117.136.124.85 () {44 vars in 938 bytes} [Mon May  6 22:41:57 2019] GET /lwd/setting/u_id/7ea12589eb7c50fbad6f8bc31dbc7da4/ => generated 31628 bytes in 7 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 2)
+7ea12589eb7c50fbad6f8bc31dbc7da4_1557153844876.jpg 头像啊呀
+[pid: 28000|app: 0|req: 176/176] 117.136.124.85 () {50 vars in 1026 bytes} [Mon May  6 22:44:05 2019] POST /lwd/update_avatar/ => generated 7 bytes in 11 msecs (HTTP/1.1 200) 4 headers in 121 bytes (1 switches on core 3)
+7ea12589eb7c50fbad6f8bc31dbc7da4_1557153864893.jpg 头像啊呀
+[pid: 28000|app: 0|req: 177/177] 117.136.124.85 () {50 vars in 1026 bytes} [Mon May  6 22:44:25 2019] POST /lwd/update_avatar/ => generated 7 bytes in 10 msecs (HTTP/1.1 200) 4 headers in 121 bytes (1 switches on core 0)
+[pid: 28000|app: 0|req: 178/178] 216.144.240.130 () {26 vars in 300 bytes} [Mon May  6 22:44:33 2019] HEAD /robots.txt => generated 84 bytes in 1 msecs (HTTP/1.0 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 28000|app: 0|req: 179/179] 117.136.124.85 () {46 vars in 969 bytes} [Mon May  6 22:45:28 2019] GET /lwd/setting/u_id/7ea12589eb7c50fbad6f8bc31dbc7da4/ => generated 31752 bytes in 6 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 2)
+[pid: 28000|app: 0|req: 180/180] 111.79.225.25 () {36 vars in 603 bytes} [Mon May  6 22:45:31 2019] GET /favicon.ico => generated 85 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 3)
+d5c485a7-701c-5dc5-a2c9-838c9611a5f3 token
+[pid: 28000|app: 0|req: 181/181] 117.136.124.85 () {44 vars in 847 bytes} [Mon May  6 22:45:34 2019] GET /lwd/ => generated 20065 bytes in 17 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 3)
+[]
+[pid: 28000|app: 0|req: 182/182] 117.136.124.85 () {44 vars in 875 bytes} [Mon May  6 22:45:38 2019] GET /lwd/u_id/7ea12589eb7c50fbad6f8bc31dbc7da4 => generated 19302 bytes in 16 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 1)
+[pid: 28000|app: 0|req: 183/183] 117.136.124.85 () {50 vars in 967 bytes} [Mon May  6 22:45:38 2019] POST /lwd/checkfollow/ => generated 38 bytes in 4 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 2)
+d5c485a7-701c-5dc5-a2c9-838c9611a5f3 token
+[pid: 28000|app: 0|req: 184/184] 117.136.124.85 () {44 vars in 838 bytes} [Mon May  6 22:45:50 2019] GET /lwd/ => generated 20065 bytes in 16 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[]
+[pid: 28000|app: 0|req: 185/185] 117.136.124.85 () {44 vars in 875 bytes} [Mon May  6 22:45:52 2019] GET /lwd/u_id/7ea12589eb7c50fbad6f8bc31dbc7da4 => generated 19302 bytes in 15 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 3)
+[pid: 28000|app: 0|req: 186/186] 117.136.124.85 () {50 vars in 967 bytes} [Mon May  6 22:45:52 2019] POST /lwd/checkfollow/ => generated 38 bytes in 4 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 1)
+d5c485a7-701c-5dc5-a2c9-838c9611a5f3 token
+[pid: 28000|app: 0|req: 187/187] 117.136.124.85 () {44 vars in 838 bytes} [Mon May  6 22:45:58 2019] GET /lwd/ => generated 20065 bytes in 17 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 2)
+[pid: 28000|app: 0|req: 188/188] 101.226.102.70 () {38 vars in 629 bytes} [Mon May  6 22:55:01 2019] GET /lwd => generated 0 bytes in 0 msecs (HTTP/1.1 301) 3 headers in 110 bytes (1 switches on core 0)
+None token
+[pid: 28000|app: 0|req: 189/189] 101.226.102.70 () {40 vars in 673 bytes} [Mon May  6 22:55:01 2019] GET /lwd/ => generated 19565 bytes in 16 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 28000|app: 0|req: 190/190] 14.17.3.64 () {38 vars in 717 bytes} [Mon May  6 22:55:01 2019] GET /lwd/setting/u_id/3417470d65405634af3597cfd51e965e => generated 27 bytes in 18 msecs (HTTP/1.1 500) 4 headers in 126 bytes (1 switches on core 1)
+None token
+[pid: 28000|app: 0|req: 194/191] 101.89.19.149 () {40 vars in 650 bytes} [Mon May  6 22:55:38 2019] GET / => generated 74 bytes in 33 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 28000|app: 0|req: 194/192] 101.89.29.92 () {40 vars in 729 bytes} [Mon May  6 22:55:38 2019] GET /lwd/article_tag/%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB => generated 17592 bytes in 52 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 28000|app: 0|req: 194/193] 101.91.62.99 () {40 vars in 729 bytes} [Mon May  6 22:55:38 2019] GET /lwd/article_tag/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91 => generated 17592 bytes in 59 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 3)
+[pid: 28000|app: 0|req: 194/194] 101.89.239.238 () {40 vars in 659 bytes} [Mon May  6 22:55:38 2019] GET /lwd/ => generated 19565 bytes in 61 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 2)
+[pid: 28000|app: 0|req: 195/195] 61.151.178.217 () {40 vars in 749 bytes} [Mon May  6 22:55:38 2019] GET /lwd/setting/u_id/3417470d65405634af3597cfd51e965e => generated 27 bytes in 21 msecs (HTTP/1.1 500) 4 headers in 126 bytes (1 switches on core 1)
+[pid: 28000|app: 0|req: 198/196] 183.192.164.85 () {36 vars in 546 bytes} [Mon May  6 22:56:01 2019] GET /lwd => generated 0 bytes in 3 msecs (HTTP/1.1 301) 3 headers in 110 bytes (1 switches on core 2)
+[pid: 28000|app: 0|req: 199/197] 120.204.17.73 () {36 vars in 600 bytes} [Mon May  6 22:56:01 2019] GET /lwd/setting/u_id/3417470d65405634af3597cfd51e965e => generated 27 bytes in 42 msecs (HTTP/1.1 500) 4 headers in 126 bytes (1 switches on core 3)
+[pid: 28000|app: 0|req: 199/198] 120.204.17.71 () {36 vars in 633 bytes} [Mon May  6 22:56:01 2019] GET /lwd/article_tag/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91 => generated 17592 bytes in 44 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 28000|app: 0|req: 199/199] 183.192.164.85 () {36 vars in 583 bytes} [Mon May  6 22:56:01 2019] GET /lwd/article_tag/%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB => generated 17592 bytes in 36 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 1)
+[pid: 28000|app: 0|req: 200/200] 120.204.17.71 () {36 vars in 502 bytes} [Mon May  6 22:56:01 2019] GET / => generated 74 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 2)
+d5c485a7-701c-5dc5-a2c9-838c9611a5f3 token
+[pid: 28000|app: 0|req: 201/201] 117.136.124.85 () {46 vars in 869 bytes} [Mon May  6 22:57:20 2019] GET /lwd/ => generated 20065 bytes in 16 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 3)
+[pid: 28000|app: 0|req: 202/202] 117.136.124.85 () {44 vars in 813 bytes} [Mon May  6 22:57:22 2019] GET /lwd/write/ => generated 9868 bytes in 1 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 28000|app: 0|req: 203/203] 117.136.124.85 () {52 vars in 1126 bytes} [Mon May  6 22:58:12 2019] POST /lwd/upload_img/?guid=1557154660861 => generated 27 bytes in 15 msecs (HTTP/1.1 500) 4 headers in 126 bytes (1 switches on core 1)
+[pid: 28000|app: 0|req: 204/204] 117.136.124.85 () {40 vars in 685 bytes} [Mon May  6 23:00:12 2019] GET /lwd => generated 0 bytes in 0 msecs (HTTP/1.1 301) 3 headers in 110 bytes (1 switches on core 2)
+None token
+[pid: 28000|app: 0|req: 205/205] 117.136.124.85 () {40 vars in 687 bytes} [Mon May  6 23:00:12 2019] GET /lwd/ => generated 19565 bytes in 15 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 2)
+[pid: 28000|app: 0|req: 206/206] 117.136.124.85 () {42 vars in 743 bytes} [Mon May  6 23:00:20 2019] GET /lwd/login/ => generated 3957 bytes in 2 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 28000|app: 0|req: 207/207] 117.136.124.85 () {48 vars in 864 bytes} [Mon May  6 23:00:35 2019] POST /lwd/login_post/ => generated 38 bytes in 15 msecs (HTTP/1.1 200) 5 headers in 245 bytes (1 switches on core 1)
+a731322d-c32f-589b-af32-a0c0ab3ad929 token
+[pid: 28000|app: 0|req: 208/208] 117.136.124.85 () {44 vars in 794 bytes} [Mon May  6 23:00:35 2019] GET /lwd/ => generated 20053 bytes in 17 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 3)
+[pid: 28000|app: 0|req: 209/209] 117.136.124.85 () {44 vars in 800 bytes} [Mon May  6 23:00:41 2019] GET /lwd/write/ => generated 9868 bytes in 1 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 2)
+[pid: 28000|app: 0|req: 210/210] 117.136.124.85 () {52 vars in 1115 bytes} [Mon May  6 23:01:02 2019] POST /lwd/upload_img/?guid=1557154857088 => generated 27 bytes in 18 msecs (HTTP/1.1 500) 4 headers in 126 bytes (5 switches on core 0)
+a731322d-c32f-589b-af32-a0c0ab3ad929 token
+[pid: 28000|app: 0|req: 211/211] 117.136.124.85 () {44 vars in 794 bytes} [Mon May  6 23:14:34 2019] GET /lwd/ => generated 20053 bytes in 16 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 1)
+[pid: 28000|app: 0|req: 212/212] 117.136.124.85 () {42 vars in 736 bytes} [Mon May  6 23:14:38 2019] GET / => generated 74 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 3)
+[pid: 28000|app: 0|req: 213/213] 117.136.124.85 () {42 vars in 717 bytes} [Mon May  6 23:14:39 2019] GET /favicon.ico => generated 85 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 2)
+a731322d-c32f-589b-af32-a0c0ab3ad929 token
+[pid: 28000|app: 0|req: 214/214] 117.136.124.85 () {42 vars in 757 bytes} [Mon May  6 23:16:00 2019] GET /lwd/ => generated 20053 bytes in 18 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 2)
+[pid: 28000|app: 0|req: 215/215] 117.136.124.85 () {44 vars in 819 bytes} [Mon May  6 23:16:08 2019] GET /lwd/about_me/ => generated 16834 bytes in 9 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 1)
+a731322d-c32f-589b-af32-a0c0ab3ad929 token
+[pid: 28000|app: 0|req: 216/216] 117.136.124.85 () {44 vars in 810 bytes} [Mon May  6 23:16:45 2019] GET /lwd/ => generated 20053 bytes in 17 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 3)
+[pid: 28000|app: 0|req: 217/217] 117.136.124.85 () {44 vars in 796 bytes} [Mon May  6 23:16:46 2019] GET /all/rss/ => generated 399 bytes in 3 msecs (HTTP/1.1 200) 3 headers in 119 bytes (35 switches on core 0)

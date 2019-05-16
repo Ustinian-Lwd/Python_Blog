@@ -1,0 +1,113 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		{# 头部元信息 #}
+		<meta name="keywords" content="李易阳，个人博客 | 问世间情为何物 直教人生死相许">
+		<meta name="description" content="李易阳，个人博客，一个提供编程技术相关文章的美男子" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+		{# 导入字体图标样式 #}
+		<link rel="stylesheet" type="text/css" href="{% static 'base/css/font_awesome/css/font-awesome.min.css' %}"/>
+
+        {# <link rel="stylesheet" type="text/css" href="{% static 'base/css/bootstrap.min.css' %}"> #}
+
+		{# 导入自定义样式 #}
+		<link rel="stylesheet" type="text/css" href="{% static 'login_register/css/login_register.css' %}" />
+
+		{# 标题图标 #}
+		<link rel="icon" href="{% static 'base/images/blog_title.ico' %}" type="image/x-icon">
+		<title>Lwd's Blog | 登录&注册</title>
+
+	</head>
+
+	<body>
+		{# 最外面的大盒子 #}
+		<div class="cotn_principal">
+			{#  中间的那块区域  #}
+			<div class="cont_centrar">
+				<div class="cont_login">
+					{# 按钮小盒子 #}
+					<div class="cont_info_log_sign_up">
+						{# 登录按钮 #}
+						<div class="col_md_login">
+							<div class="cont_ba_opcitiy">
+								<h2>登录</h2>
+								<p style="padding-left:1px ;">浮世万千，吾爱有三，日、月、卿</p>
+								<button class="btn_login" onClick="cambiar_login()">登录</button>
+							</div>
+						</div>
+						{# 注册按钮 #}
+						<div class="col_md_sign_up">
+							<div class="cont_ba_opcitiy">
+								<h2>注册</h2>
+								<p>日为朝，月为暮，卿为朝朝暮暮</p>
+								<button class="btn_sign_up" onClick="cambiar_sign_up()">注册</button>
+							</div>
+						</div>
+					</div>
+
+					{# 背景图片 #}
+					<div class="cont_back_info">
+						<div class="cont_img_back_grey">
+							<img src="{% static 'login_register/images/play_backgroud.jpg' %}" alt="" />
+						</div>
+					</div>
+
+					{#  背景弹出的登录注册  #}
+					<div class="cont_forms">
+						<div class="cont_img_back_">
+							<img src="{% static 'login_register/images/play_backgroud.jpg' %}" alt="" />
+						</div>
+						{# 背景出来的登录 #}
+						<div class="cont_form_login">
+							<a href="#" onclick="ocultar_login_sign_up()"><i class="fa fa-arrow-left fa-lg"></i></a>
+							<h2 id="lwd-h2-sign-in">Lwd's Blog | Sign in</h2>
+                            {%csrf_token %}
+							<input id="phone_number_sign_in" type="text" placeholder="Phone Number" name="phone_number" />
+							<input id="user_pwd_sign_in" type="password" placeholder="Password" name="password" />
+							<button id="sign_in_en" class="btn_login">Sign in</button>
+						</div>
+						{#  弹出的登录end  #}
+
+						{# 背景弹出来的注册 #}
+						<div class="cont_form_sign_up">
+							<a href="#" onClick="ocultar_login_sign_up()"><i class="fa fa-arrow-left fa-lg"></i></a>
+							<h2 id="lwd-h2-sign-up">Lwd's Blog | Sign Up</h2>
+
+                            {%csrf_token %}
+                            <input id="phone_number_sign_up" type="text" placeholder="Phone Number" name="phone_number" />
+
+                            {# 请输入请输入用户名 #}
+                            <input id="user_name_sign_up"  type="text" placeholder="User Name" name="user_name" />
+                            {# 请输入密码 #}
+                            <input id="user_pwd_sign_up" type="password" placeholder="password" name="password" />
+                            {# 确认密码 #}
+                            <input id="user_pwd_again_sign_up" type="password" placeholder="Cofirm Password" name="comfirm_password" />
+
+                            <button id="sign_up_en" class="btn_sign_up">Sign Up</button>
+
+						</div>
+						{#  弹出的注册 end  #}
+					</div>
+					{#  背景弹出的注册或者登录 end  #}
+				</div>
+			</div>
+
+			{#  返回按钮  #}
+			<div class="login-register-back-home">
+				<button type="button" onclick="login_register_back_home()">返回首页</button>
+			</div>
+
+
+		</div>
+		{#  外面最大的盒子 end  #}
+
+	</body>
+    {# 导入js #}
+    <script src="{% static 'base/js/jquery.min.js' %}" type="text/javascript" charset="utf-8"></script>
+    <script src="{% static 'login_register/js/login_register.js' %}" type="text/javascript" charset="utf-8"></script>
+</html>

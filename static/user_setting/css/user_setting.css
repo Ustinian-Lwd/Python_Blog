@@ -1,0 +1,720 @@
+a,
+body {
+	color: #333;
+}
+
+a:visited,
+a:hover,
+a:active,
+a:focus {
+	text-decoration: none;
+	color: black;
+}
+
+body {
+	font-family: -apple-system, SF UI Text, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei, WenQuanYi Micro Hei, sans-serif;
+	font-size: 17px;
+}
+
+
+
+.col-xs-1,
+.col-xs-2,
+.col-xs-3,
+.col-xs-4,
+.col-xs-5,
+.col-xs-6,
+.col-xs-7,
+.col-xs-8,
+.col-xs-9,
+.col-xs-10,
+.col-xs-11,
+.col-xs-12,
+.col-xs-13,
+.col-xs-14,
+.col-xs-15,
+.col-xs-16,
+.col-xs-17,
+.col-xs-18,
+.col-xs-19,
+.col-xs-20,
+.col-xs-21,
+.col-xs-22,
+.col-xs-23,
+.col-xs-24 {
+	float: left;
+}
+
+
+.col-lg-1,
+.col-lg-2,
+.col-lg-3,
+.col-lg-4,
+.col-lg-5,
+.col-lg-6,
+.col-lg-7,
+.col-lg-8,
+.col-lg-9,
+.col-lg-10,
+.col-lg-11,
+.col-lg-12,
+.col-lg-13,
+.col-lg-14,
+.col-lg-15,
+.col-lg-16,
+.col-lg-17,
+.col-lg-18,
+.col-lg-19,
+.col-lg-20,
+.col-lg-21,
+.col-lg-22,
+.col-lg-23,
+.col-lg-24,
+.col-md-1,
+.col-md-2,
+.col-md-3,
+.col-md-4,
+.col-md-5,
+.col-md-6,
+.col-md-7,
+.col-md-8,
+.col-md-9,
+.col-md-10,
+.col-md-11,
+.col-md-12,
+.col-md-13,
+.col-md-14,
+.col-md-15,
+.col-md-16,
+.col-md-17,
+.col-md-18,
+.col-md-19,
+.col-md-20,
+.col-md-21,
+.col-md-22,
+.col-md-23,
+.col-md-24,
+.col-sm-1,
+.col-sm-2,
+.col-sm-3,
+.col-sm-4,
+.col-sm-5,
+.col-sm-6,
+.col-sm-7,
+.col-sm-8,
+.col-sm-9,
+.col-sm-10,
+.col-sm-11,
+.col-sm-12,
+.col-sm-13,
+.col-sm-14,
+.col-sm-15,
+.col-sm-16,
+.col-sm-17,
+.col-sm-18,
+.col-sm-19,
+.col-sm-20,
+.col-sm-21,
+.col-sm-22,
+.col-sm-23,
+.col-sm-24,
+.col-xs-1,
+.col-xs-2,
+.col-xs-3,
+.col-xs-4,
+.col-xs-5,
+.col-xs-6,
+.col-xs-7,
+.col-xs-8,
+.col-xs-9,
+.col-xs-10,
+.col-xs-11,
+.col-xs-12,
+.col-xs-13,
+.col-xs-14,
+.col-xs-15,
+.col-xs-16,
+.col-xs-17,
+.col-xs-18,
+.col-xs-19,
+.col-xs-20,
+.col-xs-21,
+.col-xs-22,
+.col-xs-23,
+.col-xs-24 {
+	position: relative;
+	min-height: 1px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+
+
+
+
+/* 用户登录后的下拉样式下拉样式 */
+.user-info-sub {
+	width: 150px;
+	display: none;
+	background: #FFF;
+	position: relative;
+	overflow: hidden;
+	box-shadow: 0 4px 4px rgba(0, 0, 0, .04);
+}
+
+.user-info-sub li a {
+	text-align: left;
+	font-family: "微软雅黑";
+	font-size: 15px;
+}
+
+.user-info-sub li:hover {
+	background-color: #f5f5f5;
+}
+
+
+.user-info-menu {
+	position: relative;
+	padding-left: 15px;
+}
+
+.user-info-menu a img {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+}
+
+#starlist li:hover.user-info-menu:before {
+	display: none
+}
+
+#starlist .user-info-sub li {
+	padding-left: 20px;
+	text-align: left;
+	width: 100%;
+	border-bottom: #f5f5f5 1px solid;
+	line-height: 50px;
+}
+
+#starlist .user-info-sub li i {
+	color: #ea6f5a;
+}
+
+.user-info-menu:after {
+	content: "";
+	position: absolute;
+	right: 5px;
+	top: 38px;
+	width: 0;
+	height: 0;
+	background: #292828;
+	border-right: 5px solid transparent;
+	border-top: 5px solid #ffffff;
+	-ms-transition: all .5s ease;
+	-moz-transition: all .5s ease;
+	-webkit-transition: all .5s ease;
+	-o-transition: all .5s ease;
+	transition: all .5s ease;
+}
+
+
+
+/* 设置侧边栏 */
+
+.setting .row {
+	margin-left: -15px;
+	margin-right: -15px;
+	padding-top: 30px;
+}
+
+
+/* 用户设置的侧边框 */
+.setting .setting-aside {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	margin: 86px 0 0;
+	padding: 0 0 30px;
+	width: 280px;
+	overflow: auto;
+}
+
+.setting .setting-aside ul {
+	display: block;
+	padding-left: 0;
+	margin-top: 0;
+	margin-bottom: 10px;
+	list-style: none;
+	list-style-type: disc;
+	margin-block-start: 1em;
+	margin-block-end: 1em;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+	padding-inline-start: 40px;
+}
+
+.setting .setting-aside ul li {
+	line-height: 20px;
+	display: list-item;
+	text-align: -webkit-match-parent;
+}
+
+
+.setting .setting-aside a {
+	padding: 10px 15px;
+	font-size: 15px;
+	display: block;
+}
+
+.setting .setting-aside .setting-ico i {
+	margin: 6px 0 0 1px;
+	font-size: 18px;
+	display: block;
+}
+
+.setting-active {
+	background-color: lightgray;
+	border-radius: 4px;
+}
+
+/* 图标 */
+.setting .setting-aside .setting-ico {
+	margin-right: 15px;
+	width: 32px;
+	height: 32px;
+	text-align: center;
+	color: rgb(255, 255, 255);
+	background-color: rgb(160, 160, 160);
+	display: inline-block;
+	vertical-align: middle;
+	border-radius: 4px;
+}
+
+.setting .setting-aside li span {
+	vertical-align: middle;
+}
+
+/* 访问时 */
+.setting-aside ul li a:hover {
+	background-color: lightgray;
+	border-radius: 4px;
+}
+
+
+/* 侧边栏右半边 */
+.setting .main {
+	padding-left: 0;
+	margin-top: 75px;
+}
+
+.col-xs-16 {
+	width: 66.66667%;
+}
+
+.col-xs-offset-8 {
+	margin-left: 33.33333%;
+}
+
+.setting .main table {
+	width: 100%;
+}
+
+table {
+	background-color: transparent;
+	border-collapse: collapse;
+	border-spacing: 0;
+	display: table;
+	border-color: grey;
+}
+
+thead {
+	display: table-header-group;
+	vertical-align: middle;
+	border-color: inherit;
+}
+
+tr {
+	display: table-row;
+	vertical-align: inherit;
+}
+
+th {
+	text-align: left;
+	padding: 0;
+	font-weight: bold;
+	display: table-cell;
+	vertical-align: inherit;
+}
+
+.setting .main .setting-head {
+	width: 150px;
+}
+
+
+tbody {
+	display: table-row-group;
+	vertical-align: middle;
+	border-color: inherit;
+}
+
+td {
+	padding: 0;
+	display: table-cell;
+	vertical-align: inherit;
+}
+
+.setting .main tr {
+	border-bottom: 1px solid lightgray;
+}
+
+/* .setting .main .base tr:first-child {
+    border: none;
+} */
+
+
+
+.setting .main .setting-head {
+	width: 150px;
+}
+
+.setting .main .top-line {
+	padding-top: 0;
+}
+
+.setting .main td {
+	padding: 20px 0;
+}
+
+/* .setting .main td {
+    padding: 20px 0;
+} */
+
+
+.setting .main .setting-avatar {
+	width: 100px;
+	height: 100px;
+	display: block;
+	cursor: pointer;
+	border: 1px solid #ddd;
+	border-radius: 50%;
+}
+
+img {
+	vertical-align: middle;
+}
+
+/*.setting-avatar img {*/
+	/*width: 100%;*/
+	/*height: 100%;*/
+	/*border: 1px solid #ddd;*/
+	/*border-radius: 50%;*/
+/*}*/
+
+.btn {
+	display: inline-block;
+	margin-bottom: 0;
+	font-weight: 400;
+	text-align: center;
+	vertical-align: middle;
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+	cursor: pointer;
+	background-image: none;
+	border: 1px solid transparent;
+	white-space: nowrap;
+	padding: 6px 12px;
+	font-size: 14px;
+	line-height: 1.42857;
+	border-radius: 4px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.btn-hollow {
+	padding: 4px 12px;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: normal;
+	border-radius: 40px;
+	background: none;
+}
+
+.btn-hollow {
+	border: 1px solid rgba(59, 194, 29, .7);
+	color: #42c02e !important;
+}
+
+
+.setting .main .setting-title {
+	font-size: 15px;
+	color: #969696;
+}
+
+.setting .main input[type=email],
+.setting .main input[type=text] {
+	padding: 5px 10px;
+	font-size: 15px;
+	border: 1px solid #c8c8c8;
+	border-radius: 4px;
+	background-color: hsla(0, 0%, 71%, .1);
+}
+
+
+.setting .main .setted {
+	/* float: left; */
+	/* width: 100%; */
+}
+
+.setting .main .setted div {
+	font-size: 15px;
+	display: inline-block;
+}
+
+.setting .main .setted i {
+	margin: 0 0 0 10px;
+	font-size: 12px;
+	color: #969696;
+	vertical-align: middle;
+}
+
+.setting .main span {
+	margin: 0 20px 0 6px;
+	font-size: 15px;
+	vertical-align: middle;
+	display: inline-block;
+}
+
+.setting .main .cancel-bind {
+	font-size: 12px;
+	color: #969696;
+	display: none;
+}
+
+.setting .main .setted a,
+.setting .main .setted span {
+	margin: 0 0 0 3px;
+	font-size: 14px;
+	color: #969696;
+	vertical-align: middle;
+}
+
+
+
+.setting .main .setted a {
+	margin-left: 8px;
+}
+
+.setting .main .setted:hover .cancel-bind {
+	display: inline-block;
+	cursor: pointer;
+}
+
+
+
+.setting .main .setting-verticle {
+	vertical-align: bottom;
+}
+
+
+
+input[type=checkbox],
+input[type=radio] {
+	box-sizing: border-box;
+	padding: 0;
+}
+
+
+.setting .main .setting-save {
+	width: 100px;
+	margin: 30px 0 60px;
+	border-radius: 20px;
+	border: none;
+	outline: none;
+}
+
+
+.pull-left {
+	float: left !important;
+}
+
+.setting .main form {
+	margin: 0;
+}
+
+form {
+	margin: 0 0 20px;
+	display: block;
+	margin-top: 0em;
+}
+
+.setting .main textarea {
+	width: 100%;
+	height: 100px;
+	margin-bottom: 10px;
+	padding: 8px 10px;
+	font-size: 15px;
+	border: 1px solid #c8c8c8;
+	border-radius: 4px;
+	background-color: hsla(0, 0%, 71%, .1);
+	display: block;
+	resize: none;
+	outline-style: none;
+	white-space: pre-line;
+}
+
+.setting .main .setting-input {
+	line-height: 33px;
+}
+
+.setting .main .information input[name=website],
+.setting #account-setting input[name=password] {
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+.setting .main input[type=email],
+.setting .main input[type=text] {
+	padding: 5px 10px;
+	font-size: 15px;
+	border: 1px solid #c8c8c8;
+	border-radius: 4px;
+	background-color: hsla(0, 0%, 71%, .1);
+}
+
+.setting .main p {
+	margin: 0;
+	padding: 8px 0 0;
+	font-size: 12px;
+	color: #969696;
+	clear: both;
+}
+
+.pull-right {
+	float: right !important;
+}
+
+
+.setting .main .delete-account-content {
+	padding-top: 20px;
+	border-top: 1px solid #f0f0f0;
+}
+
+.setting .main .delete-account-content .show-button {
+	font-size: 15px;
+	color: #969696;
+	cursor: pointer;
+}
+
+.setting .main .delete-account-content .content h4 {
+    margin-bottom: 25px;
+	font-size: 18px;
+}
+
+.setting .main .delete-account-content .content ul {
+    margin-bottom: 25px;
+    padding-left: 20px;
+    font-size: 14px;
+}
+
+.setting .main .delete-account-content .content ul li {
+    margin-bottom: 15px;
+	list-style: square;
+}
+
+.lyy:visited,.lyy:active,.lyy:focus{
+	color: orangered;
+	cursor: pointer;
+}
+
+.lyy:hover{
+	color: #00A7EB;
+	text-decoration: underline;
+}
+
+
+
+.btn-delete {
+    border: 1px solid rgba(236,97,73,.7);
+	border-radius: 40px;
+    color: #ea6f5a!important;
+}
+
+.btn-delete{
+    padding: 4px 12px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: normal;
+    border-radius: 40px;
+    background: none;
+}
+
+.setting .main .btn-delete, .setting .main .btn-hollow {
+    font-size: 14px;
+}
+.setting .main .delete-account-content .content .btn-hollow {
+    margin-right: 10px;
+}
+
+.btn-delete:focus, .btn-delete:hover {
+    border: 1px solid #ea6f5a;
+    color: #ea6f5a!important;
+    background-color: rgba(236,97,73,.05);
+}
+
+.setting .main .delete-account-content .content{
+	display: none;
+}
+
+/* 黑名单 */
+
+.setting .main .blacklist .title {
+    font-size: 12px;
+    color: #969696;
+}
+
+.setting .main .blacklist ul {
+    list-style: none;
+}
+
+
+#profile-setting, #account-setting, #black-name, #reward-setting{
+	display: none;
+}
+
+
+
+
+/*#exampleInputFile{*/
+	/*width: 100px;*/
+	/*height: 80px;*/
+/*}*/
+
+
+
+
+
+
+
+
+
+
+
+/* 适配屏幕 */
+
+/*@media (min-width: 992px) {*/
+	/*width: 960px;*/
+/*}*/
+
+/*@media (min-width: 1081px) .setting-container {*/
+	/*width: 960px;*/
+/*}*/
+
+/*@media (min-width: 992px) .setting-container {*/
+	/*width: 970px;*/
+/*}*/
+
+/*@media (min-width: 768px) .setting-container {*/
+	/*width: 750px;*/
+/*}*/

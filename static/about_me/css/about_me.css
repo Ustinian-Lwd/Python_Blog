@@ -1,0 +1,17 @@
+
+.abinfos {
+	background: #FFF;
+	padding: 20px;
+	border: #ddd 1px solid;
+}
+
+.abinfos h3 {
+	font-size: 18px;
+	padding: 0 0 10px
+}
+
+.abinfos p {
+	margin: 0 0 10px
+}
+
+

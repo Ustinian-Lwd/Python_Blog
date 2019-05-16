@@ -1,0 +1,227 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    <title>Lwd's Blog | 关于本站</title>
+{% endblock %}
+
+{# 样式表 #}
+{% block EXTCSS %}
+    {# 导入index样式 #}
+    <link rel="stylesheet" href="{% static 'index/css/index.css' %}">
+    {# 导入 关于本站 样式 #}
+    <link rel="stylesheet" href="{% static 'about_me/css/about_me.css' %}">
+
+    <style type="text/css">
+        .lwd-introduction-p {
+            width: 100%;
+            margin: 1.25rem auto;
+            border: 0.0625rem solid #00A7EB;
+            padding-left: 2%;
+            word-wrap: break-word;
+            word-break: break-all;
+            overflow: hidden;
+            color: red;
+        }
+
+        .about_me_back_home:hover {
+            color: #0077DD;
+        }
+
+        .lwd-novel-link {
+            color: red;
+
+        }
+
+        .lwd-novel-link:hover {
+            color: #0077DD;
+            text-decoration: underline;
+        }
+    </style>
+{% endblock %}
+
+
+{% block content %}
+    <main>
+        <div class="aboutbox">
+            <h2 class="place">您现在的位置是：<a class="about_me_back_home" href="{% url 'lwd:index' %}">网站首页</a> > 关于我</h2>
+            <div class="abinfos">
+                <h3>Lwd's Blog | 关于我</h3>
+                <!-- 个人简介-第一段 -->
+                <p style="text-indent:2rem;">
+                    李易阳，男，1996年10月24日出生。典型的天蝎座男生，还有这出生日期像是为了迎合我未来是个程序员一般。2015年开始上大学，真正开始接触到的第一门编程语言是大学万年不变的C语言，之后相继接触了Java，数据结构，数据库SQL
+                    Server，HTML，Linux，微型计算机原理（这万恶的汇编语言），C++编程等等一系列的专业或者是编程语言，最后还自学了自称是"人生苦短，我用Python"的人工智能编程语言首选的"蟒蛇"语言。(*￣︶￣)
+                </p>
+
+                <p style="text-indent: 2rem;color:orangered">
+                    忘了说，我还会写小说哟。曾经写过30万字的东方玄幻小说，不过没有坚持下去，俗称太监，哭唧唧。后来闲下来有时间了，就写了一篇校园言情小说，叫《薏阳飞雪》。故事是以我和小女友为原型去虚拟升华的一个故事，小说未完，待续。
+                </p>
+
+                <p style="text-indent: 2rem;">
+                    小说链接：
+                    <a class="lwd-novel-link" href="http://yunqi.qq.com/bk/lmqc/15184796.html"
+                       target="_blank">《薏阳飞雪》</a>
+                </p>
+
+                <p style="text-indent:2rem;color: #009966;">
+                    正所谓"我不入地狱，谁入地狱？"，大家都知道IT这一行，流行着"从入门到放弃"、"从删库到跑路"、"从开始到崩溃"等这样朗朗上口的段子，没办法，现实生活已然很枯燥了，作为程序员的我们只好是苦中创造段子。
+                </p>
+
+                <!-- 第三段 -->
+                <p style="text-indent:2rem;color:lawngreen">
+                    这是我真正意义上独立完成的第一个网站，之前在学HTML这门专业课的时候，也多多少少写不过不少的静态网页，但涉及js的却很少，ε=(´ο｀*)))唉，都怪自己当初太浪，不认真学习，在此奉劝各位好友，Good
+                    good
+                    study，day day up！
+                </p>
+
+                <p style="color: #00A7EB;text-indent: 2rem;">
+                    本来脑海中想了很多话要写，可是真正落笔、敲键盘的时候，却发现自己不知道写什么了。这个基于Python+HTML开发的网站，前端后端都是我自己，怎么这句话颇有许嵩的风格，作词作曲都是我自己。O(∩_∩)O哈哈~
+                </p>
+
+                <div class="lwd-introduction-p">
+                    <p style="font-weight: 800;font-size: 0.9375rem;font-family: 微软雅黑;">
+                        网站名称：Lwd's Blog
+                    </p>
+                    <p style="font-weight: 800;font-size: 0.9375rem;font-family: 微软雅黑;">
+                        后端开发：Python+Django(李易阳)
+                    </p>
+                    <p style="font-weight: 800;font-size: 0.9375rem;font-family: 微软雅黑;">
+                        前端页面：HTML5+CSS3+JavaScript+JQuery+Bootstrap(李易阳)
+                    </p>
+                    <p style="font-weight: 800;font-size: 0.9375rem;font-family: 微软雅黑;">
+                        数据库：MySQL(李易阳)
+                    </p>
+                    <p style="font-weight: 800;font-size: 0.9375rem;font-family: 微软雅黑;">
+                        网站设计：Photoshop(李易阳)
+                    </p>
+
+                    <p style="font-weight: 800;font-size: 0.9375rem;font-family: 微软雅黑;">
+                        网站部署：阿里云服务器(李易阳)
+                    </p>
+                    <p style="font-weight: 800;font-size: 0.9375rem;font-family: 微软雅黑;">
+                        网站维护：Linux(李易阳)
+                    </p>
+                </div>
+
+                <p>大三的时候没有准备去考研，现在是大四狗快毕业了，准备努力一把，希望未来可期！！！</p>
+                <p>&nbsp;</p>
+                <h3>关于我的博客</h3>
+                <p>域 名：www.lwd520ydd.com 创建于2019年05月20日&nbsp;</p>
+                <p>服务器：阿里云服务器&nbsp;&nbsp;
+                    <a href="https://www.aliyun.com/" target="_blank">
+                        <strong style="color:#FF0000;">
+                            前往阿里云官网购买>>
+                        </strong>
+                    </a>
+                </p>
+                <p>备案号：赣ICP备1314520号-1</p>
+                <p>运行环境：Ubuntu 16.04</p>
+            </div>
+        </div>
+    </main>
+    <!--end main-->
+
+    <!--侧边栏-->
+    <aside class="sidebar">
+
+        {# 关于本站 #}
+        <div class="about">
+            <h2 class="hometitle"><i class="fa fa-th-list"></i> 关于本站</h2>
+            <ul>
+                <div class="avatar">
+                    {# 头像 #}
+                    <img src="{% static 'index/images/about/my_img.jpg' %}" title="李易阳" alt="李易阳">
+                </div>
+                <p class="abname"><a class="home-to-about_me" href="">Lwd | 李易阳</a></p>
+                <p class="abtext">
+                    李易阳，一个90后全能优质程序员，上得了厅堂，下得了厨房。编得了程序，写得了小说，斗得过流氓。
+                </p>
+                {# 微博 #}
+                <li>
+                    <a class="weibo_ico" href="{% url 'rss' %}" target="_blank"></a>
+                </li>
+                {# qq #}
+                <li class="qq_two_code">
+                    <a class="qq_ico" href="" onclick="return false;"></a>
+                    <img src="{% static 'index/images/about/lwd_qq_two_code.jpg' %}"/>
+                </li>
+                {# github #}
+                <li>
+                    <a class="github_ico" href="https://github.com/YddVae" target="_blank"></a>
+                </li>
+                {# 微信 #}
+                <li class="wx_two_code">
+                    <a class="wx_ico" href="" onclick="return false;"></a>
+                    <img src="{% static 'index/images/about/lwd_wx_two_code.jpg' %}"/>
+                </li>
+            </ul>
+        </div>
+        {# 关于本站 end #}
+
+        {# 广告位依旧强悍 #}
+        {# vip广告位01 #}
+        <div id="vip-ad">
+            <h2 class="hometitle" style="color: red;"><i class="fa fa-th-list"></i> VIP广告</h2>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    {% for ad_banner in ad_banners %}
+                        {#  轮播图第一张  #}
+                        <a href="{{ ad_banner.ab_link }}" class="swiper-slide"
+                       style="background-image:url({{ MEDIA_URL }}{{ ad_banner.ab_img_upload }})">
+                        <span class="imginfo"
+                              style="bottom: 10%;color: red;font-size: 1.25rem;z-index: auto;">{{ ad_banner.b_info_content }}</span>
+                    </a>
+                    {% endfor %}
+                </div>
+                {#  Add Pagination  #}
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        {# 广告位 end #}
+
+
+
+    </aside>
+    {# 侧边栏 #}
+
+{% endblock %}
+
+
+{% block footer_sub %}
+    <ul id="scroll">
+        <!--向上-->
+        <li class="lwd-cd-top">
+            <a href="#" style="background-color: #ff5e5c;">
+                <i class="fa fa-arrow-up"></i>
+            </a>
+        </li>
+        <!--向下-->
+        <li class="lwd-cd-bottom">
+            <a href="#" style="background-color: #ff9531;">
+                <i class="fa fa-arrow-down"></i>
+            </a>
+        </li>
+
+        <li>
+            <input type="button" name="" id="" value="简" style="background-color: burlywood" onclick="zh_tran('s');"/>
+        </li>
+
+        <!--繁体-->
+        <li>
+            <input type="button" name="" id="" value="繁" style="background-color: #aec534;" onclick="zh_tran('t');"/>
+        </li>
+
+        <!--微信-->
+        <li class="lwd-scroll-wechat">
+            <a href="#" style="background-color: #3caf33;">
+                <i class="fa fa-wechat"></i>
+            </a>
+            <img src="{% static 'index/images/about/lwd_wx_two_code.jpg' %}"/>
+        </li>
+    </ul>
+
+{% endblock %}
+
+{% block EXTJS %}
+    <script type="text/javascript" src="{% static 'about_me/js/about_me.js' %}"></script>
+{% endblock %}

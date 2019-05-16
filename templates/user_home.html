@@ -1,0 +1,492 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load blog_tags %}
+
+{% block title %}
+    {% if is_same_people %}
+        <title>Lwd's Blog | 我的主页</title>
+    {% else %}
+        <title>Lwd's Blog | {{ user.u_name }}·主页</title>
+    {% endif %}
+{% endblock %}
+
+{% block EXTCSS %}
+
+    <link rel="stylesheet" href="{% static 'user_home/css/user_home.css' %}">
+{% endblock %}
+
+{% block content %}
+    {#  主页信息+文章列表  #}
+    <main>
+        <h2 class="place">您现在的位置是：<a class="user_back_home" href="{% url 'lwd:index' %}">网站首页</a> &gt; {{ user.u_name }}-主页
+        </h2>
+
+        {#  主页信息  #}
+        <div class="main-top">
+            {#  头像  #}
+            <a class="lwd-avatar" href="" onclick="return false;">
+                <img src="{{ MEDIA_URL }}{{ user.u_img }}">
+            </a>
+
+            {% ifequal is_same_people False %}
+                <!-- 关注按钮 -->
+                <a id="user-home-follow-btn" class="off  user-follow-button">
+                    <i class="fa fa-plus"></i>
+                    <span>关注</span>
+                </a>
+            {% endifequal %}
+
+
+            {#  标题  #}
+            <div class="lwd-title">
+                {# 用户名 #}
+                <a class="lwd-title-name" href="" onclick="return false;">{{ user.u_name }}</a>
+
+                {# 性别 #}
+                {% ifequal u_sex 0 %}
+                    <i class="fa fa-mars-stroke"></i>
+                {% endifequal %}
+                {% ifequal u_sex 1 %}
+                    <i class="fa fa-mercury"></i>
+                {% endifequal %}
+                {% ifequal u_sex 2 %}
+                    <i class="fa fa-transgender-alt"></i>
+                {% endifequal %}
+            </div>
+            {#  信息如,关注量,粉丝数  #}
+            <div class="lwd-info">
+                <ul>
+                    {#  关注  #}
+                    <li>
+                        <div class="meta-block">
+                            <a href="#">
+                                <p id="user-home-follow-num">{{ follow_num }}</p>
+                                关注
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </div>
+                    </li>
+
+                    {#  粉丝  #}
+                    <li>
+                        <div class="meta-block">
+                            <a href="#">
+                                <p id="user-home-fans-num">{{ fans_num }}</p>
+                                粉丝
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </div>
+                    </li>
+
+                    {#  文章  #}
+                    <li>
+                        <div class="meta-block">
+                            <a href="#">
+                                <p id="user-home-article-num">{{ article_num }}</p>
+                                文章
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </div>
+                    </li>
+
+                    {#  字数  #}
+                    <li>
+                        <div class="meta-block">
+                            <a href="#">
+                                <p id="user-home-article-word-num">{{ article_word_num }}</p>
+                                字数
+                            </a>
+                        </div>
+                    </li>
+
+                    {#  收获喜欢  #}
+                    <li>
+                        <div class="meta-block">
+                            <a href="#">
+                                <p id="user-home-like-num">{{ like_num }}</p>
+                                收获喜欢
+                            </a>
+                        </div>
+                    </li>
+
+                    {#  L币  #}
+                    <li>
+                        <div class="meta-block">
+                            <a href="#">
+                                <p id="user-home-lb-num">{{ u_lb }}</p>
+                                我的L币
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+                {#  ul end  #}
+            </div>
+        </div>
+
+        {#  标签切换  #}
+        <ul class="trigger-menu">
+
+            {#  文章  #}
+            <li id="user-home-publish" class="lwd-trigger-menu-activate" onclick="lwd_trigger_menu_activate(this, 1)">
+                <a href="#">
+                    <i class="fa fa-file-text"></i>
+                    发表文章
+                </a>
+            </li>
+
+            {% if is_same_people %}
+                {#  草稿箱  #}
+                <li id="user-home-dfrat" onclick="lwd_trigger_menu_activate(this, 4)">
+                    <a href="#">
+                        <i class="fa fa-cloud"></i>
+                        草稿箱
+                    </a>
+                </li>
+            {% endif %}
+
+            {#  动态  #}
+            <li onclick="lwd_trigger_menu_activate(this, 2)">
+                <a href="#">
+                    <i class="fa fa-bell"></i>
+                    动态
+                </a>
+            </li>
+
+            {#  最新评论  #}
+            <li onclick="lwd_trigger_menu_activate(this, 3)">
+                <a href="#">
+                    <i class="fa fa-comments-o"></i>
+                    最新评论
+                </a>
+            </li>
+
+        </ul>
+
+        {#  列表内容  #}
+        <div id="list-container">
+
+            {#  文章列表  #}
+            <ul id="blog-list">
+                {# 文章01 #}
+                {% for article in articles %}
+                    <li>
+                        {# 文章图片 #}
+                        <i class="blogpic">
+                            <a href="{% url 'lwd:blog_detail' article.a_id %}"><img
+                                    src="{{ MEDIA_URL }}{{ article.a_pre_img }}" alt=""> </a>
+                        </i>
+                        {# 文章概要内容 #}
+                        <dl>
+                            {# 标题 #}
+                            <dt>
+                                <a href="{% url 'lwd:blog_detail' article.a_id %}"
+                                   target="_blank">{{ article.a_title }}</a>
+                            </dt>
+
+                            <dd>
+                                {# 文章内容简要 #}
+                                <span class="bloginfo">{{ article.a_content_text }}</span>
+
+                                <p class="article-otherinfo">
+                                    {# 时间 #}
+                                    <span class="user-home-article-date">{{ article.a_create_time }}</span>
+                                    <span class="user-home-article-like"><i
+                                            class="fa fa-heart"></i> {{ article.a_like_num }}</span>
+                                    <span class="user-home-article-remark"><i
+                                            class="fa fa-commenting"></i> {{ article.a_comment_num }}</span>
+                                    <span class="user-home-article-class"><a
+                                            href="{% url 'lwd:article_category' article.a_category.id %}"
+                                            style="color: #00A7EB;">{{ article.a_category.category_name }}</a></span>
+                                </p>
+
+                                {% if is_same_people %}
+                                    {# 编辑删除 #}
+                                    <a class="update-article" href="{% url 'lwd:edit' article.a_id %}">编辑文章</a>
+                                    <a class="delete-article"
+                                       href="{% url 'lwd:delete_article_logic' user_token.u_id article.a_id %}"
+                                       onclick="publish_dfrat_session_storage('dfrat')">删除文章</a>
+                                {% endif %}
+
+                            </dd>
+                        </dl>
+                    </li>
+                    {# 文章01 li end #}
+                {% empty %}
+                    <p style="margin-bottom: 20px;">你还没有发表文章哟，赶紧去发表吧</p>
+                {% endfor %}
+            </ul>
+
+            {#  草稿箱  #}
+            <ul id="draft-list">
+                {% for article_no_publish in articles_no_publish %}
+                    <li>
+                        {# 文章图片 #}
+                        <i class="blogpic">
+                            <a href="{% url 'lwd:blog_detail' article_no_publish.a_id %}"><img
+                                    src="{{ MEDIA_URL }}{{ article_no_publish.a_pre_img }}" alt=""> </a>
+                        </i>
+                        {# 文章概要内容 #}
+                        <dl>
+                            {# 标题 #}
+                            <dt>
+                                <a href="{% url 'lwd:blog_detail' article_no_publish.a_id %}"
+                                   target="_blank">{{ article_no_publish.a_title }}</a>
+                            </dt>
+
+                            <dd>
+                                {# 文章内容简要 #}
+                                <span class="bloginfo">{{ article_no_publish.a_content_text }}</span>
+
+                                <p class="article-otherinfo">
+                                    {# 时间 #}
+                                    <span class="user-home-article-date">{{ article_no_publish.a_create_time }}</span>
+                                    <span class="user-home-article-like"><i
+                                            class="fa fa-heart"></i> {{ article_no_publish.a_like_num }}</span>
+                                    <span class="user-home-article-remark"><i
+                                            class="fa fa-commenting"></i> {{ article_no_publish.a_comment_num }}</span>
+                                    <span class="user-home-article-class"><a
+                                            href="{% url 'lwd:article_category' article_no_publish.a_category.id %}"
+                                            style="color: #00A7EB;">{{ article_no_publish.a_category.category_name }}</a></span>
+
+                                </p>
+
+                                {% if is_same_people %}
+                                    {# 编辑删除 #}
+                                    <a class="update-article"
+                                       href="{% url 'lwd:edit' article_no_publish.a_id %}">编辑文章</a>
+                                    <a class="delete-article"
+                                       href="{% url 'lwd:delete_article_com' user_token.u_id article_no_publish.a_id %}">删除草稿</a>
+                                {% endif %}
+
+                            </dd>
+                        </dl>
+                    </li>
+                {% empty %}
+                    <p style="margin-bottom: 20px;">草稿箱里没有文章哟</p>
+                {% endfor %}
+
+            </ul>
+
+            {#  动态列表  #}
+            <ul id="dynamic-list">
+                <p style="margin:20px 20px">动态暂时为空</p>
+            </ul>
+
+            {#  评论列表  #}
+            <ul id="comment-list">
+                <p style="margin-left: 20px;margin-bottom: 10px;font-weight: bold;font-size: 20px">
+                    共收到 {{ comments_list_len }} 条评论</p>
+                <hr>
+                {% for comments in comments_list %}
+                    <p style="margin-top:10px;margin-left: 30px;color: #969696;font-size: 16px;font-weight: bold">
+                        第 {{ forloop.counter }} 条</p>
+                    <div class="comment-show">
+                        {# 评论用户信息 #}
+                        <div class="comment-user">
+                            {# 头像 #}
+                            <div class="comment-user-avatar">
+                                <a href="{% url 'lwd:user_home' comments.com_user.u_id %}">
+                                    <img src="{{ MEDIA_URL }}{{ comments.com_user.u_img }}"
+                                         alt="{{ comments.com_user.u_name }}">
+                                </a>
+                            </div>
+
+                            {# 用户文字信息 #}
+                            <div class="comment-user-info">
+                                {# 用户名 #}
+                                <a href="{% url 'lwd:user_home' comments.com_user.u_id %}"
+                                   class="-name">{{ comments.com_user.u_name }}</a>
+                                {# 评论时间 #}
+                                <div class="-meta">
+                                    <span>{{ comments.com_created_time }}</span>
+                                </div>
+
+                            </div>
+                        </div>
+                        {# 评论内容 #}
+                        <div class="comment-show-content">
+                            {# 内容 #}
+                            <p>{{ comments.com_content }}</p>
+                            {# 可能是点击回复 #}
+                            {# div #}
+                        </div>
+                        {# 删除评论按钮 #}
+                        {% if is_same_people %}
+                            <a class="delete-comment" href="{% url 'comments:delete_comment' comments.id %}">删除评论</a>
+                        {% endif %}
+                    </div>
+                {% empty %}
+                    <p style="margin-left:20px;margin-bottom: 20px">您发表的文章还没有收到评论哟</p>
+                {% endfor %}
+            </ul>
+
+        </div>
+
+    </main>
+    {# end main #}
+
+    {#  侧边栏  #}
+    <aside class="sidebar">
+        {#  个人名言  #}
+        <div class="lwd-aside-person-intro">
+            <h2 class="hometitle"><i class="fa fa-github-alt"></i> 个人介绍</h2>
+            <div class="lwd-aside-description">{{ user.u_intro }}</div>
+        </div>
+        {#  个人名言 end  #}
+
+        {#  收藏&喜欢  #}
+        <div class="lwd-aside-collect-like">
+            <h2 class="hometitle"><i class="fa fa-th-list"></i> 收藏&喜欢</h2>
+            <ul class="lwd-aside-collect-like-ul">
+                {% if is_same_people %}
+                    <li>
+                        <a href="{% url 'lwd:collect_like' user.u_id %}"
+                           onclick="collect_like_session_storage('collect')">
+                            <i class="fa fa-th-large"></i>
+                            <span>我收藏的文章</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'lwd:collect_like' user.u_id %}" onclick="collect_like_session_storage('like')">
+                            <i class="fa fa-th-large"></i>
+                            <span>我喜欢的文章</span>
+                        </a>
+                    </li>
+                {% else %}
+                    <li>
+                        <a href="{% url 'lwd:collect_like' user.u_id %}"
+                           onclick="collect_like_session_storage('collect')">
+                            <i class="fa fa-th-large"></i> <span>Ta收藏的文章</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'lwd:collect_like' user.u_id %}" onclick="collect_like_session_storage('like')">
+                            <i class="fa fa-th-large"></i> <span>Ta喜欢的文章</span>
+                        </a>
+                    </li>
+                {% endif %}
+            </ul>
+        </div>
+        {#  收藏喜欢 end  #}
+
+        {#  我的分类  #}
+        <div class="lwd-aside-article-classify">
+            {% if is_same_people %}
+                <h2 class="hometitle"><i class="fa fa-th-list"></i> 我的分类</h2>
+            {% else %}
+                <h2 class="hometitle"><i class="fa fa-th-list"></i> TA的分类</h2>
+            {% endif %}
+            <ul>
+                {% get_user_categories user as user_categories %}
+                {% for user_category in user_categories %}
+                    <li>
+                        <a href="{% url 'lwd:article_category' user_category.id %}">
+                            {{ user_category.category_name }}
+                            <span class="lwd-article-classify-num">({{ user_category.num_articles }})</span>
+                        </a>
+                    </li>
+                {% empty %}
+                    <p style="margin-top: 15px;margin-bottom: 15px;color: red;font-size: 17px">暂时还没有发表文章哟</p>
+                {% endfor %}
+
+            </ul>
+        </div>
+        {#  我的分类 end  #}
+
+        {# 关于本站 #}
+        <div class="about">
+            <h2 class="hometitle"><i class="fa fa-th-list"></i> 关于本站</h2>
+            <ul>
+                <div class="avatar">
+                    {# 头像 #}
+                    <img src="{% static 'index/images/about/my_img.jpg' %}" title="李易阳" alt="李易阳">
+                </div>
+                <p class="abname"><a class="home-to-about_me" href="{% url 'lwd:about_me' %}">Lwd | 李易阳</a></p>
+                <p class="abtext">
+                    李易阳，一个90后全能优质程序员，上得了厅堂，下得了厨房。编得了程序，写得了小说，斗得过流氓。
+                </p>
+                {# 订阅 #}
+                <li>
+                    <a class="weibo_ico" href="{% url 'rss' %}" target="_blank"></a>
+                </li>
+                {# qq #}
+                <li class="qq_two_code">
+                    <a class="qq_ico" href="" onclick="return false;"></a>
+                    <img src="{% static 'index/images/about/lwd_qq_two_code.jpg' %}"/>
+                </li>
+                {# github #}
+                <li>
+                    <a class="github_ico" href="https://github.com/YddVae" target="_blank"></a>
+                </li>
+                {# 微信 #}
+                <li class="wx_two_code">
+                    <a class="wx_ico" href="" onclick="return false;"></a>
+                    <img src="{% static 'index/images/about/lwd_wx_two_code.jpg' %}"/>
+                </li>
+            </ul>
+        </div>
+        {# 关于本站 end #}
+
+    </aside>
+    {#  侧边栏 end  #}
+
+{% endblock %}
+
+{# cd-top cd-bottom #}
+{% block footer_sub %}
+    <ul id="scroll">
+        {# 向上 #}
+        <li class="lwd-cd-top">
+            <a href="#" style="background-color: #ff5e5c;">
+                <i class="fa fa-arrow-up"></i>
+            </a>
+        </li>
+        {# 向下 #}
+        <li class="lwd-cd-bottom">
+            <a href="#" style="background-color: #ff9531;">
+                <i class="fa fa-arrow-down"></i>
+            </a>
+        </li>
+
+        <li>
+            <input type="button" name="" id="" value="简" style="background-color: burlywood" onclick="zh_tran('s');"/>
+        </li>
+
+        {# 繁体 #}
+        <li>
+            <input type="button" name="" id="" value="繁" style="background-color: #aec534;" onclick="zh_tran('t');"/>
+        </li>
+
+        {# 微信 #}
+        <li class="lwd-scroll-wechat">
+            <a href="#" style="background-color: #3caf33;">
+                <i class="fa fa-wechat"></i>
+            </a>
+            <img src="{% static 'index/images/about/lwd_wx_two_code.jpg' %}"/>
+        </li>
+    </ul>
+{% endblock %}
+
+{% block EXTJS %}
+    <script src="{% static 'user_home/js/user_home.js' %}" type="text/javascript" charset="utf-8"></script>
+
+    <script type="text/javascript">
+
+
+        // 核对关注
+        check_follow('{{ user.u_name }}');
+
+        // 关注
+        $("#user-home-follow-btn").on("click", function () {
+            console.log($(this).text());
+            add_follow('{{ user.u_name }}', $(this).text())
+        });
+
+
+        $(".delete-article").on("click", function () {
+
+        });
+
+
+    </script>
+{% endblock %}

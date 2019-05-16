@@ -1,0 +1,402 @@
+
+
+/*文章详情*/
+.blogbox {
+/* 	width: 100%;
+	height: auto; */
+	border: #ddd 1px solid;
+	overflow: hidden;
+	background: #fff;
+	margin-bottom: 15px
+}
+
+.blogview {
+	padding: 0 30px
+}
+
+
+.blog_title {
+	font-size: 27px;
+	line-height: 25px;
+	font-weight: 700;
+	/* 上下边距 */
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-bottom: 10px;
+	border-bottom: 1px solid #f1f1f1;
+	color: #333;
+}
+
+/* 作者信息 */
+.lwd-blog-author-box {
+	position: relative;
+	margin-bottom: 30px;
+}
+
+.lwd-avatar {
+	float: left;
+	width: 48px;
+	height: 48px;
+	vertical-align: middle;
+	display: inline-block;
+	cursor: pointer;
+}
+
+.lwd-avatar img {
+	width: 100%;
+	height: 100%;
+	border: 1px solid #ddd;
+	border-radius: 50%;
+}
+
+.author-info {
+	/* width: 100%; */
+	/* height: 100%; */
+	/*float: left;*/
+	position: absolute;
+	top: 0px;
+	left: 45px;
+
+	vertical-align: middle;
+	display: inline-block;
+	margin-left: 8px;
+}
+
+/* 博客详情中-用户名 */
+.lwd-blog-author-box .author-info .name {
+	color: black;
+	float: left;
+	margin-top: -1px;
+	margin-right: 3px;
+	font-size: 16px;
+	vertical-align: middle;
+}
+
+/* 用户等级 */
+.lwd-blog-author-box .author-info img.badge-icon {
+	float: left;
+	margin-top: 0px;
+	margin-right: 5px;
+	width: 20px;
+	height: 20px;
+	border-radius: 0;
+	border: 0;
+	vertical-align: middle;
+}
+
+/* 关注按钮 */
+.lwd-blog-author-box .author-info .follow {
+	padding: 0 7px 0 5px;
+	font-size: 12px;
+	border-color: #42c02e;
+	font-weight: 400;
+	line-height: normal;
+}
+
+.lwd-blog-author-box .author-info .btn-success {
+	border-radius: 40px;
+	color: #fff;
+	background-color: #42c02e;
+}
+
+.btn {
+	display: inline-block;
+	margin-bottom: 0;
+	text-align: center;
+	vertical-align: middle;
+	touch-action: manipulation;
+	cursor: pointer;
+	background-image: none;
+	border: 1px solid transparent;
+	white-space: nowrap;
+	user-select: none;
+}
+
+.lwd-blog-author-box .author-info .following {
+	border: 1px solid hsla(0, 0%, 59%, .6);
+	background: none;
+	padding: 0 7px 0 5px;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: normal;
+}
+
+
+.lwd-blog-author-box .author-info .btn-default {
+	border-radius: 40px;
+	color: #8c8c8c;
+	background-color: #f0f0f0;
+	border-color: #f0f0f0;
+}
+
+
+/* meta */
+.lwd-blog-author-box .author-info .meta {
+	clear: both;
+	margin-top: 10px;
+	font-size: 12px;
+	color: #969696;
+}
+
+.lwd-blog-author-box .author-info .meta span {
+	padding-right: 5px;
+}
+
+.meta span:first-child {
+	color: #ea6f5a;
+}
+
+.lwd-blog-author-box .author-info .meta .edit {
+	float: right;
+	margin-top: -30px;
+	margin-left: 250px;
+	padding: 0 12px;
+	font-size: 14px;
+	border: 1px solid #dcdcdc;
+	color: #9b9b9b;
+	line-height: 30px;
+	border-radius: 50px;
+}
+
+
+#lwd-blog-content {
+	/*line-height: 24px;*/
+	/*font-size: 14px;*/
+}
+
+#lwd-blog-content p {
+	/*overflow: hidden;*/
+	/*padding-bottom: 4px;*/
+	/*padding-top: 6px;*/
+	/*word-wrap: break-word;*/
+}
+
+
+#lwd-blog-content img {
+	/*max-width: 620px;*/
+	/*height: auto;*/
+	/*margin-top: 10px;*/
+	/*margin-bottom: 20px;*/
+}
+
+
+
+/* 喜欢 收藏 */
+.collect_like {
+	padding: 20px;
+	/* float: left; */
+}
+
+.diggit {
+	cursor: pointer;
+	width: 160px;
+	margin: auto;
+	background: #E2523A;
+	color: #fff;
+	box-shadow: 1px 2px 6px 0px rgba(0, 0, 0, .2);
+	border-radius: 3px;
+	line-height: 40px;
+	text-align: center;
+}
+
+.diggit a {
+	color: #fff;
+}
+
+.diggnum {
+	margin: 5px;
+}
+
+
+/* 下一篇内容 */
+.nextinfo {
+	line-height: 24px;
+	width: 100%;
+	overflow: hidden;
+	margin: 20px 0;
+	background: #FFF;
+}
+
+.nextinfo p {
+	padding: 4px 10px;
+	border-radius: 5px;
+}
+
+.nextinfo a:hover {
+	color: #000;
+	text-decoration: underline
+}
+
+
+
+/*评论*/
+.comment-container {
+	margin: 10px 0 30px;
+	width: 100%;
+	overflow: hidden;
+	background: #FFF;
+}
+
+.comment-container h2 {
+	border-bottom: #000 2px solid;
+	line-height: 40px;
+	font-size: 14px;
+	padding-left: 10px;
+	color: #000
+}
+
+.lwd-comment-textarea{
+	font-family: Tahoma, sans-serif;
+	font-size: 15px;
+    width: 100%;
+    height: 200px;
+	margin-top: 10px;
+    padding: 5px;
+	border-radius: 5px;
+	white-space: pre-line;
+
+}
+#publish-comment{
+    width: 80px;
+    height: 40px;
+
+    /*text-decoration: none;*/
+    /*text-align: center;*/
+    background-color: #00A7EB;
+	margin-top: 10px;
+    margin-bottom: 50px;
+    border: 1px solid white;
+    border-radius: 5px;
+	color: white;
+    line-height: 40px;
+    font-size: 15px;
+    vertical-align: middle;
+}
+
+/* 如果没有登录，想评论必须--登录 */
+.comment-publish-login{
+	width: 100%;
+	height: 80px;
+	margin-top: 20px;
+	margin-bottom: 50px;
+	border: 1px solid #a9a9a9;
+	border-radius: 5px;
+	text-align: center;
+	position: relative;
+}
+.comment-publish-login-div{
+	width: 150px;
+	height: 30px;
+	background-color: #00A7EB;
+	border: 1px solid #00A7EB;
+    border-radius: 10px;
+	text-align: center;
+	position: absolute;
+	top: 30%;
+	left: 40%;
+
+
+}
+.comment-publish-login-div a{
+	vertical-align: middle;
+	line-height: 30px;
+	color: #ffffff;
+}
+
+.comment-show{
+	padding: 20px 0 10px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.comment-user{
+	margin-bottom: 15px;
+}
+
+.comment-user-avatar{
+	display: inline-block;
+	position: relative;
+}
+.comment-user-avatar a{
+	margin-right: 5px;
+    width: 38px;
+    height: 38px;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.comment-user-avatar a img{
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+}
+
+.comment-user-info{
+	display: inline-block;
+    vertical-align: middle;
+}
+
+.comment-user-info .-name{
+	font-size: 15px;
+    color: #333;
+}
+
+.comment-user-info .-meta{
+	font-size: 12px;
+    color: #969696;
+}
+
+.comment-user-info .-meta span {
+    margin-right: 6px;
+}
+
+.comment-show-content p{
+	font-size: 16px;
+	margin: 10px 0;
+    line-height: 1.5;
+	/*word-break: break-word;*/
+	white-space: pre-line;
+}
+
+
+
+
+
+/*otherlink*/
+
+.otherlink,
+.xzsm,
+.ffsm {
+	width: 100%;
+	background: #FFF;
+	border-radius: 10px;
+	overflow: hidden;
+	margin: 20px 0
+}
+
+.otherlink h2 {
+	border-bottom: #000 2px solid;
+	line-height: 40px;
+	font-size: 14px;
+	padding-left: 10px;
+	color: #000
+}
+
+.otherlink ul {
+	margin: 10px 0
+}
+
+.otherlink li {
+	line-height: 24px;
+	height: 24px;
+	display: block;
+	width: 45%;
+	float: left;
+	overflow: hidden;
+	padding-left: 10px;
+}
+
+.otherlink li a:hover {
+	text-decoration: underline;
+	color: #000
+}

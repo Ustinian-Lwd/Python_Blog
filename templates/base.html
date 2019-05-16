@@ -1,0 +1,293 @@
+{% load static %}
+{% load blog_tags %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {# 头部元信息 #}
+    <meta name="keywords" content="李易阳，个人博客 | 问世间情为何物 直教人生死相许">
+    <meta name="description" content="李易阳，个人博客，一个提供编程技术相关文章的美男子"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {# 导入字体图标 #}
+    <link rel="stylesheet" href="{% static 'base/css/font_awesome/css/font-awesome.min.css' %}">
+    {# 导入swiper.css #}
+    <link rel="stylesheet" href="{% static 'base/css/swiper.min.css' %}">
+    {# 导入重置a li 等样式 #}
+    <link rel="stylesheet" href="{% static 'base/css/reset.css' %}">
+    {# 导入base.css #}
+    <link rel="stylesheet" href="{% static 'base/css/base.css' %}">
+    {# 屏幕的适应尺寸 #}
+    <link rel="stylesheet" href="{% static 'base/css/fit_size.css' %}">
+
+    {#  标题图标  #}
+    <link rel="shortcut icon" href="{% static 'base/images/blog_title.ico' %}" type="image/x-icon">
+    {# 标题 #}
+    {% block title %}
+    {% endblock %}
+
+    {#   样式表#}
+    {% block EXTCSS %}
+    {% endblock %}
+</head>
+<body>
+
+{# 头部#}
+{% block header %}
+    {# 头部标记header #}
+    <header id="header">
+        {# 导航工具栏 #}
+        <div class="navbar">
+            <div class="topbox">
+                <p class="welcome">您好，欢迎您访问李易阳 | 个人博客，问世间情为何物 直教人生死相许！</p>
+                {# 搜索栏 #}
+                <div class="searchbox">
+                    <div id="search_bar" class="search_bar">
+                        <form role="search" method="get" id="searchform" action="{% url 'haystack_search' %}">
+                            {% csrf_token %}
+                            {# 搜索框 #}
+                            <input class="search_text" placeholder="请输入关键词搜索" type="search" name="q" id="search_text">
+                            {# 搜索按钮 #}
+                            <button type="submit"><span id="search_ico"></span></button>
+
+                        </form>
+                    </div>
+                    {# end search_bar #}
+                </div>
+                {# end searchbox #}
+            </div>
+            {# end topbox #}
+        </div>
+        {# end navbar #}
+
+        {# 导航栏--内容 #}
+        <div class="header-navigation">
+            <nav>
+                {# 导航栏内容--左边--logo #}
+                <div class="logo">
+                    <a href="{% url 'lwd:index' %}">❤Lwd's Blog❤</a>
+                </div>
+
+                {# 自动折叠三条横杠 #}
+                <h2 id="mnavh"><span class="navicon"></span></h2>
+
+                {# 首页，等内容 #}
+                <ul id="starlist">
+                    {#  首页  #}
+                    <li>
+                        <a href="{% url 'lwd:index' %}" id="selected"><i class="fa fa-home fa-fw"></i> Home</a>
+                    </li>
+
+                    {# Python编程 #}
+                    <li class="menu">
+                        <a href="#"><i class="fa fa-paypal"></i> Python</a>
+                        <ul class="sub">
+                            {% get_python_category as ptyon_category_list %}
+                            {% for category_name in ptyon_category_list %}
+                                    <li>
+                                        <a href="{% url 'lwd:article_category' category_name.id %}">{{ category_name.category_name }}</a>
+                                    </li>
+                            {% empty %}
+                                <li><a href="#">暂无分类</a></li>
+                            {% endfor %}
+                        </ul>
+                        {#  python sub end  #}
+                    </li>
+
+                    {# 技术分享 #}
+                    <li class="menu">
+                        <a href="#"><i class="fa fa-simplybuilt"></i> Share</a>
+                        <ul class="sub">
+                            {% get_share_category as share_category_list %}
+                            {% for category_name in share_category_list %}
+                                    <li>
+                                        <a href="{% url 'lwd:article_category' category_name.id %}">{{ category_name.category_name }}</a>
+                                    </li>
+                            {% empty %}
+                                <li><a href="#">暂无分类</a></li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+
+                    {# 其他分类 #}
+                    <li class="menu">
+                        <a href="#"><i class="fa fa-modx"></i> Other</a>
+                        <ul class="sub">
+                            {% get_other_category as other_category_list %}
+                            {% for category_name in other_category_list %}
+                                <li>
+                                    <a href="{% url 'lwd:article_category' category_name.id %}">{{ category_name.category_name }}</a>
+                                </li>
+                            {% empty %}
+                                <li><a href="#">暂无分类</a></li>
+                            {% endfor %}
+
+                        </ul>
+                    </li>
+
+                    {# 有token在就是登录后的样式 #}
+                    {% if token %}
+                        {# 用户信息 #}
+                        <li class="user-info-menu">
+                            <a href="#"><img src="{{ MEDIA_URL }}{{ user_token.u_img }}" alt="" title=""></a>
+                            <ul class="user-info-sub">
+                                <li>
+                                    <i class="fa fa-user"></i>
+                                    <a href="{% url 'lwd:user_home' user_token.u_id %}"
+                                       onclick="publish_dfrat_session_storage('publish')"> 我的主页</a>
+                                </li>
+                                <li>
+                                    <i class="fa fa-star"></i>
+                                    <a href="{% url 'lwd:collect_like' user_token.u_id %}"
+                                       onclick="collect_like_session_storage('collect')"> 收藏的文章</a>
+                                </li>
+                                <li>
+                                    <i class="fa fa-heart"></i>
+                                    <a href="{% url 'lwd:collect_like' user_token.u_id %}"
+                                       onclick="collect_like_session_storage('like')"> 喜欢的文章</a>
+                                </li>
+                                <li>
+                                    <i class="fa fa-list-ol"></i>
+                                    <a href="#"> 文章分类</a>
+                                </li>
+                                <li>
+                                    <i class="fa fa-cog"></i>
+                                    <a href="{% url 'lwd:user_setting' user_token.u_id %}"> 设置</a>
+                                </li>
+                                <li>
+                                    <i class="fa fa-hand-o-right"></i>
+                                    <a href="{% url 'lwd:quit' %}"> 退出</a>
+                                </li>
+                            </ul>
+                        </li>
+                        {# token不在 #}
+                    {% else %}
+                        {# 登录 #}
+                        <li>
+                            <a href="{% url 'lwd:login' %}" onclick="login_register_session_storage('login')">
+                                <i class="fa fa-user-circle-o"></i>
+                                登录
+                            </a>
+                        </li>
+                        {# 登录end #}
+
+                        {#  注册  #}
+                        <li>
+                            <a href="{% url 'lwd:register' %}" onclick="login_register_session_storage('register')"><i
+                                    class="fa fa-user-circle"></i>
+                                注册</a>
+                        </li>
+                        {# 注册end #}
+                    {% endif %}
+
+                    {% if token %}
+                        <li>
+                            <a href="{% url 'lwd:write' %}" id="lwd-write-article"><i class="fa fa-pencil-square-o"></i>
+                                写博客</a>
+                        </li>
+                    {% else %}
+                        {#  写博客  #}
+                        <li>
+                            <a href="{% url 'lwd:login' %}" id="lwd-write-article"
+                               onclick="login_register_session_storage('login')"><i class="fa fa-pencil-square-o"></i>
+                                写博客</a>
+                        </li>
+                    {% endif %}
+
+                </ul>
+                {#  starlist end  #}
+            </nav>
+        </div>
+    </header>
+    {# end header #}
+{% endblock %}
+
+
+{# 主体内容 #}
+<div class="wrapper">
+    {% block content %}
+    {% endblock %}
+</div>
+
+{# 其他内容 #}
+{% block content_sub %}
+{% endblock %}
+
+
+{# 尾部#}
+{% block footer %}
+    {# footer 开始 #}
+    <footer>
+        <div class="footer">
+            <div class="wxbox">
+                {# 微信二维码 #}
+                <ul>
+                    <li>
+                        <img src="{% static 'base/images/lwd_wx_two_code.jpg' %}" title="加我微信有惊喜哟" alt="加我微信有惊喜哟">
+                        <span>李易阳的微信</span>
+                    </li>
+                    <li>
+                        <img src="{% static 'base/images/lwd_qq_two_code.jpg' %}" title="加我QQ有惊喜哟" alt="加我QQ有惊喜哟">
+                        <span>李易阳的QQ</span>
+                    </li>
+                </ul>
+            </div>
+            {# 本站简介 #}
+            <div class="bzjj">
+                <h2>本站简介</h2>
+                <p>李易阳 | 个人博客，是一个专注于编写IT技术博客或者文章的网站，网站的开发作者是一个帅气、阳光的程序员，他上得了厅堂、下得了厨房、解决得了bug、写得了文章，还斗得过流氓。</p>
+            </div>
+            {# 其他信息，网站的版权，运行时间 #}
+            <div class="other">
+                <h2>网站版权</h2>
+                <p>
+                    <!--时间-->
+                <div id="colophon" class="site-footer" role="contentinfo">
+                    <div class="site-info">
+                        Copyright © 2019-2020&nbsp;&nbsp;赣ICP备17017404号-1
+                        <span class="add-info">
+									<br/>
+									网站稳定运行：
+								</span>
+                        <span id="span_dt_dt"></span>
+                    </div>
+                </div>
+                </p>
+                <p>&nbsp;</p>
+                <p></p>
+            </div>
+        </div>
+    </footer>
+    {# footer end #}
+{% endblock %}
+
+{# 底部或许还可以有其他内容，比如scroll 向上向下 #}
+{% block footer_sub %}
+{% endblock %}
+
+
+
+
+{# 默认需要的js #}
+<script src="{% static 'base/js/jquery.min.js' %}"></script>
+<script src="{% static 'base/js/jquery.cookie.js' %}"></script>
+<script src="{% static 'base/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'base/js/swiper.min.js' %}"></script>
+<script src="{% static 'base/js/hc-sticky.js' %}"></script>
+<script src="{% static 'base/js/language.js' %}"></script>
+<script src="{% static 'base/js/lwd_time.js' %}"></script>
+<script src="{% static 'base/js/base.js' %}"></script>
+
+{# 导入窝巢特效 #}
+<script type="text/javascript" color="0,0,255" opacity='0.7' zIndex="-2" count="99"
+        src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
+
+
+{# 导入额外的JS#}
+{% block EXTJS %}
+{% endblock %}
+
+</body>
+</html>
